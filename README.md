@@ -17,19 +17,12 @@ than [Docker Desktop](https://www.docker.com/products/docker-desktop) on
 Windows and Mac, and [Docker Compose](https://docs.docker.com/compose/install/)
 on Linux.
 
-1. Build the docker image
+1. Build and run the docker image
 
    ```bash
-   docker-compose build
+   docker compose up -d --build
    ```
 
-1. Run the built image
-
-   ```bash
-   docker-compose up
-   ```
-
-   > NOTE: You can run both commands at once with `docker-compose up --build`.
 
 1. Verify that the service is working.
 
