@@ -1,12 +1,6 @@
 # Krs Official Documentation
 
-## Running locally
-
-Clone the repository and run the following command:
-
-```bash
-hugo server
-```
+This is an official website for Krs docs
 
 ## Running a container locally
 
