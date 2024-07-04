@@ -2,16 +2,13 @@
 
 This is an official website for Krs docs
 
+## Prerequisite
+
+- Docker Desktop or Engine installed on your system
+
 ## Running a container locally
 
-You can run docsy-example inside a [Docker](https://docs.docker.com/)
-container, the container runs with a volume bound to the `docsy-example`
-folder. This approach doesn't require you to install any dependencies other
-than [Docker Desktop](https://www.docker.com/products/docker-desktop) on
-Windows and Mac, and [Docker Compose](https://docs.docker.com/compose/install/)
-on Linux.
-
-1. Build and run the docker image
+Clone the repo and run the following command
 
    ```bash
    docker compose up -d --build
