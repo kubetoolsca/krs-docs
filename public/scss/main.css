@@ -19217,6 +19217,8 @@ h6:hover > .td-heading-self-link, .h6:hover > .td-heading-self-link {
     .td-offline-search-results__close-button:after {
       content: "\f00d"; }
 
+.td-default main > section:first-of-type 
+
 .td-outer {
   display: flex;
   flex-direction: column;
@@ -19247,7 +19249,10 @@ h6:hover > .td-heading-self-link, .h6:hover > .td-heading-self-link {
   min-height: 500px; }
 
 .td-cover-block--height-full {
-  min-height: 100vh; }
+  min-height: 100vh; 
+}
+
+
 
 @media (min-width: 768px) {
   .td-cover-block--height-min {
@@ -19665,6 +19670,10 @@ div.drawioframe {
 .td-card .card-body pre {
   margin: 0;
   padding: 0 1rem 1rem 1rem; }
+
+.td-default main > section:first-of-type {
+  background-image: url(/wp10034205-kubernetes-wallpapers.jpg) !important;
+}
 
 .swagger-ui .info .title small pre, .swagger-ui .info .title .small pre, .swagger-ui .info .title .td-footer__center pre, .swagger-ui .info .title .td-cover-block > .byline pre {
   background: #7d8492; }
