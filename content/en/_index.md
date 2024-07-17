@@ -2,13 +2,13 @@
 title: Kube Docs
 ---
 
-{{< blocks/cover title="Kubernetes Recommender System (KRS): A Comprehensive Guide!" image_anchor="top" height="full" background_image="/home/oluchukwu/krs-docs/public/wp10034205-kubernetes-wallpapers.jpg" >}}
+{{< blocks/cover title="Kubernetes Recommender System (KRS): A Comprehensive Guide!" image_anchor="top" height="full" >}}
 
 <a class="btn btn-lg btn-primary me-3 mb-4" href="/docs/" style="background-color: white; color: #020202;">
-  Learn More <i class="fas fa-arrow-alt-circle-right ms-2"></i>
+  Getting Started <i class="fas fa-arrow-alt-circle-right ms-2"></i>
 </a>
-<a class="btn btn-lg btn-secondary me-3 mb-4" href="https://github.com/kubetoolsca">
-  Browse Code <i class="fab fa-github ms-2 "></i>
+<a class="btn btn-lg btn-primary me-3 mb-4" href="www.launchpass.com/kubetoolsio" style="background-color: #2faf79; border-color: #ecb22e;">
+  Join Slack <i class="fab fa-slack ms-2 "></i>
 </a>
 <p class="lead mt-5"></p>
 {{< blocks/link-down color="info" >}}

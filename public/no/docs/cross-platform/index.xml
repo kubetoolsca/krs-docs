@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Flere plattformer on Gulldoks</title>
+    <title>Flere plattformer on Kube Docs</title>
     <link>http://localhost:1313/no/docs/cross-platform/</link>
-    <description>Recent content in Flere plattformer on Gulldoks</description>
+    <description>Recent content in Flere plattformer on Kube Docs</description>
     <generator>Hugo</generator>
     <language>no</language>
     <lastBuildDate>Wed, 03 Jul 2024 07:19:21 +0530</lastBuildDate>
