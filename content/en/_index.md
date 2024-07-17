@@ -2,7 +2,7 @@
 title: Kube Docs
 ---
 
-{{< blocks/cover title="Kubernetes Recommender System (KRS): A Comprehensive Guide!" image_anchor="top" height="full" >}}
+{{< blocks/cover title="Kubernetes Recommender System" image_anchor="top" height="full" >}}
 
 <a class="btn btn-lg btn-primary me-3 mb-4" href="/docs/" style="background-color: white; color: #020202;">
   Getting Started <i class="fas fa-arrow-alt-circle-right ms-2"></i>
@@ -16,7 +16,7 @@ title: Kube Docs
 
 
 {{% blocks/lead color="primary" %}}
-KRS is your AI-powered co-pilot for managing Kubernetes clusters. It scans your cluster to understand its setup and recommends the best tools for the job, ensuring you have a perfectly optimized environment. But Krs goes beyond basic suggestions. It acts like a detective, using advanced language models to analyze your pod logs and events. This lets Krs identify potential problems before they cause issues, keeping your cluster running smoothly and efficiently. With an easy-to-use command line interface, Krs is like having a Kubernetes expert in your pocket, ready to help you optimize and troubleshoot your cluster.
+KRS is a GenAI-powered Kubernetes Tools Recommender System. It scans your cluster to understand its setup and recommends the best tools for the job, ensuring you have a perfectly optimized environment.
 {{% /blocks/lead %}}
 
 
