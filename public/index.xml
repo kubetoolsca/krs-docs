@@ -85,27 +85,6 @@
       <description>These basic sample guidelines assume that your Docsy site is deployed using Netlify and your files are stored in GitHub. You can use the guidelines &amp;ldquo;as is&amp;rdquo; or adapt them with your own instructions: for example, other deployment options, information about your doc project&amp;rsquo;s file structure, project-specific review guidelines, versioning guidelines, or any other information your users might find useful when updating your site. Kubeflow has a great example.</description>
     </item>
     <item>
-      <title>Easy documentation with Docsy</title>
-      <link>http://localhost:1313/blog/2018/10/06/easy-documentation-with-docsy/</link>
-      <pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2018/10/06/easy-documentation-with-docsy/</guid>
-      <description>This is a typical blog post that includes images.&#xA;The front matter specifies the date of the blog post, its title, a short description that will be displayed on the blog landing page, and its author.&#xA;Including images Here&amp;rsquo;s an image (featured-sunset-get.png) that includes a byline and a caption.&#xA;Fetch and scale an image in the upcoming Hugo 0.43. Photo: Riona MacNamara / CC-BY-CA The front matter of this post specifies properties to be assigned to all image resources:</description>
-    </item>
-    <item>
-      <title>Second blog post</title>
-      <link>http://localhost:1313/blog/2018/10/06/second-blog-post/</link>
-      <pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2018/10/06/second-blog-post/</guid>
-      <description>Text can be bold, italic, or strikethrough. Links should be blue with no underlines (unless hovered over).&#xA;There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.&#xA;There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.&#xA;There should be no margin above this first sentence.</description>
-    </item>
-    <item>
-      <title>Another Great Release</title>
-      <link>http://localhost:1313/blog/2018/01/04/another-great-release/</link>
-      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2018/01/04/another-great-release/</guid>
-      <description>Text can be bold, italic, or strikethrough. Links should be blue with no underlines (unless hovered over).&#xA;There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.&#xA;There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.&#xA;There should be no margin above this first sentence.</description>
-    </item>
-    <item>
       <title>Example Page</title>
       <link>http://localhost:1313/docs/getting-started/example-page/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
@@ -118,13 +97,6 @@
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/reference/parameter-reference/</guid>
       <description>This is a placeholder page. Replace it with your own content.&#xA;Text can be bold, italic, or strikethrough. Links should be blue with no underlines (unless hovered over).&#xA;There should be whitespace between paragraphs. Vape migas chillwave sriracha poutine try-hard distillery. Tattooed shabby chic small batch, pabst art party heirloom letterpress air plant pop-up. Sustainable chia skateboard art party banjo cardigan normcore affogato vexillologist quinoa meggings man bun master cleanse shoreditch readymade.</description>
-    </item>
-    <item>
-      <title>About Goldydocs</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description> About Goldydocs A sample site using the Docsy Hugo theme.&#xA;Goldydocs is a sample site using the Docsy Hugo theme that shows what it can do and provides you with a template site structure. It’s designed for you to clone and edit as much as you like. See the different sections of the documentation and site for more ideas.&#xA;This is another section This is another section </description>
     </item>
     <item>
       <title>Search Results</title>

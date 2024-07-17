@@ -57,51 +57,6 @@
     <loc>http://localhost:1313/docs/contribution-guidelines/</loc>
     <lastmod>2024-07-11T14:10:57-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/news/</loc>
-    <lastmod>2024-07-11T14:10:57-06:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa"
-                href="http://localhost:1313/fa/blog/news/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/blog/news/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/blog/releases/</loc>
-    <lastmod>2024-07-11T14:10:57-06:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa"
-                href="http://localhost:1313/fa/blog/releases/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/blog/releases/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/blog/2018/10/06/easy-documentation-with-docsy/</loc>
-    <lastmod>2024-07-11T14:10:57-06:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa"
-                href="http://localhost:1313/fa/blog/2018/10/06/%D9%85%D8%B3%D8%AA%D8%AF%D8%A7%D8%AA-%D8%B1%D8%A7%D8%AD%D8%AA-%D8%A8%D8%A7-%D8%AF%D8%A7%DA%A9%D8%B3%DB%8C/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/blog/2018/10/06/easy-documentation-with-docsy/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/blog/2018/10/06/second-blog-post/</loc>
-    <lastmod>2024-07-03T07:19:21+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/2018/01/04/another-great-release/</loc>
-    <lastmod>2024-07-03T07:19:21+05:30</lastmod>
-  </url><url>
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2024-07-11T14:10:57-06:00</lastmod>
     <xhtml:link
@@ -159,32 +114,6 @@
     <loc>http://localhost:1313/docs/tasks/ponycopters/</loc>
     <lastmod>2024-07-03T07:19:21+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
-    <lastmod>2024-07-11T14:10:57-06:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa"
-                href="http://localhost:1313/fa/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/about/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2024-07-11T14:10:57-06:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fa"
-                href="http://localhost:1313/fa/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/blog/"
-                />
-  </url><url>
     <loc>http://localhost:1313/community/</loc>
     <lastmod>2024-07-11T14:10:57-06:00</lastmod>
     <xhtml:link
@@ -217,7 +146,7 @@
                 />
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-07-11T14:10:57-06:00</lastmod>
+    <lastmod>2024-07-12T20:36:30-06:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="no"
