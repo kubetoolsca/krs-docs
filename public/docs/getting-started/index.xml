@@ -8,6 +8,20 @@
     <language>en</language>
     <atom:link href="http://localhost:1313/docs/getting-started/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Overview</title>
+      <link>http://localhost:1313/docs/getting-started/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/getting-started/overview/</guid>
+      <description>KRS is an innovative AI-powered tool designed to simplify and streamline your Kubernetes cluster management. Imagine having an intelligent co-pilot for your cluster, offering insights and functionalities to optimize performance and maintain smooth operation. That&amp;rsquo;s exactly what KRS provides.&#xA;Why Use KRS? Effortless Optimization: KRS analyzes your Kubernetes cluster&amp;rsquo;s configuration and resource usage. Based on this intelligent assessment, it recommends the most suitable tools to address your specific needs, ensuring an optimized environment.</description>
+    </item>
+    <item>
+      <title>Contribution Guidelines</title>
+      <link>http://localhost:1313/docs/getting-started/contribution-guidelines/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/getting-started/contribution-guidelines/</guid>
+      <description>These basic sample guidelines assume that your Docsy site is deployed using Netlify and your files are stored in GitHub. You can use the guidelines &amp;ldquo;as is&amp;rdquo; or adapt them with your own instructions: for example, other deployment options, information about your doc project&amp;rsquo;s file structure, project-specific review guidelines, versioning guidelines, or any other information your users might find useful when updating your site. Kubeflow has a great example.</description>
+    </item>
+    <item>
       <title>Architecture</title>
       <link>http://localhost:1313/docs/getting-started/architecture/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>

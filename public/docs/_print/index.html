@@ -159,7 +159,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>1.2.1: <a href="#pg-067afb87c06cf64e946d7e0e48c543e1">Manual</a></li>
+<li>1.2.1: <a href="#pg-c381434a4ebd357ba29f5a24e1ca157f">Manual</a></li>
 
 
     
@@ -167,7 +167,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>1.2.2: <a href="#pg-1cf2b4161d26a2a8c3b295b53a83a341">Docker Desktop</a></li>
+<li>1.2.2: <a href="#pg-ae848b7d6382bec4c1fc5d5c89c41573">Docker Desktop</a></li>
 
 
     
@@ -183,7 +183,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>1.2.4: <a href="#pg-3018127d24112aa9db3388f03eca2cf5">Minikube</a></li>
+<li>1.2.4: <a href="#pg-ec123d58fe7c297e38827ea44b164051">Minikube</a></li>
 
 
     
@@ -218,7 +218,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>1.3.2: <a href="#pg-899fa7fa8f3cd92e8597f56671f3344b">AWS</a></li>
+<li>1.3.2: <a href="#pg-a688fdffdf357b874bce57fb4d861210">AWS</a></li>
 
 
     
@@ -226,7 +226,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>1.3.3: <a href="#pg-a5e4eacd5cd1efdbc3b52a5c0bc062db">EKS</a></li>
+<li>1.3.3: <a href="#pg-997c3b4711cce9988c2b3f1dc40c6208">EKS</a></li>
 
 
     
@@ -337,29 +337,105 @@ Content</a>.</p>
     
 	<h1 id="pg-17b09a9dc5200475d8a306f18e63a0f9">1 - Getting Started</h1>
     <div class="lead">What does your user need to know to try your project?</div>
-	
-
-<div class="pageinfo pageinfo-primary">
-<p>This is a placeholder page that shows you how to use this template site.</p>
-
-</div>
-
-<p>Information in this section helps your user try your project themselves.</p>
+	<p>KRS empowers you to manage your Kubernetes clusters with the help of cutting-edge Artificial Intelligence. This guide equips you with everything you need to get started and unlock the potential of KRS&rsquo;s intelligent recommendations, proactive problem detection, and powerful health checks.</p>
+<h2 id="prerequisites">Prerequisites<a class="td-heading-self-link" href="#prerequisites" aria-label="Heading self-link"></a></h2>
 <ul>
 <li>
-<p>What do your users need to do to start using your project? This could include downloading/installation instructions, including any prerequisites or system requirements.</p>
+<p><strong>Up and Running Kubernetes Cluster:</strong> Ensure you have a Kubernetes cluster running locally (e.g., Minikube, etc) or in the cloud (e.g., Amazon EKS, Google Kubernetes Engine, etc), if on the cloud, ensure that you&rsquo;ve secured a config file, before using KRS.</p>
 </li>
 <li>
-<p>Introductory “Hello World” example, if appropriate. More complex tutorials should live in the Tutorials section.</p>
+<p><strong>Python 3.6+:</strong> KRS is a Python-based tool, so make sure you have Python 3.6 or a later version installed on your system. You can check your version by running python3 &ndash;version in your terminal. If you don&rsquo;t have Python installed, head over to <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a> for installation instructions.</p>
+</li>
+<li>
+<p><strong>Basic understanding of Kubernetes concepts:</strong> Having a foundational understanding of Kubernetes concepts like pods, namespaces, and deployments will help you get the most out of KRS&rsquo;s functionalities.</p>
 </li>
 </ul>
-<p>Consider using the headings below for your getting started page. You can delete any that are not applicable to your project.</p>
-<h2 id="prerequisites">Prerequisites<a class="td-heading-self-link" href="#prerequisites" aria-label="Heading self-link"></a></h2>
-<p>Are there any system requirements for using your project? What languages are supported (if any)? Do users need to already have any software or tools installed?</p>
 <h2 id="installation">Installation<a class="td-heading-self-link" href="#installation" aria-label="Heading self-link"></a></h2>
-<p>Where can your user find your project code? How can they install it (binaries, installable package, build from source)? Are there multiple options/versions they can install and how should they choose the right one for them?</p>
-<h2 id="setup">Setup<a class="td-heading-self-link" href="#setup" aria-label="Heading self-link"></a></h2>
-<p>Is there any initial setup users need to do after installation to try your project?</p>
+<ol>
+<li><strong>Clone the Repository</strong>
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>git clone https://github.com/kubetoolsca/krs.git
+</code></pre>
+
+</div>
+</li>
+<li><strong>Change directory to the cloned repository</strong>
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>cd krs
+</code></pre>
+
+</div>
+</li>
+<li><strong>Python Package Installation</strong>
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>pip install krs
+</code></pre>
+
+</div>
+</li>
+</ol>
+<h2 id="initial-setup">Initial Setup<a class="td-heading-self-link" href="#initial-setup" aria-label="Heading self-link"></a></h2>
+<ol>
+<li><strong>Initialize KRS</strong>
+This step initializes KRS&rsquo;s services and loads the scanner.
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>krs init
+</code></pre>
+
+</div>
+</li>
+<li><strong>Explore KRS Commands (Optional)</strong>
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>krs --help
+</code></pre>
+
+</div>
+</li>
+</ol>
+<h2 id="scan-your-cluster-and-explore-recommendations">Scan Your Cluster and Explore Recommendations<a class="td-heading-self-link" href="#scan-your-cluster-and-explore-recommendations" aria-label="Heading self-link"></a></h2>
+<p>This is where the real power of KRS comes in!</p>
+<ol>
+<li><strong>Scan your cluster</strong>
+Execute the following command to scan your cluster and identify the tools currently in use:
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>krs scan
+</code></pre>
+
+</div>
+</li>
+<li><strong>View recommended tools</strong>
+KRS analyzes your cluster and recommends tools based on best practices and its internal ranking database. Use the following command to explore these recommendations
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>krs recommend
+</code></pre>
+
+</div>
+</li>
+<li><strong>Interactive Health Check with AI</strong>
+KRS leverages Large Language Models (LLMs) like OpenAI or Hugging Face to provide in-depth health checks for your pods.
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>pip install krs
+</code></pre>
+
+</div>
+</li>
+</ol>
 <h2 id="try-it-out">Try it out!<a class="td-heading-self-link" href="#try-it-out" aria-label="Heading self-link"></a></h2>
 <p>Can your users test their installation, for example by running a command or deploying a Hello World example?</p>
 
@@ -386,49 +462,45 @@ Content</a>.</p>
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-66c93933444d37877051ad38074e8a75">1.1 - Overview</h1>
-    <div class="lead">Here&rsquo;s where your user finds out if your project is for them.</div>
-	
-
-<div class="pageinfo pageinfo-primary">
-<p>This is a placeholder page that shows you how to use this template site.</p>
-
-</div>
-
-<p>The Overview is where your users find out about your project. Depending on the
-size of your docset, you can have a separate overview page (like this one) or
-put your overview contents in the Documentation landing page (like in the Docsy
-User Guide).</p>
-<p>Try answering these questions for your user in this page:</p>
-<h2 id="what-is-it">What is it?<a class="td-heading-self-link" href="#what-is-it" aria-label="Heading self-link"></a></h2>
-<p>Introduce your project, including what it does or lets you do, why you would use
-it, and its primary goal (and how it achieves it). This should be similar to
-your README description, though you can go into a little more detail here if you
-want.</p>
-<h2 id="why-do-i-want-it">Why do I want it?<a class="td-heading-self-link" href="#why-do-i-want-it" aria-label="Heading self-link"></a></h2>
-<p>Help your user know if your project will help them. Useful information can
-include:</p>
+    <div class="lead">This overview introduces KRS, your AI-powered co-pilot for managing Kubernetes clusters. .</div>
+	<p>KRS is an innovative AI-powered tool designed to simplify and streamline your Kubernetes cluster management.  Imagine having an intelligent co-pilot for your cluster, offering insights and functionalities to optimize performance and maintain smooth operation. That&rsquo;s exactly what KRS provides.</p>
+<h3 id="why-use-krs">Why Use KRS?<a class="td-heading-self-link" href="#why-use-krs" aria-label="Heading self-link"></a></h3>
 <ul>
 <li>
-<p><strong>What is it good for?</strong>: What types of problems does your project solve? What
-are the benefits of using it?</p>
+<p><strong>Effortless Optimization</strong>: KRS analyzes your Kubernetes cluster&rsquo;s configuration and resource usage. Based on this intelligent assessment, it recommends the most suitable tools to address your specific needs, ensuring an optimized environment.</p>
 </li>
 <li>
-<p><strong>What is it not good for?</strong>: For example, point out situations that might
-intuitively seem suited for your project, but aren&rsquo;t for some reason. Also
-mention known limitations, scaling issues, or anything else that might let
-your users know if the project is not for them.</p>
+<p><strong>Proactive Problem Detection</strong>: KRS utilizes advanced language models to delve into your pod logs and events. This proactive approach empowers KRS to identify potential issues before they snowball into major problems, saving you time and frustration.</p>
 </li>
 <li>
-<p><strong>What is it <em>not yet</em> good for?</strong>: Highlight any useful features that are
-coming soon.</p>
+<p><strong>Enhanced Troubleshooting</strong>: KRS&rsquo;s AI capabilities allow it to analyze issues within your cluster at a deeper level. This significantly reduces troubleshooting time and effort, allowing you to focus on other critical tasks.</p>
+</li>
+<li>
+<p><strong>Simplified Management</strong>: KRS provides a user-friendly command-line interface (CLI) that puts cluster management at your fingertips. This eliminates the need for complex configurations or extensive technical expertise.</p>
 </li>
 </ul>
-<h2 id="where-should-i-go-next">Where should I go next?<a class="td-heading-self-link" href="#where-should-i-go-next" aria-label="Heading self-link"></a></h2>
-<p>Give your users next steps from the Overview. For example:</p>
+<h2 id="who-should-use-krs">Who should use KRS?<a class="td-heading-self-link" href="#who-should-use-krs" aria-label="Heading self-link"></a></h2>
+<p>KRS is ideal for anyone who manages Kubernetes clusters, regardless of experience level. Whether you&rsquo;re a seasoned pro or just getting started, KRS can empower you to:</p>
 <ul>
-<li><a href="/docs/getting-started/">Getting Started</a>: Get started with $project</li>
+<li>
+<p><strong>Optimize your cluster&rsquo;s performance and resource utilization</strong></p>
+</li>
+<li>
+<p><strong>Proactively identify and address potential issues before they disrupt your operations</strong></p>
+</li>
+<li>
+<p><strong>Simplify troubleshooting and reduce the time spent resolving cluster problems</strong></p>
+</li>
+<li>
+<p><strong>Gain valuable insights into your cluster&rsquo;s health and performance</strong></p>
+</li>
+</ul>
+<h2 id="whats-next">What&rsquo;s Next?<a class="td-heading-self-link" href="#whats-next" aria-label="Heading self-link"></a></h2>
+<ul>
+<li><a href="/docs/getting-started/">Getting Started</a>: Get started with KRS</li>
 <li><a href="/docs/examples/">Examples</a>: Check out some example code!</li>
 </ul>
+<p><strong>Let KRS become your trusted companion for optimizing and managing your Kubernetes clusters effectively!</strong></p>
 
 </div>
 
@@ -485,7 +557,7 @@ coming soon.</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-067afb87c06cf64e946d7e0e48c543e1">1.2.1 - Manual</h1>
+	<h1 id="pg-c381434a4ebd357ba29f5a24e1ca157f">1.2.1 - Manual</h1>
     <div class="lead">A short lead description about this content page. It can be <strong>bold</strong> or <em>italic</em> and can be split over multiple paragraphs.</div>
 	
 
@@ -802,7 +874,7 @@ bar := &#34;foo&#34;;
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-1cf2b4161d26a2a8c3b295b53a83a341">1.2.2 - Docker Desktop</h1>
+	<h1 id="pg-ae848b7d6382bec4c1fc5d5c89c41573">1.2.2 - Docker Desktop</h1>
     <div class="lead">A short lead description about this content page. It can be <strong>bold</strong> or <em>italic</em> and can be split over multiple paragraphs.</div>
 	
 
@@ -1143,7 +1215,7 @@ bar := &#34;foo&#34;;
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-3018127d24112aa9db3388f03eca2cf5">1.2.4 - Minikube</h1>
+	<h1 id="pg-ec123d58fe7c297e38827ea44b164051">1.2.4 - Minikube</h1>
     <div class="lead">A short lead description about this content page. It can be <strong>bold</strong> or <em>italic</em> and can be split over multiple paragraphs.</div>
 	
 
@@ -1521,7 +1593,7 @@ bar := &#34;foo&#34;;
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-899fa7fa8f3cd92e8597f56671f3344b">1.3.2 - AWS</h1>
+	<h1 id="pg-a688fdffdf357b874bce57fb4d861210">1.3.2 - AWS</h1>
     <div class="lead">A short lead description about this content page. It can be <strong>bold</strong> or <em>italic</em> and can be split over multiple paragraphs.</div>
 	
 
@@ -1838,7 +1910,7 @@ bar := &#34;foo&#34;;
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-a5e4eacd5cd1efdbc3b52a5c0bc062db">1.3.3 - EKS</h1>
+	<h1 id="pg-997c3b4711cce9988c2b3f1dc40c6208">1.3.3 - EKS</h1>
     <div class="lead">A short lead description about this content page. It can be <strong>bold</strong> or <em>italic</em> and can be split over multiple paragraphs.</div>
 	
 

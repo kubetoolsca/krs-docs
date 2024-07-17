@@ -1,34 +1,68 @@
 ---
 title: Getting Started
 description: What does your user need to know to try your project?
-categories: [Examples, Placeholders]
-tags: [test, docs]
+categories: [guide, setup, intro, getting started]
+tags: [krs, install]
 weight: 2
 ---
 
-{{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
-{{% /pageinfo %}}
+KRS empowers you to manage your Kubernetes clusters with the help of cutting-edge Artificial Intelligence. This guide equips you with everything you need to get started and unlock the potential of KRS's intelligent recommendations, proactive problem detection, and powerful health checks.
 
-Information in this section helps your user try your project themselves.
-
-* What do your users need to do to start using your project? This could include downloading/installation instructions, including any prerequisites or system requirements.
-
-* Introductory “Hello World” example, if appropriate. More complex tutorials should live in the Tutorials section.
-
-Consider using the headings below for your getting started page. You can delete any that are not applicable to your project.
 
 ## Prerequisites
 
-Are there any system requirements for using your project? What languages are supported (if any)? Do users need to already have any software or tools installed?
+- **Up and Running Kubernetes Cluster:** Ensure you have a Kubernetes cluster running locally (e.g., Minikube, etc) or in the cloud (e.g., Amazon EKS, Google Kubernetes Engine, etc), if on the cloud, ensure that you've secured a config file, before using KRS.
+
+- **Python 3.6+:** KRS is a Python-based tool, so make sure you have Python 3.6 or a later version installed on your system. You can check your version by running python3 --version in your terminal. If you don't have Python installed, head over to https://www.python.org/downloads/ for installation instructions.
+
+- **Basic understanding of Kubernetes concepts:** Having a foundational understanding of Kubernetes concepts like pods, namespaces, and deployments will help you get the most out of KRS's functionalities.
 
 ## Installation
 
-Where can your user find your project code? How can they install it (binaries, installable package, build from source)? Are there multiple options/versions they can install and how should they choose the right one for them?
+1. **Clone the Repository** 
+    {{% pageinfo %}}
+    git clone https://github.com/kubetoolsca/krs.git
+    {{% /pageinfo %}}
+2. **Change directory to the cloned repository** 
+     {{% pageinfo %}}
+    cd krs
+    {{% /pageinfo %}}
+3. **Python Package Installation** 
+     {{% pageinfo %}}
+    pip install krs
+    {{% /pageinfo %}}
 
-## Setup
+## Initial Setup
 
-Is there any initial setup users need to do after installation to try your project?
+1. **Initialize KRS** 
+    This step initializes KRS's services and loads the scanner.
+    {{% pageinfo %}}
+    krs init
+    {{% /pageinfo %}}
+2. **Explore KRS Commands (Optional)** 
+    {{% pageinfo %}}
+    krs --help
+    {{% /pageinfo %}}
+
+## Scan Your Cluster and Explore Recommendations
+
+This is where the real power of KRS comes in!
+
+1. **Scan your cluster** 
+    Execute the following command to scan your cluster and identify the tools currently in use:
+    {{% pageinfo %}}
+    krs scan
+    {{% /pageinfo %}}
+2. **View recommended tools** 
+    KRS analyzes your cluster and recommends tools based on best practices and its internal ranking database. Use the following command to explore these recommendations
+    {{% pageinfo %}}
+    krs recommend
+    {{% /pageinfo %}}
+3. **Interactive Health Check with AI** 
+    KRS leverages Large Language Models (LLMs) like OpenAI or Hugging Face to provide in-depth health checks for your pods.
+    {{% pageinfo %}}
+    pip install krs
+    {{% /pageinfo %}}
 
 ## Try it out!
 
