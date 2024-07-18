@@ -1,32 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Core Tasks on Kube Docs</title>
+    <title>Local Installation on Kube Docs</title>
     <link>http://localhost:1313/docs/tasks/</link>
-    <description>Recent content in Core Tasks on Kube Docs</description>
+    <description>Recent content in Local Installation on Kube Docs</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Jul 2024 14:10:57 -0600</lastBuildDate>
+    <lastBuildDate>Thu, 05 Jan 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/docs/tasks/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Bed and Chair Metrics</title>
-      <link>http://localhost:1313/docs/tasks/beds/</link>
+      <title>Manual</title>
+      <link>http://localhost:1313/docs/tasks/manual/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/tasks/beds/</guid>
+      <guid>http://localhost:1313/docs/tasks/manual/</guid>
       <description>This is a placeholder page. Replace it with your own content.&#xA;Text can be bold, italic, or strikethrough. Links should be blue with no underlines (unless hovered over).&#xA;There should be whitespace between paragraphs. Vape migas chillwave sriracha poutine try-hard distillery. Tattooed shabby chic small batch, pabst art party heirloom letterpress air plant pop-up. Sustainable chia skateboard art party banjo cardigan normcore affogato vexillologist quinoa meggings man bun master cleanse shoreditch readymade.</description>
     </item>
     <item>
-      <title>Porridge Assessment</title>
-      <link>http://localhost:1313/docs/tasks/porridge/</link>
+      <title>Docker Desktop</title>
+      <link>http://localhost:1313/docs/tasks/docker-desktop/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/tasks/porridge/</guid>
+      <guid>http://localhost:1313/docs/tasks/docker-desktop/</guid>
       <description>This is a placeholder page. Replace it with your own content.&#xA;Text can be bold, italic, or strikethrough. Links should be blue with no underlines (unless hovered over).&#xA;There should be whitespace between paragraphs. Vape migas chillwave sriracha poutine try-hard distillery. Tattooed shabby chic small batch, pabst art party heirloom letterpress air plant pop-up. Sustainable chia skateboard art party banjo cardigan normcore affogato vexillologist quinoa meggings man bun master cleanse shoreditch readymade.</description>
     </item>
     <item>
-      <title>Another Task</title>
-      <link>http://localhost:1313/docs/tasks/task/</link>
+      <title>Kind</title>
+      <link>http://localhost:1313/docs/tasks/kind/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/tasks/task/</guid>
+      <guid>http://localhost:1313/docs/tasks/kind/</guid>
+      <description>This is a placeholder page. Replace it with your own content.</description>
+    </item>
+    <item>
+      <title>Minikube</title>
+      <link>http://localhost:1313/docs/tasks/minikube/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tasks/minikube/</guid>
       <description>This is a placeholder page. Replace it with your own content.&#xA;Text can be bold, italic, or strikethrough. Links should be blue with no underlines (unless hovered over).&#xA;There should be whitespace between paragraphs. Vape migas chillwave sriracha poutine try-hard distillery. Tattooed shabby chic small batch, pabst art party heirloom letterpress air plant pop-up. Sustainable chia skateboard art party banjo cardigan normcore affogato vexillologist quinoa meggings man bun master cleanse shoreditch readymade.</description>
     </item>
   </channel>

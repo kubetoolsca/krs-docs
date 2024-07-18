@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tutorials on Kube Docs</title>
+    <title>Cloud Providers on Kube Docs</title>
     <link>http://localhost:1313/docs/tutorials/</link>
-    <description>Recent content in Tutorials on Kube Docs</description>
+    <description>Recent content in Cloud Providers on Kube Docs</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Jul 2024 14:10:57 -0600</lastBuildDate>
+    <lastBuildDate>Thu, 05 Jan 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/docs/tutorials/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Multi-Bear Domicile Setup</title>
-      <link>http://localhost:1313/docs/tutorials/multi-bear/</link>
+      <title>AKS</title>
+      <link>http://localhost:1313/docs/tutorials/aks/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/tutorials/multi-bear/</guid>
+      <guid>http://localhost:1313/docs/tutorials/aks/</guid>
+      <description>This is a placeholder page. Replace it with your own content.</description>
+    </item>
+    <item>
+      <title>AWS</title>
+      <link>http://localhost:1313/docs/tutorials/aws/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tutorials/aws/</guid>
       <description>This is a placeholder page. Replace it with your own content.&#xA;Text can be bold, italic, or strikethrough. Links should be blue with no underlines (unless hovered over).&#xA;There should be whitespace between paragraphs. Vape migas chillwave sriracha poutine try-hard distillery. Tattooed shabby chic small batch, pabst art party heirloom letterpress air plant pop-up. Sustainable chia skateboard art party banjo cardigan normcore affogato vexillologist quinoa meggings man bun master cleanse shoreditch readymade.</description>
     </item>
     <item>
-      <title>Another Tutorial</title>
-      <link>http://localhost:1313/docs/tutorials/tutorial2/</link>
+      <title>EKS</title>
+      <link>http://localhost:1313/docs/tutorials/eks/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/tutorials/tutorial2/</guid>
+      <guid>http://localhost:1313/docs/tutorials/eks/</guid>
       <description>This is a placeholder page. Replace it with your own content.&#xA;Text can be bold, italic, or strikethrough. Links should be blue with no underlines (unless hovered over).&#xA;There should be whitespace between paragraphs. Vape migas chillwave sriracha poutine try-hard distillery. Tattooed shabby chic small batch, pabst art party heirloom letterpress air plant pop-up. Sustainable chia skateboard art party banjo cardigan normcore affogato vexillologist quinoa meggings man bun master cleanse shoreditch readymade.</description>
     </item>
   </channel>
