@@ -18,21 +18,23 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Contribution Guidelines | Kube Docs</title>
-<meta name="description" content="How to contribute to the docs">
+<meta name="description" content="How to contribute to the KRS project">
 <meta property="og:url" content="http://localhost:1313/docs/getting-started/contribution-guidelines/">
   <meta property="og:site_name" content="Kube Docs">
   <meta property="og:title" content="Contribution Guidelines">
-  <meta property="og:description" content="How to contribute to the docs">
+  <meta property="og:description" content="How to contribute to the KRS project">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
+    <meta property="article:modified_time" content="2024-07-17T11:06:47-06:00">
 
   <meta itemprop="name" content="Contribution Guidelines">
-  <meta itemprop="description" content="How to contribute to the docs">
-  <meta itemprop="wordCount" content="749">
+  <meta itemprop="description" content="How to contribute to the KRS project">
+  <meta itemprop="dateModified" content="2024-07-17T11:06:47-06:00">
+  <meta itemprop="wordCount" content="438">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Contribution Guidelines">
-  <meta name="twitter:description" content="How to contribute to the docs">
+  <meta name="twitter:description" content="How to contribute to the KRS project">
 <link href="/scss/main.css" rel="stylesheet">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -133,14 +135,14 @@
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsgetting-startedcontribution-guidelines-li">
   <a href="/docs/getting-started/contribution-guidelines/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-docsgetting-startedcontribution-guidelines"><span class="td-sidebar-nav-active-item">Contribution Guidelines</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgetting-startedhow-it-works-li">
+  <a href="/docs/getting-started/how-it-works/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsgetting-startedhow-it-works"><span class="">How It Works</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgetting-startedarchitecture-li">
   <a href="/docs/getting-started/architecture/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsgetting-startedarchitecture"><span class="">Architecture</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgetting-startedcli-reference-li">
   <a href="/docs/getting-started/cli-reference/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsgetting-startedcli-reference"><span class="">CLI Reference</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgetting-startedexample-page-li">
   <a href="/docs/getting-started/example-page/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsgetting-startedexample-page"><span class="">Example Page</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgetting-startedhow-it-works-li">
-  <a href="/docs/getting-started/how-it-works/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsgetting-startedhow-it-works"><span class="">How It Works</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsexamples-li">
@@ -167,11 +169,13 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#quick-start-with-netlify">Quick start with Netlify</a></li>
-    <li><a href="#updating-a-single-page">Updating a single page</a></li>
-    <li><a href="#previewing-your-changes-locally">Previewing your changes locally</a></li>
-    <li><a href="#creating-an-issue">Creating an issue</a></li>
-    <li><a href="#useful-resources">Useful resources</a></li>
+    <li>
+      <ul>
+        <li><a href="#sharpen-your-skills">Sharpen Your Skills</a></li>
+        <li><a href="#contributing-to-krs">Contributing to KRS</a></li>
+        <li><a href="#additional-considerations-for-impactful-contributions">Additional Considerations for Impactful Contributions</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>
@@ -179,11 +183,16 @@
             <div class="taxonomy taxonomy-terms-cloud taxo-tags">
       <h5 class="taxonomy-title">Tag Cloud</h5>
       <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/docs/" data-taxonomy-term="docs"><span class="taxonomy-label">Docs</span><span class="taxonomy-count">4</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/cli/" data-taxonomy-term="cli"><span class="taxonomy-label">CLI</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/commands/" data-taxonomy-term="commands"><span class="taxonomy-label">Commands</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/docs/" data-taxonomy-term="docs"><span class="taxonomy-label">Docs</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/example/" data-taxonomy-term="example"><span class="taxonomy-label">Example</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/insight/" data-taxonomy-term="insight"><span class="taxonomy-label">Insight</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="http://localhost:1313/tags/install/" data-taxonomy-term="install"><span class="taxonomy-label">Install</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="http://localhost:1313/tags/krs/" data-taxonomy-term="krs"><span class="taxonomy-label">Krs</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/sample/" data-taxonomy-term="sample"><span class="taxonomy-label">Sample</span><span class="taxonomy-count">3</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/test/" data-taxonomy-term="test"><span class="taxonomy-label">Test</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/krs-cli/" data-taxonomy-term="krs-cli"><span class="taxonomy-label">KRS CLI</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/sample/" data-taxonomy-term="sample"><span class="taxonomy-label">Sample</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/test/" data-taxonomy-term="test"><span class="taxonomy-label">Test</span><span class="taxonomy-count">2</span></a></li>
         </ul>
     </div>
   <div class="taxonomy taxonomy-terms-cloud taxo-categories">
@@ -218,80 +227,54 @@
             
 <div class="td-content">
 	<h1>Contribution Guidelines</h1>
-	<div class="lead">How to contribute to the docs</div>
+	<div class="lead">How to contribute to the KRS project</div>
 	<header class="article-meta">
 		
   </header>
-	
-
-<div class="pageinfo pageinfo-primary">
-<p>These basic sample guidelines assume that your Docsy site is deployed using Netlify and your files are stored in GitHub. You can use the guidelines &ldquo;as is&rdquo; or adapt them with your own instructions: for example, other deployment options, information about your doc project&rsquo;s file structure, project-specific review guidelines, versioning guidelines, or any other information your users might find useful when updating your site. <a href="https://github.com/kubeflow/website/blob/master/README.md">Kubeflow</a> has a great example.</p>
-<p>Don&rsquo;t forget to link to your own doc repo rather than our example site! Also make sure users can find these guidelines from your doc repo README: either add them there and link to them from this page, add them here and link to them from the README, or include them in both locations.</p>
-
-</div>
-
-<p>We use <a href="https://gohugo.io/">Hugo</a> to format and generate our website, the
-<a href="https://github.com/google/docsy">Docsy</a> theme for styling and site structure,
-and <a href="https://www.netlify.com/">Netlify</a> to manage the deployment of the site.
-Hugo is an open-source static site generator that provides us with templates,
-content organisation in a standard directory structure, and a website generation
-engine. You write the pages in Markdown (or HTML if you want), and Hugo wraps them up into a website.</p>
-<p>All submissions, including submissions by project members, require review. We
-use GitHub pull requests for this purpose. Consult
-<a href="https://help.github.com/articles/about-pull-requests/">GitHub Help</a> for more
-information on using pull requests.</p>
-<h2 id="quick-start-with-netlify">Quick start with Netlify<a class="td-heading-self-link" href="#quick-start-with-netlify" aria-label="Heading self-link"></a></h2>
-<p>Here&rsquo;s a quick guide to updating the docs. It assumes you&rsquo;re familiar with the
-GitHub workflow and you&rsquo;re happy to use the automated preview of your doc
-updates:</p>
-<ol>
-<li>Fork the <a href="https://github.com/google/docsy-example">Goldydocs repo</a> on GitHub.</li>
-<li>Make your changes and send a pull request (PR).</li>
-<li>If you&rsquo;re not yet ready for a review, add &ldquo;WIP&rdquo; to the PR name to indicate
-it&rsquo;s a work in progress. (<strong>Don&rsquo;t</strong> add the Hugo property
-&ldquo;draft = true&rdquo; to the page front matter, because that prevents the
-auto-deployment of the content preview described in the next point.)</li>
-<li>Wait for the automated PR workflow to do some checks. When it&rsquo;s ready,
-you should see a comment like this: <strong>deploy/netlify — Deploy preview ready!</strong></li>
-<li>Click <strong>Details</strong> to the right of &ldquo;Deploy preview ready&rdquo; to see a preview
-of your updates.</li>
-<li>Continue updating your doc and pushing your changes until you&rsquo;re happy with
-the content.</li>
-<li>When you&rsquo;re ready for a review, add a comment to the PR, and remove any
-&ldquo;WIP&rdquo; markers.</li>
-</ol>
-<h2 id="updating-a-single-page">Updating a single page<a class="td-heading-self-link" href="#updating-a-single-page" aria-label="Heading self-link"></a></h2>
-<p>If you&rsquo;ve just spotted something you&rsquo;d like to change while using the docs, Docsy has a shortcut for you:</p>
-<ol>
-<li>Click <strong>Edit this page</strong> in the top right hand corner of the page.</li>
-<li>If you don&rsquo;t already have an up to date fork of the project repo, you are prompted to get one - click <strong>Fork this repository and propose changes</strong> or <strong>Update your Fork</strong> to get an up to date version of the project to edit. The appropriate page in your fork is displayed in edit mode.</li>
-<li>Follow the rest of the <a href="/docs/getting-started/contribution-guidelines/#quick-start-with-netlify">Quick start with Netlify</a> process above to make, preview, and propose your changes.</li>
-</ol>
-<h2 id="previewing-your-changes-locally">Previewing your changes locally<a class="td-heading-self-link" href="#previewing-your-changes-locally" aria-label="Heading self-link"></a></h2>
-<p>If you want to run your own local Hugo server to preview your changes as you work:</p>
-<ol>
-<li>
-<p>Follow the instructions in <a href="/docs/getting-started/">Getting started</a> to install Hugo and any other tools you need. You&rsquo;ll need at least <strong>Hugo version 0.45</strong> (we recommend using the most recent available version), and it must be the <strong>extended</strong> version, which supports SCSS.</p>
-</li>
-<li>
-<p>Fork the <a href="https://github.com/google/docsy-example">Goldydocs repo</a> repo into your own project, then create a local copy using <code>git clone</code>. Don’t forget to use <code>--recurse-submodules</code> or you won’t pull down some of the code you need to generate a working site.</p>
-<pre tabindex="0"><code>git clone --recurse-submodules --depth 1 https://github.com/google/docsy-example.git
-</code></pre></li>
-<li>
-<p>Run <code>hugo server</code> in the site root directory. By default your site will be available at http://localhost:1313/. Now that you&rsquo;re serving your site locally, Hugo will watch for changes to the content and automatically refresh your site.</p>
-</li>
-<li>
-<p>Continue with the usual GitHub workflow to edit files, commit them, push the
-changes up to your fork, and create a pull request.</p>
-</li>
-</ol>
-<h2 id="creating-an-issue">Creating an issue<a class="td-heading-self-link" href="#creating-an-issue" aria-label="Heading self-link"></a></h2>
-<p>If you&rsquo;ve found a problem in the docs, but you&rsquo;re not sure how to fix it yourself, please create an issue in the <a href="https://github.com/google/docsy-example/issues">Goldydocs repo</a>. You can also create an issue about a specific page by clicking the <strong>Create Issue</strong> button in the top right hand corner of the page.</p>
-<h2 id="useful-resources">Useful resources<a class="td-heading-self-link" href="#useful-resources" aria-label="Heading self-link"></a></h2>
+	<p>Welcome to the world of KRS contributors! We&rsquo;re excited to have you join our mission of empowering users with a seamless Kubernetes experience. This guide outlines how you can make valuable contributions to the KRS project.</p>
+<h3 id="sharpen-your-skills">Sharpen Your Skills<a class="td-heading-self-link" href="#sharpen-your-skills" aria-label="Heading self-link"></a></h3>
 <ul>
-<li><a href="https://www.docsy.dev/docs/">Docsy user guide</a>: All about Docsy, including how it manages navigation, look and feel, and multi-language support.</li>
-<li><a href="https://gohugo.io/documentation/">Hugo documentation</a>: Comprehensive reference for Hugo.</li>
-<li><a href="https://guides.github.com/activities/hello-world/">Github Hello World!</a>: A basic introduction to GitHub concepts and workflow.</li>
+<li><strong>Kubernetes Expertise:</strong> Possessing a strong foundation in Kubernetes concepts allows you to understand user needs and tailor contributions accordingly.</li>
+<li><strong>KRS Functionality Deep Dive:</strong> Delving into KRS functionalities equips you to contribute to core functionalities, integrations, or even documentation improvements.</li>
+</ul>
+<h3 id="contributing-to-krs">Contributing to KRS<a class="td-heading-self-link" href="#contributing-to-krs" aria-label="Heading self-link"></a></h3>
+<ol>
+<li><strong>Fork the Repository:</strong> Head over to the <a href="https://github.com/kubetoolsca/krs">KRS project repository on GitHub</a> and &ldquo;Fork&rdquo; it to create your personal copy.</li>
+<li><strong>Local Clone for Collaboration:</strong> Use git clone to clone your forked repository to your development environment. This sets the stage for local development and collaboration.</li>
+<li><strong>Navigate the Issue Landscape:</strong> Explore open issues within the KRS project repository. Look for labels like &ldquo;help wanted&rdquo; or issues indicating specific functionalities requiring attention. These are prime areas where your expertise can shine!</li>
+<li><strong>Branch Out Strategically:</strong> Create a new branch in your local repository using a descriptive name that references the issue you&rsquo;re tackling (e.g., fix/issue-<issue-number> for bug fixes or feature/enhancement-<descriptive-name> for new features).</li>
+<li><strong>Code with Collaboration in Mind:</strong>
+<ul>
+<li>Make your code contributions following the project&rsquo;s coding style and conventions.</li>
+<li>Write clear, well-documented code that adheres to best practices.</li>
+<li>Consider TDD development standards to ensure the integrity and reliability of your contribution.</li>
+</ul>
+</li>
+<li><strong>Commit with Clarity:</strong>
+<ul>
+<li>Stage your changes using git add.</li>
+<li>Craft a meaningful commit message that summarizes your contribution and references the issue number.</li>
+</ul>
+</li>
+<li><strong>Push for Progress:</strong> Push your committed changes to your forked repository on GitHub.</li>
+<li><strong>Propose Your Innovation:</strong>
+<ul>
+<li>Head over to your forked repository on GitHub and initiate a pull request.</li>
+<li>Provide a clear title and description for your pull request, mentioning the issue number and a brief explanation of your changes.</li>
+</ul>
+</li>
+</ol>
+<h3 id="additional-considerations-for-impactful-contributions">Additional Considerations for Impactful Contributions<a class="td-heading-self-link" href="#additional-considerations-for-impactful-contributions" aria-label="Heading self-link"></a></h3>
+<ul>
+<li><strong>Discussions Are Key:</strong> If your contribution involves a significant change, consider creating a separate issue to discuss the technical approach before diving in. This fosters collaboration and avoids potential roadblocks.</li>
+<li><strong>Testing is Essential:</strong> Whenever possible, write unit tests to accompany your code contributions. This strengthens the overall quality and maintainability of the KRS project.</li>
+<li><strong>Documentation Updates:</strong> If your contribution affects existing functionalities or introduces new features, ensure an accompanying documentation update follows your pull request. This ensures a smooth user experience.</li>
+</ul>
+<h4 id="thank-you-for-being-a-krs-contributor">Thank you for being a KRS contributor!<a class="td-heading-self-link" href="#thank-you-for-being-a-krs-contributor" aria-label="Heading self-link"></a></h4>
+<p>Your contributions directly influence the future of KRS and empower users to manage their Kubernetes clusters with greater efficiency. Let&rsquo;s build a better KRS together!</p>
+<ul>
+<li><a href="https://github.com/kubetoolsca/krs/tree/main">KRS Project Repository</a>: All about KRS, its features, use cases, and codebase.</li>
+<li><a href="https://github.com/kubetoolsca/krs-docs">KRS Documentation</a>: Comprehensive reference for KRS.</li>
 </ul>
 
 	<style>
@@ -350,6 +333,9 @@ changes up to your fork, and create a pull request.</p>
   });
 </script>
 <br />
+<div class="td-page-meta__lastmod">
+  Last modified July 17, 2024: <a href="https://github.com/kubetoolsca/commit/51149fa0308069af61634a12578253d0dcd71e8c">Requested Pages Created (51149fa)</a>
+</div>
 
 </div>
 

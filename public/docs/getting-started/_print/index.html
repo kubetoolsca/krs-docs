@@ -20,22 +20,22 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Getting Started | Kube Docs</title>
-<meta name="description" content="What does your user need to know to try your project?">
+<meta name="description" content="A clear roadmap for installing and using KRS">
 <meta property="og:url" content="http://localhost:1313/docs/getting-started/">
   <meta property="og:site_name" content="Kube Docs">
   <meta property="og:title" content="Getting Started">
-  <meta property="og:description" content="What does your user need to know to try your project?">
+  <meta property="og:description" content="A clear roadmap for installing and using KRS">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Getting Started">
-  <meta itemprop="description" content="What does your user need to know to try your project?">
-  <meta itemprop="dateModified" content="2024-07-11T14:10:57-06:00">
-  <meta itemprop="wordCount" content="312">
+  <meta itemprop="description" content="A clear roadmap for installing and using KRS">
+  <meta itemprop="dateModified" content="2024-07-17T16:39:24-06:00">
+  <meta itemprop="wordCount" content="1673">
   <meta itemprop="keywords" content="Krs,Install">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Getting Started">
-  <meta name="twitter:description" content="What does your user need to know to try your project?">
+  <meta name="twitter:description" content="A clear roadmap for installing and using KRS">
 <link href="/scss/main.css" rel="stylesheet">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -100,7 +100,7 @@ This is the multi-page printable view of this section.
 
 
 <h1 class="title">Getting Started</h1>
-<div class="lead">What does your user need to know to try your project?</div>
+<div class="lead">A clear roadmap for installing and using KRS</div>
 
 
 
@@ -226,7 +226,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>5: <a href="#pg-ffc590ea6468143712feda0ba56c1372">Architecture</a></li>
+<li>5: <a href="#pg-fc5c34771c21b8e5103cafeae994e513">How It Works</a></li>
 
 
     
@@ -234,7 +234,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>6: <a href="#pg-5342de47efa5bec83c3fb47d2a279f1c">CLI Reference</a></li>
+<li>6: <a href="#pg-ffc590ea6468143712feda0ba56c1372">Architecture</a></li>
 
 
     
@@ -242,7 +242,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>7: <a href="#pg-26c5b3cd3e0466fc2bf2315820925ef4">Example Page</a></li>
+<li>7: <a href="#pg-5342de47efa5bec83c3fb47d2a279f1c">CLI Reference</a></li>
 
 
     
@@ -250,7 +250,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>8: <a href="#pg-fc5c34771c21b8e5103cafeae994e513">How It Works</a></li>
+<li>8: <a href="#pg-26c5b3cd3e0466fc2bf2315820925ef4">Example Page</a></li>
 
 
     
@@ -328,7 +328,8 @@ This step initializes KRS&rsquo;s services and loads the scanner.
 <h2 id="scan-your-cluster-and-explore-recommendations">Scan Your Cluster and Explore Recommendations<a class="td-heading-self-link" href="#scan-your-cluster-and-explore-recommendations" aria-label="Heading self-link"></a></h2>
 <p>This is where the real power of KRS comes in!</p>
 <ol>
-<li><strong>Scan your cluster</strong>
+<li>
+<p><strong>Scan your cluster</strong>
 Execute the following command to scan your cluster and identify the tools currently in use:
 
 
@@ -337,8 +338,31 @@ Execute the following command to scan your cluster and identify the tools curren
 </code></pre>
 
 </div>
+
+You&rsquo;ll see the following results:
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>Scanning your cluster...
+
+Cluster scanned successfully...
+
+Extracted tools used in cluster...
+
+
+The cluster is using the following tools:
+
++-------------+--------+------------+---------------+
+| Tool Name   | Rank   | Category   | CNCF Status   |
++=============+========+============+===============+
++-------------+--------+------------+---------------+
+</code></pre>
+
+</div>
+</p>
 </li>
-<li><strong>View recommended tools</strong>
+<li>
+<p><strong>View recommended tools</strong>
 KRS analyzes your cluster and recommends tools based on best practices and its internal ranking database. Use the following command to explore these recommendations
 
 
@@ -347,20 +371,269 @@ KRS analyzes your cluster and recommends tools based on best practices and its i
 </code></pre>
 
 </div>
-</li>
-<li><strong>Interactive Health Check with AI</strong>
-KRS leverages Large Language Models (LLMs) like OpenAI or Hugging Face to provide in-depth health checks for your pods.
+</p>
+<p>You&rsquo;ll see similar results to this:
 
 
 <div class="pageinfo pageinfo-primary">
-<pre><code>pip install krs
+<pre><code>krs recommend
+
+Our recommended tools for this deployment are:
+
++----------------------+------------------+-------------+---------------+
+| Category             | Recommendation   | Tool Name   | CNCF Status   |
++======================+==================+=============+===============+
+| Alert and Monitoring | Recommended tool | grafana     | listed        |
++----------------------+------------------+-------------+---------------+
+| Cluster Management   | Recommended tool | rancher     | unlisted      |
++----------------------+------------------+-------------+---------------+
 </code></pre>
 
 </div>
+</p>
 </li>
 </ol>
-<h2 id="try-it-out">Try it out!<a class="td-heading-self-link" href="#try-it-out" aria-label="Heading self-link"></a></h2>
-<p>Can your users test their installation, for example by running a command or deploying a Hello World example?</p>
+<h2 id="interactive-health-check-with-ai">Interactive Health Check with AI<a class="td-heading-self-link" href="#interactive-health-check-with-ai" aria-label="Heading self-link"></a></h2>
+<p>KRS leverages Large Language Models (LLMs) like OpenAI or Hugging Face to provide in-depth health checks for your pods.</p>
+<ol>
+<li>
+<p><strong>Start the health check</strong>
+Execute the following command to initiate an interactive terminal session:
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>krs health
+</code></pre>
+
+</div>
+
+You&rsquo;ll see the following results:
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>krs health
+
+Starting interactive terminal...
+
+
+Choose the model provider for healthcheck:
+
+[1] OpenAI
+[2] Huggingface
+
+&gt;&gt;
+</code></pre>
+
+</div>
+</p>
+</li>
+<li>
+<p><strong>Choose your LLM provider</strong>
+The user is prompted to choose a model provider for the health check. The options provided are &ldquo;OpenAI&rdquo; and &ldquo;Huggingface&rdquo;. The selected option determines which LLM model will be used for the health check.</p>
+<p>Let&rsquo;s say you choose the option &ldquo;1&rdquo;, then it will install the necessary libraries.</p>
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>Enter your OpenAI API key: open_ai_api_key
+
+Enter the OpenAI model name: gpt-3.5-turbo
+API key and model are valid.
+
+Namespaces in the cluster:
+
+1. default
+2. kube-node-lease
+3. kube-public
+4. kube-system
+5. ns1
+
+Which namespace do you want to check the health for? Select a namespace by entering 
+its number: &gt;&gt; 4
+</code></pre>
+
+</div>
+
+</li>
+<li>
+<p><strong>Specify the pod</strong>
+Choose the pod you want to analyze from the listed options. KRS will then extract logs and events for the selected pod.</p>
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>Which namespace do you want to check the health for? Select a namespace by entering 
+its number: &gt;&gt; 4
+
+Pods in the namespace kube-system:
+
+1. coredns-76f75df574-mdk6w
+2. coredns-76f75df574-vg6z2
+3. etcd-docker-desktop
+4. kube-apiserver-docker-desktop
+5. kube-controller-manager-docker-desktop
+6. kube-proxy-p5hw4
+7. kube-scheduler-docker-desktop
+8. storage-provisioner
+9. vpnkit-controller
+
+Which pod from kube-system do you want to check the health for? Select a pod by entering its 
+number: &gt;&gt; 4
+
+Checking status of the pod...
+
+Extracting logs and events from the pod...
+
+Logs and events from the pod extracted successfully!
+
+&gt;&gt;
+</code></pre>
+
+</div>
+
+</li>
+<li>
+<p><strong>Interact with the LLM</strong>
+The LLM will analyze the extracted information and provide insights into potential issues with your pod.
+You can ask clarifying questions or request further analysis within the interactive terminal.</p>
+<p>If your pod has no errors, your output would be :</p>
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>Interactive session started. Type 'end chat' to exit from the session!
+
+&gt;&gt;  The log entries provided are empty {}, so there is nothing to analyze. Therefore, 
+I can confirm that 'Everything looks good!' in this case.
+
+If there were warnings or errors in the log entries, I would have analyzed them 
+thoroughly to identify the root cause. Depending on the specific warnings or 
+errors, potential steps to resolve the issues could include:
+
+1. Analyzing the specific error message to understand the problem
+2. Checking Kubernetes resources (e.g., pods, deployments, configmaps) 
+for any misconfigurations
+3. Verifying connectivity to external resources or dependencies
+4. Checking for resource limitations or constraints that could be causing issues
+5. Reviewing recent changes in the Kubernetes environment that could have introduced problems
+6. Using Kubernetes troubleshooting tools like kubectl logs, describe, or events 
+to gather more information 
+
+By following these steps and addressing any identified issues, you can resolve 
+warnings or errors in the Kubernetes environment.
+
+&gt;&gt; Wonderful, anything else to note?
+&gt;&gt;  In addition to resolving warnings or errors in Kubernetes logs, it's important to regularly 
+monitor and maintain the Kubernetes environment to ensure smooth operation. Some best 
+practices for Kubernetes maintenance include:
+
+1. Regularly updating Kubernetes components and cluster nodes to the latest stable versions 
+to benefit from bug fixes and security patches.
+2. Implementing automated backups of critical data and configurations to 
+prevent data loss in case of failures.
+3. Monitoring resource utilization and scaling components as needed to optimize 
+performance and cost efficiency.
+4. Implementing security best practices, such as network policies, RBAC, and 
+pod security policies to protect 
+the cluster from unauthorized access or malicious activities.
+5. Conducting regular health checks and performance tuning to identify 
+and address any bottlenecks or 
+inefficiencies in the cluster.
+6. Developing a disaster recovery plan and testing it periodically to 
+ensure business continuity in case of unexpected events.
+
+By following these maintenance practices, you can ensure the stability, scalability, and security 
+of your Kubernetes environment for optimal DevOps operations.
+
+&gt;&gt; Alright, so are we done?
+&gt;&gt;  Yes, we have covered the analysis of the Kubernetes log entries and 
+discussed best practices for Kubernetes maintenance. If you have any more 
+questions or need further assistance, feel free to ask. Otherwise, 
+we can consider this conversation complete.
+
+&gt;&gt; Wonderful. Thanks! end chat
+&gt;&gt;  You're welcome! If you have any more questions in the future, 
+feel free to reach out. Have a great day! Goodbye!
+
+&gt;&gt; end chat
+</code></pre>
+
+</div>
+
+<p>Else, your output would be:</p>
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>Interactive session started. Type 'end chat' to exit from the session!
+
+&gt;&gt;  Warning/Error 1:
+&quot;Unable to authenticate the request&quot; with err=&quot;[invalid bearer token, 
+service account token has expired]&quot;
+This indicates that there was an issue with authenticating the request due to an invalid bearer token and 
+an expired service account token. To resolve this issue, the bearer token needs to be updated or regenerated, 
+and the service account token needs to be renewed.
+
+Warning/Error 2:
+&quot;Failed to update lease&quot; with err=&quot;StorageError: invalid object, Code: 4, Key: 
+/registry/leases/kube-system/apiserver-457xdkumpkdqmkwikdt6khrbya&quot;
+This error indicates a storage error while trying to update a lease, possibly due to an invalid object 
+or a conflict in UIDs. To resolve this issue, the lease object needs to be checked and possibly 
+recreated with the correct UID.
+
+Warning/Error 3:
+&quot;Error removing old endpoints from kubernetes service: no API server IP addresses were listed in storage, 
+refusing to erase all endpoints for the kubernetes Service&quot;
+This warning indicates that there were no API server IP addresses listed in storage, causing the removal 
+of old endpoints from the Kubernetes service to fail. To resolve this issue, the API server IP addresses 
+need to be correctly listed in storage.
+
+Warning/Error 4:
+&quot;Skipping API apps/v1beta1 because it has no resources.&quot;
+This warning indicates that the API version 'apps/v1beta1' is being skipped because it has no 
+associated resources. This might be an informational warning and may not necessarily require 
+immediate action, depending on the use case.
+
+Warning/Error 5:
+&quot;watch chan error: etcdserver: mvcc: required revision has been compacted&quot;
+This error indicates a watch channel error related to the revision being compacted in etcdserver. 
+To resolve this issue, the etcd database revision or configuration may need to be checked and potentially adjusted.
+
+Overall, it is important to investigate and address each warning and error to ensure the stability 
+and reliability of the Kubernetes cluster. If there are no concerns in the log entries provided, 
+the message 'Everything looks good!' can be returned.
+
+&gt;&gt; can you help me in fixing this error message
+&gt;&gt;  To help you fix the error messages mentioned in the log entries, here are some steps you can take:
+
+1. For the &quot;Unable to authenticate the request&quot; error:
+- Generate a new bearer token and update it in the relevant configuration files.
+- Renew the service account token to prevent expiration issues.
+
+2. For the &quot;Failed to update lease&quot; error:
+- Investigate the storage error and check for any invalid objects.
+- Recreate the lease object with the correct UID if needed.
+
+3. For the &quot;Error removing old endpoints from Kubernetes service&quot; error:
+- Ensure that the API server IP addresses are correctly listed in the storage.
+- Verify the configuration of the Kubernetes service and update it if necessary.
+
+4. For the &quot;watch chan error: etcdserver: mvcc: required revision has been compacted&quot; error:
+- Check the etcd server configuration and ensure that the revision is maintained correctly.
+- Monitor the etcd server for any potential issues causing revision compaction.
+
+After performing these steps, restart relevant services or components as needed to apply the changes. 
+Monitor the Kubernetes cluster for any further errors and ensure that the issues have been resolved successfully.
+
+Feel free to provide more specific details or additional logs if you need further assistance with resolving the error messages.
+</code></pre>
+
+</div>
+
+</li>
+<li>
+<p><strong>Exit the session</strong>
+Type end chat to exit the interactive health check session.</p>
+</li>
+</ol>
+<h2 id="additional-resources">Additional Resources!<a class="td-heading-self-link" href="#additional-resources" aria-label="Heading self-link"></a></h2>
+<p>KRS Project Repository: For those interested in contributing to the project or exploring the source code, visit the project repository. (<a href="https://github.com/kubetoolsca/krs-docs">Github Repo</a>)</p>
 
 </div>
 </div>
@@ -383,7 +656,7 @@ KRS leverages Large Language Models (LLMs) like OpenAI or Hugging Face to provid
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-66c93933444d37877051ad38074e8a75">1 - Overview</h1>
-    <div class="lead">This overview introduces KRS, your AI-powered co-pilot for managing Kubernetes clusters. .</div>
+    <div class="lead">Introduces KRS, your AI-powered co-pilot for managing Kubernetes clusters.</div>
 	<p>KRS is an innovative AI-powered tool designed to simplify and streamline your Kubernetes cluster management.  Imagine having an intelligent co-pilot for your cluster, offering insights and functionalities to optimize performance and maintain smooth operation. That&rsquo;s exactly what KRS provides.</p>
 <h3 id="why-use-krs">Why Use KRS?<a class="td-heading-self-link" href="#why-use-krs" aria-label="Heading self-link"></a></h3>
 <ul>
@@ -2153,77 +2426,51 @@ bar := &#34;foo&#34;;
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-41989b459285865a107e785b1cf2d453">4 - Contribution Guidelines</h1>
-    <div class="lead">How to contribute to the docs</div>
-	
-
-<div class="pageinfo pageinfo-primary">
-<p>These basic sample guidelines assume that your Docsy site is deployed using Netlify and your files are stored in GitHub. You can use the guidelines &ldquo;as is&rdquo; or adapt them with your own instructions: for example, other deployment options, information about your doc project&rsquo;s file structure, project-specific review guidelines, versioning guidelines, or any other information your users might find useful when updating your site. <a href="https://github.com/kubeflow/website/blob/master/README.md">Kubeflow</a> has a great example.</p>
-<p>Don&rsquo;t forget to link to your own doc repo rather than our example site! Also make sure users can find these guidelines from your doc repo README: either add them there and link to them from this page, add them here and link to them from the README, or include them in both locations.</p>
-
-</div>
-
-<p>We use <a href="https://gohugo.io/">Hugo</a> to format and generate our website, the
-<a href="https://github.com/google/docsy">Docsy</a> theme for styling and site structure,
-and <a href="https://www.netlify.com/">Netlify</a> to manage the deployment of the site.
-Hugo is an open-source static site generator that provides us with templates,
-content organisation in a standard directory structure, and a website generation
-engine. You write the pages in Markdown (or HTML if you want), and Hugo wraps them up into a website.</p>
-<p>All submissions, including submissions by project members, require review. We
-use GitHub pull requests for this purpose. Consult
-<a href="https://help.github.com/articles/about-pull-requests/">GitHub Help</a> for more
-information on using pull requests.</p>
-<h2 id="quick-start-with-netlify">Quick start with Netlify<a class="td-heading-self-link" href="#quick-start-with-netlify" aria-label="Heading self-link"></a></h2>
-<p>Here&rsquo;s a quick guide to updating the docs. It assumes you&rsquo;re familiar with the
-GitHub workflow and you&rsquo;re happy to use the automated preview of your doc
-updates:</p>
-<ol>
-<li>Fork the <a href="https://github.com/google/docsy-example">Goldydocs repo</a> on GitHub.</li>
-<li>Make your changes and send a pull request (PR).</li>
-<li>If you&rsquo;re not yet ready for a review, add &ldquo;WIP&rdquo; to the PR name to indicate
-it&rsquo;s a work in progress. (<strong>Don&rsquo;t</strong> add the Hugo property
-&ldquo;draft = true&rdquo; to the page front matter, because that prevents the
-auto-deployment of the content preview described in the next point.)</li>
-<li>Wait for the automated PR workflow to do some checks. When it&rsquo;s ready,
-you should see a comment like this: <strong>deploy/netlify — Deploy preview ready!</strong></li>
-<li>Click <strong>Details</strong> to the right of &ldquo;Deploy preview ready&rdquo; to see a preview
-of your updates.</li>
-<li>Continue updating your doc and pushing your changes until you&rsquo;re happy with
-the content.</li>
-<li>When you&rsquo;re ready for a review, add a comment to the PR, and remove any
-&ldquo;WIP&rdquo; markers.</li>
-</ol>
-<h2 id="updating-a-single-page">Updating a single page<a class="td-heading-self-link" href="#updating-a-single-page" aria-label="Heading self-link"></a></h2>
-<p>If you&rsquo;ve just spotted something you&rsquo;d like to change while using the docs, Docsy has a shortcut for you:</p>
-<ol>
-<li>Click <strong>Edit this page</strong> in the top right hand corner of the page.</li>
-<li>If you don&rsquo;t already have an up to date fork of the project repo, you are prompted to get one - click <strong>Fork this repository and propose changes</strong> or <strong>Update your Fork</strong> to get an up to date version of the project to edit. The appropriate page in your fork is displayed in edit mode.</li>
-<li>Follow the rest of the <a href="/docs/getting-started/contribution-guidelines/#quick-start-with-netlify">Quick start with Netlify</a> process above to make, preview, and propose your changes.</li>
-</ol>
-<h2 id="previewing-your-changes-locally">Previewing your changes locally<a class="td-heading-self-link" href="#previewing-your-changes-locally" aria-label="Heading self-link"></a></h2>
-<p>If you want to run your own local Hugo server to preview your changes as you work:</p>
-<ol>
-<li>
-<p>Follow the instructions in <a href="/docs/getting-started/">Getting started</a> to install Hugo and any other tools you need. You&rsquo;ll need at least <strong>Hugo version 0.45</strong> (we recommend using the most recent available version), and it must be the <strong>extended</strong> version, which supports SCSS.</p>
-</li>
-<li>
-<p>Fork the <a href="https://github.com/google/docsy-example">Goldydocs repo</a> repo into your own project, then create a local copy using <code>git clone</code>. Don’t forget to use <code>--recurse-submodules</code> or you won’t pull down some of the code you need to generate a working site.</p>
-<pre tabindex="0"><code>git clone --recurse-submodules --depth 1 https://github.com/google/docsy-example.git
-</code></pre></li>
-<li>
-<p>Run <code>hugo server</code> in the site root directory. By default your site will be available at http://localhost:1313/. Now that you&rsquo;re serving your site locally, Hugo will watch for changes to the content and automatically refresh your site.</p>
-</li>
-<li>
-<p>Continue with the usual GitHub workflow to edit files, commit them, push the
-changes up to your fork, and create a pull request.</p>
-</li>
-</ol>
-<h2 id="creating-an-issue">Creating an issue<a class="td-heading-self-link" href="#creating-an-issue" aria-label="Heading self-link"></a></h2>
-<p>If you&rsquo;ve found a problem in the docs, but you&rsquo;re not sure how to fix it yourself, please create an issue in the <a href="https://github.com/google/docsy-example/issues">Goldydocs repo</a>. You can also create an issue about a specific page by clicking the <strong>Create Issue</strong> button in the top right hand corner of the page.</p>
-<h2 id="useful-resources">Useful resources<a class="td-heading-self-link" href="#useful-resources" aria-label="Heading self-link"></a></h2>
+    <div class="lead">How to contribute to the KRS project</div>
+	<p>Welcome to the world of KRS contributors! We&rsquo;re excited to have you join our mission of empowering users with a seamless Kubernetes experience. This guide outlines how you can make valuable contributions to the KRS project.</p>
+<h3 id="sharpen-your-skills">Sharpen Your Skills<a class="td-heading-self-link" href="#sharpen-your-skills" aria-label="Heading self-link"></a></h3>
 <ul>
-<li><a href="https://www.docsy.dev/docs/">Docsy user guide</a>: All about Docsy, including how it manages navigation, look and feel, and multi-language support.</li>
-<li><a href="https://gohugo.io/documentation/">Hugo documentation</a>: Comprehensive reference for Hugo.</li>
-<li><a href="https://guides.github.com/activities/hello-world/">Github Hello World!</a>: A basic introduction to GitHub concepts and workflow.</li>
+<li><strong>Kubernetes Expertise:</strong> Possessing a strong foundation in Kubernetes concepts allows you to understand user needs and tailor contributions accordingly.</li>
+<li><strong>KRS Functionality Deep Dive:</strong> Delving into KRS functionalities equips you to contribute to core functionalities, integrations, or even documentation improvements.</li>
+</ul>
+<h3 id="contributing-to-krs">Contributing to KRS<a class="td-heading-self-link" href="#contributing-to-krs" aria-label="Heading self-link"></a></h3>
+<ol>
+<li><strong>Fork the Repository:</strong> Head over to the <a href="https://github.com/kubetoolsca/krs">KRS project repository on GitHub</a> and &ldquo;Fork&rdquo; it to create your personal copy.</li>
+<li><strong>Local Clone for Collaboration:</strong> Use git clone to clone your forked repository to your development environment. This sets the stage for local development and collaboration.</li>
+<li><strong>Navigate the Issue Landscape:</strong> Explore open issues within the KRS project repository. Look for labels like &ldquo;help wanted&rdquo; or issues indicating specific functionalities requiring attention. These are prime areas where your expertise can shine!</li>
+<li><strong>Branch Out Strategically:</strong> Create a new branch in your local repository using a descriptive name that references the issue you&rsquo;re tackling (e.g., fix/issue-<issue-number> for bug fixes or feature/enhancement-<descriptive-name> for new features).</li>
+<li><strong>Code with Collaboration in Mind:</strong>
+<ul>
+<li>Make your code contributions following the project&rsquo;s coding style and conventions.</li>
+<li>Write clear, well-documented code that adheres to best practices.</li>
+<li>Consider TDD development standards to ensure the integrity and reliability of your contribution.</li>
+</ul>
+</li>
+<li><strong>Commit with Clarity:</strong>
+<ul>
+<li>Stage your changes using git add.</li>
+<li>Craft a meaningful commit message that summarizes your contribution and references the issue number.</li>
+</ul>
+</li>
+<li><strong>Push for Progress:</strong> Push your committed changes to your forked repository on GitHub.</li>
+<li><strong>Propose Your Innovation:</strong>
+<ul>
+<li>Head over to your forked repository on GitHub and initiate a pull request.</li>
+<li>Provide a clear title and description for your pull request, mentioning the issue number and a brief explanation of your changes.</li>
+</ul>
+</li>
+</ol>
+<h3 id="additional-considerations-for-impactful-contributions">Additional Considerations for Impactful Contributions<a class="td-heading-self-link" href="#additional-considerations-for-impactful-contributions" aria-label="Heading self-link"></a></h3>
+<ul>
+<li><strong>Discussions Are Key:</strong> If your contribution involves a significant change, consider creating a separate issue to discuss the technical approach before diving in. This fosters collaboration and avoids potential roadblocks.</li>
+<li><strong>Testing is Essential:</strong> Whenever possible, write unit tests to accompany your code contributions. This strengthens the overall quality and maintainability of the KRS project.</li>
+<li><strong>Documentation Updates:</strong> If your contribution affects existing functionalities or introduces new features, ensure an accompanying documentation update follows your pull request. This ensures a smooth user experience.</li>
+</ul>
+<h4 id="thank-you-for-being-a-krs-contributor">Thank you for being a KRS contributor!<a class="td-heading-self-link" href="#thank-you-for-being-a-krs-contributor" aria-label="Heading self-link"></a></h4>
+<p>Your contributions directly influence the future of KRS and empower users to manage their Kubernetes clusters with greater efficiency. Let&rsquo;s build a better KRS together!</p>
+<ul>
+<li><a href="https://github.com/kubetoolsca/krs/tree/main">KRS Project Repository</a>: All about KRS, its features, use cases, and codebase.</li>
+<li><a href="https://github.com/kubetoolsca/krs-docs">KRS Documentation</a>: Comprehensive reference for KRS.</li>
 </ul>
 
 </div>
@@ -2240,7 +2487,63 @@ changes up to your fork, and create a pull request.</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-ffc590ea6468143712feda0ba56c1372">5 - Architecture</h1>
+	<h1 id="pg-fc5c34771c21b8e5103cafeae994e513">5 - How It Works</h1>
+    <div class="lead">A high-level overview of KRS&rsquo;s internal functionalities and the role of AI in its operations</div>
+	<p>The Kubernetes Resource Scanner (KRS) utilizes a multi-faceted approach to empower you with intelligent Kubernetes cluster management. This section delves into the core functionalities and the underlying Artificial Intelligence (AI) mechanisms that drive KRS&rsquo;s effectiveness.</p>
+<h3 id="comprehensive-cluster-analysis">Comprehensive Cluster Analysis<a class="td-heading-self-link" href="#comprehensive-cluster-analysis" aria-label="Heading self-link"></a></h3>
+<ul>
+<li>
+<p><strong>Initial Scan:</strong>
+Upon executing krs scan, KRS conducts a comprehensive scan of your Kubernetes cluster. This scan meticulously identifies the tools currently deployed within your environment, providing valuable insights into your existing infrastructure.</p>
+</li>
+<li>
+<p><strong>Deep Log and Event Analysis:</strong>
+KRS transcends basic scanning by leveraging its Natural Language Processing (NLP) capabilities. It delves into pod logs and events, uncovering potential issues that traditional methods might overlook. This proactive analysis helps you stay ahead of potential problems and maintain cluster stability.</p>
+</li>
+</ul>
+<h3 id="ai-driven-tool-recommendations">AI-Driven Tool Recommendations<a class="td-heading-self-link" href="#ai-driven-tool-recommendations" aria-label="Heading self-link"></a></h3>
+<ul>
+<li>
+<p><strong>KRS Recommender System:</strong>
+KRS maintains a meticulously curated database of Kubernetes tools. These tools are categorized and ranked based on various factors such as functionality, maturity, and community adoption. This ranking system ensures that KRS recommends the most relevant and effective tools for your specific needs.</p>
+</li>
+<li>
+<p><strong>Tailored Suggestions for Optimization:</strong>
+Following the analysis of your cluster configuration and identified tools, KRS leverages its AI engine to recommend the most suitable tools from its database. These recommendations can address potential gaps in your existing setup or suggest more efficient alternatives to optimize your cluster&rsquo;s performance.</p>
+</li>
+</ul>
+<h3 id="proactive-health-checks-with-large-language-models-llms">Proactive Health Checks with Large Language Models (LLMs)<a class="td-heading-self-link" href="#proactive-health-checks-with-large-language-models-llms" aria-label="Heading self-link"></a></h3>
+<ul>
+<li>
+<p><strong>Harnessing the Power of LLMs:</strong>
+KRS integrates seamlessly with cutting-edge Large Language Models (LLMs) such as OpenAI&rsquo;s gpt-3 or models from Hugging Face. These AI powerhouses are trained on massive datasets of text and code, enabling them to analyze information and reason at an exceptional level.</p>
+</li>
+<li>
+<p><strong>In-Depth Pod Analysis:</strong>
+When you initiate krs health and select a specific pod, KRS retrieves the associated logs and events. This data is then fed into the LLM you choose for analysis.</p>
+</li>
+<li>
+<p><strong>AI-Driven Insights and Interactive Troubleshooting:</strong>
+The chosen LLM meticulously analyzes the pod&rsquo;s health data, pinpointing potential problems and offering recommendations for rectification. The interactive terminal session facilitates further exploration of specific issues. You can delve deeper into the LLM&rsquo;s analysis or request additional insights to expedite troubleshooting and resolution</p>
+</li>
+</ul>
+<p>In essence, KRS acts as your intelligent co-pilot for Kubernetes cluster management. It automates tedious tasks, proactively identifies potential problems, and empowers you to make informed decisions for a healthy and optimized cluster environment.  This translates to increased efficiency, reduced downtime, and a more robust Kubernetes management experience.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-ffc590ea6468143712feda0ba56c1372">6 - Architecture</h1>
     <div class="lead">A short lead description about this content page. It can be <strong>bold</strong> or <em>italic</em> and can be split over multiple paragraphs.</div>
 	
 
@@ -2264,15 +2567,448 @@ changes up to your fork, and create a pull request.</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-5342de47efa5bec83c3fb47d2a279f1c">6 - CLI Reference</h1>
-    <div class="lead">A short lead description about this content page. It can be <strong>bold</strong> or <em>italic</em> and can be split over multiple paragraphs.</div>
-	
+	<h1 id="pg-5342de47efa5bec83c3fb47d2a279f1c">7 - CLI Reference</h1>
+    <div class="lead">Everything you need to master the KRS CLI</div>
+	<p>The KRS CLI provides a powerful set of commands for interacting with your Kubernetes clusters and leveraging KRS&rsquo;s intelligent features. This section serves as a comprehensive reference guide for all available commands and their functionalities.</p>
+
 
 <div class="pageinfo pageinfo-primary">
-<p>This is a placeholder page. Replace it with your own content.</p>
+<pre><code>krs --help
+
+Usage: krs [OPTIONS] COMMAND [ARGS]...
+
+krs: A command line interface to scan your Kubernetes Cluster, detect errors, provide resolutions using LLMs and recommend latest tools for your cluster
+
+╭─ Options ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ --install-completion          Install completion for the current  shell.                                                                                       │
+│ --show-completion             Show completion for the current shell, to copy it or customize the installation.                                                │
+│ --help                        Show this message and exit.                                                                                                     │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ exit         Ends krs services safely and deletes all state files from system. Removes all cached data.                                                       │
+│ export       Exports pod info with logs and events.                                                                                                           │
+│ health       Starts an interactive terminal using an LLM of your choice to detect and fix issues with your cluster                                            │
+│ init         Initializes the services and loads the scanner.                                                                                                  │
+│ namespaces   Lists all the namespaces.                                                                                                                        │
+│ pods         Lists all the pods with namespaces, or lists pods under a specified namespace.                                                                   │
+│ recommend    Generates a table of recommended tools from our ranking database and their CNCF project status.                                                  │
+│ scan         Scans the cluster and extracts a list of tools that are currently used.                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+</code></pre>
 
 </div>
 
+<h3 id="understanding-the-output">Understanding the Output<a class="td-heading-self-link" href="#understanding-the-output" aria-label="Heading self-link"></a></h3>
+<p>When you execute krs &ndash;help, you&rsquo;ll see a formatted output that provides an overview of the KRS CLI and its functionalities. Here&rsquo;s a breakdown of the key sections:</p>
+<ul>
+<li><strong>Usage:</strong>
+This line describes the general format for using KRS commands. It specifies that you can use optional arguments ([OPTIONS]) followed by a specific command (COMMAND) and any additional arguments ([ARGS]) needed for that command.</li>
+<li><strong>krs: A command line interface&hellip; :</strong>
+This section provides a brief description of KRS&rsquo;s purpose: scanning Kubernetes clusters, detecting errors, providing solutions using LLMs, and recommending the latest tools.</li>
+<li><strong>Options (Global):</strong>
+These options apply to all KRS commands and can be used to customize their behavior.
+<ul>
+<li><strong><code>--install-completion</code>:</strong>
+Installs autocompletion for the current shell, making it easier to type KRS commands.</li>
+<li><strong><code>--show-completion</code>:</strong>
+Shows available autocompletion options for the current shell.</li>
+<li><strong><code>--help</code>:</strong>
+Displays this help message and exits the program.</li>
+</ul>
+</li>
+<li><strong>Commands:</strong>
+This table lists all available KRS commands and their brief descriptions.</li>
+</ul>
+<h3 id="detailed-command-explanations">Detailed Command Explanations<a class="td-heading-self-link" href="#detailed-command-explanations" aria-label="Heading self-link"></a></h3>
+<p>This section dives deeper into each KRS command, providing a comprehensive explanation of its purpose, usage syntax, options, and examples for practical application.</p>
+<h5 id="1-krs-init">1. <strong>krs init:</strong><a class="td-heading-self-link" href="#1-krs-init" aria-label="Heading self-link"></a></h5>
+<ul>
+<li><strong>Purpose:</strong>
+Initializes the KRS services and loads the scanner. This step is necessary for KRS to function properly. Initialization ensures essential internal services are running efficiently, enabling features like health checks and communication with Large Language Models (LLMs).</li>
+<li><strong>Usage:</strong>
+<ul>
+<li><strong><code>krs init</code></strong></li>
+</ul>
+</li>
+<li><strong>Options:</strong> None</li>
+<li><strong>Example:</strong>
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>krs init
+</code></pre>
+
+</div>
+
+<strong>Output</strong>
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>Services initialized and scanner loaded.
+</code></pre>
+
+</div>
+</li>
+</ul>
+<h5 id="2-krs-scan">2. <strong>krs scan:</strong><a class="td-heading-self-link" href="#2-krs-scan" aria-label="Heading self-link"></a></h5>
+<ul>
+<li>
+<p><strong>Purpose:</strong>
+Scans your Kubernetes cluster to identify currently deployed tools and extract relevant information about their usage. This information is used for various purposes, including understanding your current cluster setup and generating recommendations.</p>
+</li>
+<li>
+<p><strong>Usage:</strong></p>
+<ul>
+<li><strong><code>krs scan</code></strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Options:</strong> None</p>
+</li>
+<li>
+<p><strong>Example:</strong>
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>krs scan
+</code></pre>
+
+</div>
+</p>
+</li>
+<li>
+<p><strong>Output:</strong></p>
+<p>The krs scan command provides a list of tools detected within your Kubernetes cluster. This list may include tools for monitoring, logging, security, networking, and more.</p>
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>Scanning your cluster...
+
+Cluster scanned successfully...
+
+Extracted tools used in cluster...
+
+
+The cluster is using the following tools:
+
++-------------+--------+------------------+---------------+
+| Tool Name   |   Rank | Category         | CNCF Status   |
++=============+========+==================+===============+
+| cilium      |      1 | Network Policies | graduated     |
++-------------+--------+------------------+---------------+
+| hubble      |      7 | Security Tools   | listed        |
++-------------+--------+------------------+---------------+
+</code></pre>
+
+</div>
+
+</li>
+</ul>
+<h5 id="3-krs-namespaces">3. <strong>krs namespaces:</strong><a class="td-heading-self-link" href="#3-krs-namespaces" aria-label="Heading self-link"></a></h5>
+<ul>
+<li>
+<p><strong>Purpose:</strong><br>
+Lists all namespaces within your cluster. Namespaces provide a way to logically group Kubernetes resources. Understanding your cluster&rsquo;s namespace structure is essential for managing resources effectively.</p>
+</li>
+<li>
+<p><strong>Usage:</strong></p>
+<ul>
+<li><strong><code>krs namespaces</code></strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Options:</strong> None</p>
+</li>
+<li>
+<p><strong>Example:</strong>
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>krs namespaces
+</code></pre>
+
+</div>
+</p>
+</li>
+<li>
+<p><strong>Output:</strong></p>
+<p>The krs namespaces command displays a list of all namespace names within your Kubernetes cluster.</p>
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>Namespaces in your cluster are: 
+
+1. default
+2. kube-node-lease
+3. kube-public
+4. kube-system
+</code></pre>
+
+</div>
+
+</li>
+</ul>
+<h5 id="4-krs-pods---namespace-namespace_name">4. <strong>krs pods [&ndash;namespace &lt;namespace_name&gt;]:</strong><a class="td-heading-self-link" href="#4-krs-pods---namespace-namespace_name" aria-label="Heading self-link"></a></h5>
+<ul>
+<li>
+<p><strong>Purpose:</strong>
+Lists all pods within the cluster, optionally filtered by a specific namespace. Pods are the fundamental units of execution in Kubernetes and house containerized applications.</p>
+</li>
+<li>
+<p><strong>Usage:</strong></p>
+<ul>
+<li><strong><code>krs pods</code></strong></li>
+<li><strong><code>krs pods --namespace &lt;namespace_name&gt;</code></strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Options:</strong></p>
+<ul>
+<li><strong><code>--namespace &lt;namespace_name&gt;</code></strong>: Filters the list of pods to include only those within the specified namespace.</li>
+</ul>
+</li>
+<li>
+<p><strong>Example:</strong>
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>krs pods
+</code></pre>
+
+</div>
+</p>
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>krs pods --namespace kube-system 
+</code></pre>
+
+</div>
+
+</li>
+<li>
+<p><strong>Output:</strong></p>
+<p>The krs namespaces command displays a list of all namespace names within your Kubernetes cluster.</p>
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>Pods in namespace 'kube-system': 
+
+1. cilium-9lqbq
+2. cilium-ffpct
+3. cilium-pvknr
+4. coredns-85f59d8784-nvr2n
+5. coredns-85f59d8784-p9jcv
+6. cpc-bridge-proxy-c6xzr
+7. cpc-bridge-proxy-p7r4p
+8. cpc-bridge-proxy-tkfrd
+9. csi-do-node-hwxn7
+10. csi-do-node-q27rc
+11. csi-do-node-rn7dm
+12. do-node-agent-6t5ms
+13. do-node-agent-85r8b
+14. do-node-agent-m7bvr
+15. hubble-relay-74686df4df-856pj
+16. hubble-ui-86cc69bddc-xc745
+17. konnectivity-agent-9k8vk
+18. konnectivity-agent-h5fm2
+19. konnectivity-agent-kf4xh
+20. kube-proxy-94945
+21. kube-proxy-qgv4j
+22. kube-proxy-vztzf
+</code></pre>
+
+</div>
+
+</li>
+</ul>
+<h5 id="5-krs-recommend">5. <strong>krs recommend:</strong><a class="td-heading-self-link" href="#5-krs-recommend" aria-label="Heading self-link"></a></h5>
+<ul>
+<li>
+<p><strong>Purpose:</strong>
+Generates a table of recommended tools based on KRS&rsquo;s internal ranking database and your cluster configuration. The recommendations consider factors like the identified gaps in your current tooling, tool popularity within the Kubernetes community, and feature compatibility with your cluster setup.</p>
+</li>
+<li>
+<p><strong>Usage:</strong></p>
+<ul>
+<li><strong><code>krs recommend</code></strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Options:</strong> None</p>
+</li>
+<li>
+<p><strong>Example:</strong>
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>krs recommend
+</code></pre>
+
+</div>
+</p>
+</li>
+<li>
+<p><strong>Output:</strong></p>
+<p>The krs recommend command displays a table with recommended tools. The table typically includes information like the tool name, a brief description, and its CNCF project status (e.g., graduated, listed).</p>
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>Our recommended tools for this deployment are:
+
++------------------+------------------------+-------------+---------------+
+| Category         | Recommendation         | Tool Name   | CNCF Status   |
++==================+========================+=============+===============+
+| Network Policies | Already using the best | cilium      | graduated     |
++------------------+------------------------+-------------+---------------+
+| Security Tools   | Recommended tool       | trivy       | listed        |
++------------------+------------------------+-------------+---------------+
+</code></pre>
+
+</div>
+
+</li>
+</ul>
+<h5 id="6-krs-health">6. <strong>krs health:</strong><a class="td-heading-self-link" href="#6-krs-health" aria-label="Heading self-link"></a></h5>
+<ul>
+<li>
+<p><strong>Purpose:</strong>
+Starts an interactive terminal session for performing in-depth health checks on your Kubernetes cluster. This session utilizes KRS&rsquo;s capabilities to go beyond basic health checks provided by Kubernetes itself.</p>
+</li>
+<li>
+<p><strong>Usage:</strong></p>
+<ul>
+<li><strong><code>krs health</code></strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Options:</strong> None</p>
+</li>
+<li>
+<p><strong>Example:</strong>
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>krs health
+</code></pre>
+
+</div>
+</p>
+</li>
+<li>
+<p><strong>Output:</strong></p>
+<p>Executing krs health launches a new interactive terminal window. Within this terminal, you&rsquo;ll have access to a set of KRS health check functionalities. These functionalities may vary depending on your KRS version and configuration, but they typically include:</p>
+<ul>
+<li><strong>Detailed Pod Health:</strong> KRS can delve deeper than basic liveness and readiness probes offered by Kubernetes. It can analyze container logs, resource consumption metrics, and even leverage LLMs to identify potential issues within pods that might not be readily apparent with standard checks.</li>
+<li><strong>Network Health Analysis:</strong> KRS can assess the health of your cluster&rsquo;s network fabric. This might involve examining pod-to-pod communication latency, identifying potential bottlenecks, and verifying network configuration for optimal performance.</li>
+<li><strong>Security Posture Evaluation:</strong> KRS can scan your cluster for security vulnerabilities. This may involve analyzing deployments for outdated container images, checking security context constraints (SCCs), and searching for suspicious activities within the cluster.</li>
+</ul>
+
+
+<div class="pageinfo pageinfo-primary">
+<pre><code>Starting interactive terminal...
+
+
+Choose the model provider for healthcheck: 
+
+[1] OpenAI 
+[2] Huggingface
+
+&gt;&gt; 1
+
+Installing necessary libraries..........
+
+openai is already installed.
+
+Enter your OpenAI API key: *open_ai_api_key*
+Enter the OpenAI model name: gpt-3.5-turbo
+API key and model are valid.
+
+Namespaces in the cluster:
+
+1. default
+2. kube-node-lease
+3. kube-public
+4. kube-system
+5. portainer
+
+Which namespace do you want to check the health for? Select a namespace by entering its number: &gt;&gt; 4
+
+Pods in the namespace kube-system:
+
+1. cilium-9lqbq
+2. cilium-ffpct
+3. cilium-pvknr
+4. coredns-85f59d8784-nvr2n
+5. coredns-85f59d8784-p9jcv
+6. cpc-bridge-proxy-c6xzr
+7. cpc-bridge-proxy-p7r4p
+8. cpc-bridge-proxy-tkfrd
+9. csi-do-node-hwxn7
+10. csi-do-node-q27rc
+11. csi-do-node-rn7dm
+12. do-node-agent-6t5ms
+13. do-node-agent-85r8b
+14. do-node-agent-m7bvr
+15. hubble-relay-74686df4df-856pj
+16. hubble-ui-86cc69bddc-xc745
+17. konnectivity-agent-9k8vk
+18. konnectivity-agent-h5fm2
+19. konnectivity-agent-kf4xh
+20. kube-proxy-94945
+21. kube-proxy-qgv4j
+22. kube-proxy-vztzf
+
+
+Which pod from kube-system do you want to check the health for? Select a pod by entering its number: &gt;&gt; 1
+
+Checking status of the pod...
+
+Extracting logs and events from the pod...
+
+Logs and events from the pod extracted successfully!
+
+
+Interactive session started. Type 'end chat' to exit from the session!
+
+&gt;&gt;  The log entries provided are empty {}, so there is nothing to analyze. Therefore, I can confirm that 'Everything looks good!' in this case.
+
+If there were warnings or errors in the log entries, I would have analyzed them thoroughly to identify the root cause. Depending on the specific warnings or errors, potential steps to resolve the issues could include:
+
+1. Analyzing the specific error message to understand the problem
+2. Checking Kubernetes resources (e.g., pods, deployments, configmaps) for any misconfigurations
+3. Verifying connectivity to external resources or dependencies
+4. Checking for resource limitations or constraints that could be causing issues
+5. Reviewing recent changes in the Kubernetes environment that could have introduced problems
+6. Using Kubernetes troubleshooting tools like kubectl logs, describe, or events to gather more information 
+
+By following these steps and addressing any identified issues, you can resolve warnings or errors in the Kubernetes environment.
+
+&gt;&gt; Wonderful, anything else to note?
+&gt;&gt;  In addition to resolving warnings or errors in Kubernetes logs, it's important to regularly monitor and maintain the Kubernetes environment to ensure smooth operation. Some best practices for Kubernetes maintenance include:
+
+1. Regularly updating Kubernetes components and cluster nodes to the latest stable versions to benefit from bug fixes and security patches.
+2. Implementing automated backups of critical data and configurations to prevent data loss in case of failures.
+3. Monitoring resource utilization and scaling components as needed to optimize performance and cost efficiency.
+4. Implementing security best practices, such as network policies, RBAC, and pod security policies to protect the cluster from unauthorized access or malicious activities.
+5. Conducting regular health checks and performance tuning to identify and address any bottlenecks or inefficiencies in the cluster.
+6. Developing a disaster recovery plan and testing it periodically to ensure business continuity in case of unexpected events.
+
+By following these maintenance practices, you can ensure the stability, scalability, and security of your Kubernetes environment for optimal DevOps operations.
+
+&gt;&gt; Alright, so are we done?
+&gt;&gt;  Yes, we have covered the analysis of the Kubernetes log entries and discussed best practices for Kubernetes maintenance. If you have any more questions or need further assistance, feel free to ask. Otherwise, we can consider this conversation complete.
+
+&gt;&gt; Wonderful. Thanks! end chat
+&gt;&gt;  You're welcome! If you have any more questions in the future, feel free to reach out. Have a great day! Goodbye!
+
+&gt;&gt; end chat
+</code></pre>
+
+</div>
+
+</li>
+</ul>
 
 </div>
 
@@ -2288,7 +3024,7 @@ changes up to your fork, and create a pull request.</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-26c5b3cd3e0466fc2bf2315820925ef4">7 - Example Page</h1>
+	<h1 id="pg-26c5b3cd3e0466fc2bf2315820925ef4">8 - Example Page</h1>
     <div class="lead">A short lead description about this content page. It can be <strong>bold</strong> or <em>italic</em> and can be split over multiple paragraphs.</div>
 	
 
@@ -2591,30 +3327,6 @@ bar := &#34;foo&#34;;
 <p>Stumptown PBR&amp;B keytar plaid street art, forage XOXO pitchfork selvage affogato green juice listicle pickled everyday carry hashtag. Organic sustainable letterpress sartorial scenester intelligentsia swag bushwick. Put a bird on it stumptown neutra locavore. IPhone typewriter messenger bag narwhal. Ennui cold-pressed seitan flannel keytar, single-origin coffee adaptogen occupy yuccie williamsburg chillwave shoreditch forage waistcoat.</p>
 <pre tabindex="0"><code>This is the final element on the page and there should be no margin below this.
 </code></pre>
-</div>
-
-
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-fc5c34771c21b8e5103cafeae994e513">8 - How It Works</h1>
-    <div class="lead">A short lead description about this content page. It can be <strong>bold</strong> or <em>italic</em> and can be split over multiple paragraphs.</div>
-	
-
-<div class="pageinfo pageinfo-primary">
-<p>This is a placeholder page. Replace it with your own content.</p>
-
-</div>
-
-
 </div>
 
 
