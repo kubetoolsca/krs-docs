@@ -1,6 +1,6 @@
 ---
 title: Overview
-description: This overview introduces KRS, your AI-powered co-pilot for managing Kubernetes clusters. .
+description: Introduces KRS, your AI-powered co-pilot for managing Kubernetes clusters.
 weight: 1
 ---
 

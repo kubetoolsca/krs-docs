@@ -12,7 +12,7 @@
       <link>http://localhost:1313/docs/getting-started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/getting-started/</guid>
-      <description>This is a placeholder page that shows you how to use this template site.&#xA;KRS empowers you to manage your Kubernetes clusters with the help of cutting-edge Artificial Intelligence. This guide equips you with everything you need to get started and unlock the potential of KRS&amp;rsquo;s intelligent recommendations, proactive problem detection, and powerful health checks.&#xA;Prerequisites Up and Running Kubernetes Cluster: Ensure you have a Kubernetes cluster running locally (e.</description>
+      <description>KRS empowers you to manage your Kubernetes clusters with the help of cutting-edge Artificial Intelligence. This guide equips you with everything you need to get started and unlock the potential of KRS&amp;rsquo;s intelligent recommendations, proactive problem detection, and powerful health checks.&#xA;Prerequisites Up and Running Kubernetes Cluster: Ensure you have a Kubernetes cluster running locally (e.g., Minikube, etc) or in the cloud (e.g., Amazon EKS, Google Kubernetes Engine, etc), if on the cloud, ensure that you&amp;rsquo;ve secured a config file, before using KRS.</description>
     </item>
   </channel>
 </rss>

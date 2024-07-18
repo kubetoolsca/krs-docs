@@ -19,7 +19,14 @@
       <link>http://localhost:1313/docs/getting-started/contribution-guidelines/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/getting-started/contribution-guidelines/</guid>
-      <description>These basic sample guidelines assume that your Docsy site is deployed using Netlify and your files are stored in GitHub. You can use the guidelines &amp;ldquo;as is&amp;rdquo; or adapt them with your own instructions: for example, other deployment options, information about your doc project&amp;rsquo;s file structure, project-specific review guidelines, versioning guidelines, or any other information your users might find useful when updating your site. Kubeflow has a great example.</description>
+      <description>Welcome to the world of KRS contributors! We&amp;rsquo;re excited to have you join our mission of empowering users with a seamless Kubernetes experience. This guide outlines how you can make valuable contributions to the KRS project.&#xA;Sharpen Your Skills Kubernetes Expertise: Possessing a strong foundation in Kubernetes concepts allows you to understand user needs and tailor contributions accordingly. KRS Functionality Deep Dive: Delving into KRS functionalities equips you to contribute to core functionalities, integrations, or even documentation improvements.</description>
+    </item>
+    <item>
+      <title>How It Works</title>
+      <link>http://localhost:1313/docs/getting-started/how-it-works/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/getting-started/how-it-works/</guid>
+      <description>The Kubernetes Resource Scanner (KRS) utilizes a multi-faceted approach to empower you with intelligent Kubernetes cluster management. This section delves into the core functionalities and the underlying Artificial Intelligence (AI) mechanisms that drive KRS&amp;rsquo;s effectiveness.&#xA;Comprehensive Cluster Analysis Initial Scan: Upon executing krs scan, KRS conducts a comprehensive scan of your Kubernetes cluster. This scan meticulously identifies the tools currently deployed within your environment, providing valuable insights into your existing infrastructure.</description>
     </item>
     <item>
       <title>Architecture</title>
@@ -33,7 +40,7 @@
       <link>http://localhost:1313/docs/getting-started/cli-reference/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/getting-started/cli-reference/</guid>
-      <description>This is a placeholder page. Replace it with your own content.</description>
+      <description>The KRS CLI provides a powerful set of commands for interacting with your Kubernetes clusters and leveraging KRS&amp;rsquo;s intelligent features. This section serves as a comprehensive reference guide for all available commands and their functionalities.&#xA;krs --help Usage: krs [OPTIONS] COMMAND [ARGS]... krs: A command line interface to scan your Kubernetes Cluster, detect errors, provide resolutions using LLMs and recommend latest tools for your cluster ╭─ Options ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮ │ --install-completion Install completion for the current shell.</description>
     </item>
     <item>
       <title>Example Page</title>
@@ -41,13 +48,6 @@
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/getting-started/example-page/</guid>
       <description>This is a placeholder page. Replace it with your own content.&#xA;Text can be bold, italic, or strikethrough. Links should be blue with no underlines (unless hovered over).&#xA;There should be whitespace between paragraphs. Vape migas chillwave sriracha poutine try-hard distillery. Tattooed shabby chic small batch, pabst art party heirloom letterpress air plant pop-up. Sustainable chia skateboard art party banjo cardigan normcore affogato vexillologist quinoa meggings man bun master cleanse shoreditch readymade.</description>
-    </item>
-    <item>
-      <title>How It Works</title>
-      <link>http://localhost:1313/docs/getting-started/how-it-works/</link>
-      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/getting-started/how-it-works/</guid>
-      <description>This is a placeholder page. Replace it with your own content.</description>
     </item>
   </channel>
 </rss>
