@@ -29,18 +29,18 @@
       <description>This is a placeholder page that shows you how to use this template site.&#xA;Do you have any example applications or code for your users in your repo or elsewhere? Link to your examples here.</description>
     </item>
     <item>
-      <title>AKS</title>
+      <title>Azure EKS</title>
       <link>http://localhost:1313/docs/tutorials/aks/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/tutorials/aks/</guid>
-      <description>Optimize your AKS cluster management with KRS. This powerful tool, installed locally on your machine, analyzes your AKS cluster to identify areas for improvement. KRS leverages AI to provide recommendations for enhancing your cluster&amp;rsquo;s efficiency and functionality.&#xA;Ready to Get Started? Our comprehensive tutorial on our GitHub repository will guide you through Setting up Krs for an EKS cluster on Microsoft Azure for step-by-step instructions:</description>
+      <description>Optimize your AKS cluster management with KRS. This powerful tool, installed locally on your machine, analyzes your AKS cluster to identify areas for improvement. KRS leverages AI to provide recommendations for enhancing your cluster&amp;rsquo;s efficiency and functionality.&#xA;Ready to Get Started? Our comprehensive tutorial on our GitHub repository will guide you through Setting up Krs for an EKS cluster on Microsoft Azure</description>
     </item>
     <item>
-      <title>AWS</title>
+      <title>DigitalOcean</title>
       <link>http://localhost:1313/docs/tutorials/aws/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/tutorials/aws/</guid>
-      <description>This is a placeholder page. Replace it with your own content.&#xA;Text can be bold, italic, or strikethrough. Links should be blue with no underlines (unless hovered over).&#xA;There should be whitespace between paragraphs. Vape migas chillwave sriracha poutine try-hard distillery. Tattooed shabby chic small batch, pabst art party heirloom letterpress air plant pop-up. Sustainable chia skateboard art party banjo cardigan normcore affogato vexillologist quinoa meggings man bun master cleanse shoreditch readymade.</description>
+      <description>Gain valuable insights for your DigitalOcean Kubernetes cluster with KRS. This local tool analyzes your cluster and provides recommendations for smoother management.&#xA;Ready to Get Started? Follow our guide on GitHub Installing and Configuring Krs with Digital Ocean Kubernetes Cluster</description>
     </item>
     <item>
       <title>Docker Desktop</title>
@@ -50,11 +50,11 @@
       <description>This is a placeholder page. Replace it with your own content.&#xA;Text can be bold, italic, or strikethrough. Links should be blue with no underlines (unless hovered over).&#xA;There should be whitespace between paragraphs. Vape migas chillwave sriracha poutine try-hard distillery. Tattooed shabby chic small batch, pabst art party heirloom letterpress air plant pop-up. Sustainable chia skateboard art party banjo cardigan normcore affogato vexillologist quinoa meggings man bun master cleanse shoreditch readymade.</description>
     </item>
     <item>
-      <title>EKS</title>
+      <title>AWS EKS</title>
       <link>http://localhost:1313/docs/tutorials/eks/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/tutorials/eks/</guid>
-      <description>Effortlessly optimize your EKS cluster with KRS. This powerful tool, running locally on your machine, analyzes your EKS cluster for improvement. Leverage KRS to gain valuable insights and recommendations for a smoother Kubernetes experience.&#xA;Ready to Get Started? Follow our step-by-step guide on Installing and Configuring Krs with EKS (AWS) to set up KRS with your EKS cluster.</description>
+      <description>Effortlessly optimize your EKS cluster with KRS. This powerful tool, running locally on your machine, analyzes your EKS cluster for improvement. Leverage KRS to gain valuable insights and recommendations for a smoother Kubernetes experience.&#xA;Ready to Get Started? Follow our step-by-step guide on Installing and Configuring Krs with EKS (AWS)</description>
     </item>
     <item>
       <title>Kind</title>
@@ -68,13 +68,13 @@
       <link>http://localhost:1313/docs/tasks/minikube/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/tasks/minikube/</guid>
-      <description>This is a placeholder page. Replace it with your own content.&#xA;Text can be bold, italic, or strikethrough. Links should be blue with no underlines (unless hovered over).&#xA;There should be whitespace between paragraphs. Vape migas chillwave sriracha poutine try-hard distillery. Tattooed shabby chic small batch, pabst art party heirloom letterpress air plant pop-up. Sustainable chia skateboard art party banjo cardigan normcore affogato vexillologist quinoa meggings man bun master cleanse shoreditch readymade.</description>
+      <description>Minikube is your key to unlocking a powerful local Kubernetes environment. This lightweight tool lets you set up a single-node Kubernetes cluster on your machine in a flash. It&amp;rsquo;s perfect for:&#xA;Learning Kubernetes: Gain hands-on experience with core concepts in a controlled setting. Testing Applications: Deploy and test your containerized apps locally. Rapid Iteration: Experiment and refine your configurations without impacting production. Ready to dive in? Check out our comprehensive Minikube tutorial for a step-by-step guide: Install and Configure Krs with MiniKube</description>
     </item>
     <item>
       <title>Contribution Guidelines</title>
-      <link>http://localhost:1313/docs/getting-started/contribution-guidelines/</link>
+      <link>http://localhost:1313/docs/contribution-guidelines/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/getting-started/contribution-guidelines/</guid>
+      <guid>http://localhost:1313/docs/contribution-guidelines/</guid>
       <description>Welcome to the world of KRS contributors! We&amp;rsquo;re excited to have you join our mission of empowering users with a seamless Kubernetes experience. This guide outlines how you can make valuable contributions to the KRS project.&#xA;Sharpen Your Skills Kubernetes Expertise: Possessing a strong foundation in Kubernetes concepts allows you to understand user needs and tailor contributions accordingly. KRS Functionality Deep Dive: Delving into KRS functionalities equips you to contribute to core functionalities, integrations, or even documentation improvements.</description>
     </item>
     <item>
@@ -93,9 +93,9 @@
     </item>
     <item>
       <title>CLI Reference</title>
-      <link>http://localhost:1313/docs/getting-started/cli-reference/</link>
+      <link>http://localhost:1313/docs/cli-reference/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/getting-started/cli-reference/</guid>
+      <guid>http://localhost:1313/docs/cli-reference/</guid>
       <description>The KRS CLI provides a powerful set of commands for interacting with your Kubernetes clusters and leveraging KRS&amp;rsquo;s intelligent features. This section serves as a comprehensive reference guide for all available commands and their functionalities.&#xA;krs --help Usage: krs [OPTIONS] COMMAND [ARGS]... krs: A command line interface to scan your Kubernetes Cluster, detect errors, provide resolutions using LLMs and recommend latest tools for your cluster ╭─ Options ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮ │ --install-completion Install completion for the current shell.</description>
     </item>
     <item>
