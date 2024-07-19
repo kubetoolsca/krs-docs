@@ -6,14 +6,14 @@
     <description>Recent content in Insight on Kube Docs</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Jul 2024 11:06:47 -0600</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jul 2024 16:23:39 -0600</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/insight/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How It Works</title>
       <link>http://localhost:1313/docs/getting-started/how-it-works/</link>
       <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/getting-started/how-it-works/</guid>
-      <description>The Kubernetes Resource Scanner (KRS) utilizes a multi-faceted approach to empower you with intelligent Kubernetes cluster management. This section delves into the core functionalities and the underlying Artificial Intelligence (AI) mechanisms that drive KRS&amp;rsquo;s effectiveness.</description>
+      <description>The Kubernetes Resource Scanner (KRS) utilizes a multi-faceted approach to empower you with intelligent Kubernetes cluster management. This section delves into the core functionalities and the underlying Artificial Intelligence (AI) mechanisms that drive KRS&amp;rsquo;s effectiveness.&#xA;Comprehensive Cluster Analysis Initial Scan: Upon executing krs scan, KRS conducts a comprehensive scan of your Kubernetes cluster. This scan meticulously identifies the tools currently deployed within your environment, providing valuable insights into your existing infrastructure.</description>
     </item>
   </channel>
 </rss>

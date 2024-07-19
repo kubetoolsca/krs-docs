@@ -3,13 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/docs/getting-started/overview/</loc>
-    <lastmod>2024-07-17T16:39:24-06:00</lastmod>
+    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/getting-started/tasks/manual/</loc>
     <lastmod>2024-07-17T16:39:24-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/getting-started/</loc>
-    <lastmod>2024-07-17T16:39:24-06:00</lastmod>
+    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/examples/</loc>
     <lastmod>2024-07-03T07:19:21+05:30</lastmod>
@@ -39,13 +39,10 @@
     <lastmod>2024-07-17T11:06:47-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/getting-started/contribution-guidelines/</loc>
-    <lastmod>2024-07-17T11:06:47-06:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/getting-started/architecture/</loc>
-    <lastmod>2024-07-17T11:06:47-06:00</lastmod>
+    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2024-07-17T16:39:24-06:00</lastmod>
+    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
@@ -62,32 +59,17 @@
                 href="http://localhost:1313/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/docs/getting-started/cli-reference/</loc>
-    <lastmod>2024-07-17T11:06:47-06:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/cli-reference/</loc>
-    <lastmod>2024-07-17T11:06:47-06:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/docs/</loc>
-    <lastmod>2024-07-17T11:06:47-06:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/getting-started/example-page/</loc>
-    <lastmod>2024-07-11T14:10:57-06:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/examples/</loc>
-    <lastmod>2024-07-11T14:10:57-06:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/categories/how-it-works/</loc>
-    <lastmod>2024-07-17T11:06:47-06:00</lastmod>
+    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/getting-started/how-it-works/</loc>
-    <lastmod>2024-07-17T11:06:47-06:00</lastmod>
+    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/sample/</loc>
-    <lastmod>2024-07-17T11:06:47-06:00</lastmod>
+    <loc>http://localhost:1313/tags/insight/</loc>
+    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-07-17T16:39:24-06:00</lastmod>
+    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
@@ -103,6 +85,39 @@
                 hreflang="en"
                 href="http://localhost:1313/tags/"
                 />
+  </url><url>
+    <loc>http://localhost:1313/docs/getting-started/architecture/</loc>
+    <lastmod>2024-07-17T11:06:47-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/cli/</loc>
+    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/getting-started/cli-reference/</loc>
+    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/cli-reference/</loc>
+    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/commands/</loc>
+    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/docs/</loc>
+    <lastmod>2024-07-17T11:06:47-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/example/</loc>
+    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/getting-started/example-page/</loc>
+    <lastmod>2024-07-11T14:10:57-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/examples/</loc>
+    <lastmod>2024-07-11T14:10:57-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/krs-cli/</loc>
+    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/sample/</loc>
+    <lastmod>2024-07-17T11:06:47-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/test/</loc>
     <lastmod>2024-07-17T11:06:47-06:00</lastmod>
@@ -121,7 +136,7 @@
                 />
   </url><url>
     <loc>http://localhost:1313/docs/</loc>
-    <lastmod>2024-07-03T07:19:21+05:30</lastmod>
+    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="no"
@@ -139,22 +154,22 @@
                 />
   </url><url>
     <loc>http://localhost:1313/categories/getting-started/</loc>
-    <lastmod>2024-07-17T16:39:24-06:00</lastmod>
+    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/guide/</loc>
-    <lastmod>2024-07-17T16:39:24-06:00</lastmod>
+    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/install/</loc>
-    <lastmod>2024-07-17T16:39:24-06:00</lastmod>
+    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/intro/</loc>
-    <lastmod>2024-07-17T16:39:24-06:00</lastmod>
+    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/krs/</loc>
-    <lastmod>2024-07-17T16:39:24-06:00</lastmod>
+    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-07-17T11:06:47-06:00</lastmod>
+    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="no"
@@ -190,6 +205,6 @@
                 />
   </url><url>
     <loc>http://localhost:1313/categories/setup/</loc>
-    <lastmod>2024-07-17T16:39:24-06:00</lastmod>
+    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
   </url>
 </urlset>

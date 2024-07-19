@@ -16,25 +16,11 @@
       <description>This is a placeholder page. Replace it with your own content.</description>
     </item>
     <item>
-      <title>CLI Reference</title>
-      <link>http://localhost:1313/docs/getting-started/cli-reference/</link>
-      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/getting-started/cli-reference/</guid>
-      <description>This is a placeholder page. Replace it with your own content.</description>
-    </item>
-    <item>
       <title>Example Page</title>
       <link>http://localhost:1313/docs/getting-started/example-page/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/getting-started/example-page/</guid>
       <description>This is a placeholder page. Replace it with your own content.&#xA;Text can be bold, italic, or strikethrough. Links should be blue with no underlines (unless hovered over).&#xA;There should be whitespace between paragraphs. Vape migas chillwave sriracha poutine try-hard distillery. Tattooed shabby chic small batch, pabst art party heirloom letterpress air plant pop-up. Sustainable chia skateboard art party banjo cardigan normcore affogato vexillologist quinoa meggings man bun master cleanse shoreditch readymade.</description>
-    </item>
-    <item>
-      <title>How It Works</title>
-      <link>http://localhost:1313/docs/getting-started/how-it-works/</link>
-      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/getting-started/how-it-works/</guid>
-      <description>This is a placeholder page. Replace it with your own content.</description>
     </item>
   </channel>
 </rss>
