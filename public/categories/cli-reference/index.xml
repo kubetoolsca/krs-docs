@@ -17,10 +17,10 @@
     </item>
     <item>
       <title>CLI Reference</title>
-      <link>http://localhost:1313/docs/getting-started/cli-reference/</link>
+      <link>http://localhost:1313/docs/cli-reference/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/getting-started/cli-reference/</guid>
-      <description>This is a placeholder page. Replace it with your own content.</description>
+      <guid>http://localhost:1313/docs/cli-reference/</guid>
+      <description>The KRS CLI provides a powerful set of commands for interacting with your Kubernetes clusters and leveraging KRS&amp;rsquo;s intelligent features. This section serves as a comprehensive reference guide for all available commands and their functionalities.&#xA;krs --help Usage: krs [OPTIONS] COMMAND [ARGS]... krs: A command line interface to scan your Kubernetes Cluster, detect errors, provide resolutions using LLMs and recommend latest tools for your cluster ╭─ Options ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮ │ --install-completion Install completion for the current shell.</description>
     </item>
   </channel>
 </rss>

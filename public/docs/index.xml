@@ -14,5 +14,19 @@
       <guid>http://localhost:1313/docs/examples/</guid>
       <description>This is a placeholder page that shows you how to use this template site.&#xA;Do you have any example applications or code for your users in your repo or elsewhere? Link to your examples here.</description>
     </item>
+    <item>
+      <title>Contribution Guidelines</title>
+      <link>http://localhost:1313/docs/contribution-guidelines/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/contribution-guidelines/</guid>
+      <description>Welcome to the world of KRS contributors! We&amp;rsquo;re excited to have you join our mission of empowering users with a seamless Kubernetes experience. This guide outlines how you can make valuable contributions to the KRS project.&#xA;Sharpen Your Skills Kubernetes Expertise: Possessing a strong foundation in Kubernetes concepts allows you to understand user needs and tailor contributions accordingly. KRS Functionality Deep Dive: Delving into KRS functionalities equips you to contribute to core functionalities, integrations, or even documentation improvements.</description>
+    </item>
+    <item>
+      <title>CLI Reference</title>
+      <link>http://localhost:1313/docs/cli-reference/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/cli-reference/</guid>
+      <description>The KRS CLI provides a powerful set of commands for interacting with your Kubernetes clusters and leveraging KRS&amp;rsquo;s intelligent features. This section serves as a comprehensive reference guide for all available commands and their functionalities.&#xA;krs --help Usage: krs [OPTIONS] COMMAND [ARGS]... krs: A command line interface to scan your Kubernetes Cluster, detect errors, provide resolutions using LLMs and recommend latest tools for your cluster ╭─ Options ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮ │ --install-completion Install completion for the current shell.</description>
+    </item>
   </channel>
 </rss>
