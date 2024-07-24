@@ -151,8 +151,8 @@ params:
   prism_syntax_highlighting: false
 
   copyright:
-    authors: Docsy Authors | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) |
-    from_year: 2018
+    authors: Kubetools Technologies
+    from_year: 2024
 
   # User interface configuration
   ui:
@@ -196,11 +196,11 @@ params:
     # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
     developer:
       - name: GitHub
-        url: https://github.com/kubetoolsca
+        url: /docs/
         icon: fab fa-github
         desc: Development takes place here!
       - name: Slack
-        url: www.launchpass.com/kubetoolsio
+        url: https://www.launchpass.com/kubetoolsio
         icon: fab fa-slack
         desc: Chat with other project developers
   

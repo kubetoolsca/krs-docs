@@ -6,7 +6,7 @@
     <description>Recent content in Cloud Providers on Kube Docs</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jul 2024 16:16:16 -0600</lastBuildDate>
     <atom:link href="http://localhost:1313/docs/tutorials/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Azure EKS</title>
@@ -28,6 +28,13 @@
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/tutorials/eks/</guid>
       <description>Effortlessly optimize your EKS cluster with KRS. This powerful tool, running locally on your machine, analyzes your EKS cluster for improvement. Leverage KRS to gain valuable insights and recommendations for a smoother Kubernetes experience.&#xA;Ready to Get Started? Follow our step-by-step guide on Installing and Configuring Krs with EKS (AWS)</description>
+    </item>
+    <item>
+      <title>Google&#39;s GKE</title>
+      <link>http://localhost:1313/docs/tutorials/gke/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tutorials/gke/</guid>
+      <description>Effortlessly optimize your GKE cluster with KRS. This powerful tool, running locally on your machine, analyzes your GKE cluster for improvement. Leverage KRS to gain valuable insights and recommendations for a smoother Kubernetes experience.&#xA;Ready to Get Started? Follow our step-by-step guide on Setting up Krs for Google Kubernetes Engine</description>
     </item>
   </channel>
 </rss>
