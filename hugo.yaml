@@ -1,5 +1,5 @@
 baseURL: https://example.docsy.dev
-title: Kube Docs
+title: KRS Docs
 
 # cSpell:ignore goldmark github hugo readingtime docsy subdir lastmod pygments linenos catmullrom norsk gu
 
@@ -46,7 +46,7 @@ imaging:
 languages:
   en:
     languageName: English
-    title: Kube Docs
+    title: KRS Docs
     params:
       description: A Docsy example site
       custom_css: [css/custom.css]
@@ -60,7 +60,7 @@ languages:
   'no':
     languageName: Norsk
     contentDir: content/no
-    title: Kube Docs
+    title: KRS Docs
     params:
       description: Docsy er operativsystem for skyen
       time_format_default: 02.01.2006
@@ -69,7 +69,7 @@ languages:
     languageDirection: rtl
     languageName: "فارسی (Persian)"
     contentDir: content/fa
-    title: "Kube Docs"
+    title: "KRS Docs"
     params:
       description: "یک نمونه برای پوسته داکسی"
       time_format_default: 2006.01.02

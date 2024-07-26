@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>How It Works on Kube Docs</title>
+    <title>How It Works on KRS Docs</title>
     <link>http://localhost:1313/categories/how-it-works/</link>
-    <description>Recent content in How It Works on Kube Docs</description>
+    <description>Recent content in How It Works on KRS Docs</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 18 Jul 2024 16:23:39 -0600</lastBuildDate>
