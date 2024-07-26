@@ -49,6 +49,7 @@ languages:
     title: Kube Docs
     params:
       description: A Docsy example site
+      custom_css: [css/custom.css]
     menu:
       main:
       - identifier: "k_blog"

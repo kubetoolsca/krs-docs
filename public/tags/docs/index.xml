@@ -6,14 +6,14 @@
     <description>Recent content in Docs on Kube Docs</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Jul 2024 11:06:47 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jul 2024 13:41:18 -0600</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Architecture</title>
       <link>http://localhost:1313/docs/getting-started/architecture/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/getting-started/architecture/</guid>
-      <description>This is a placeholder page. Replace it with your own content.</description>
+      <description> </description>
     </item>
   </channel>
 </rss>
