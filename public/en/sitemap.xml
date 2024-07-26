@@ -5,11 +5,11 @@
     <loc>http://localhost:1313/docs/getting-started/overview/</loc>
     <lastmod>2024-07-18T16:23:39-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/tasks/manual/</loc>
-    <lastmod>2024-07-19T16:16:16-06:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/docs/getting-started/</loc>
     <lastmod>2024-07-18T16:23:39-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/tasks/manual/</loc>
+    <lastmod>2024-07-19T16:16:16-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/tutorials/aks/</loc>
     <lastmod>2024-07-19T16:16:16-06:00</lastmod>
@@ -166,19 +166,19 @@
                 />
   </url><url>
     <loc>http://localhost:1313/categories/getting-started/</loc>
-    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
+    <lastmod>2024-07-19T16:16:16-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/guide/</loc>
-    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
+    <lastmod>2024-07-19T16:16:16-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/install/</loc>
-    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
+    <lastmod>2024-07-19T16:16:16-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/intro/</loc>
-    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
+    <lastmod>2024-07-19T16:16:16-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/krs/</loc>
-    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
+    <lastmod>2024-07-19T16:16:16-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/search/</loc>
     <lastmod>2024-07-11T14:10:57-06:00</lastmod>
@@ -199,6 +199,6 @@
                 />
   </url><url>
     <loc>http://localhost:1313/categories/setup/</loc>
-    <lastmod>2024-07-18T16:23:39-06:00</lastmod>
+    <lastmod>2024-07-19T16:16:16-06:00</lastmod>
   </url>
 </urlset>

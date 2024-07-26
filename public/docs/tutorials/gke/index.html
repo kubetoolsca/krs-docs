@@ -18,12 +18,12 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Google&#39;s GKE | KRS Docs</title>
-<meta name="description" content="A guide to setting up Krs for Google Kubernetes Engine
+<meta name="description" content="How to Install KRS on Google Kubernetes Engine
 ">
 <meta property="og:url" content="http://localhost:1313/docs/tutorials/gke/">
   <meta property="og:site_name" content="KRS Docs">
   <meta property="og:title" content="Google&#39;s GKE">
-  <meta property="og:description" content="A guide to setting up Krs for Google Kubernetes Engine">
+  <meta property="og:description" content="How to Install KRS on Google Kubernetes Engine">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
@@ -31,13 +31,13 @@
     <meta property="article:modified_time" content="2024-07-24T13:41:18-06:00">
 
   <meta itemprop="name" content="Google&#39;s GKE">
-  <meta itemprop="description" content="A guide to setting up Krs for Google Kubernetes Engine">
+  <meta itemprop="description" content="How to Install KRS on Google Kubernetes Engine">
   <meta itemprop="datePublished" content="2017-01-05T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-07-24T13:41:18-06:00">
-  <meta itemprop="wordCount" content="50">
+  <meta itemprop="wordCount" content="384">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Google&#39;s GKE">
-  <meta name="twitter:description" content="A guide to setting up Krs for Google Kubernetes Engine">
+  <meta name="twitter:description" content="How to Install KRS on Google Kubernetes Engine">
 <link href="/scss/main.css" rel="stylesheet">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -53,22 +53,11 @@
   <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="https://blog.kubetools.io/" target="_blank" rel="noopener"><span>Blog</span></a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link active" href="/docs/"><span>Docs</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/community/"><span>Community</span></a>
       </li>
-      <li class="nav-item dropdown d-none d-lg-block">
-        <div class="dropdown">
-  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="/no/">Norsk</a></li>
-    <li><a class="dropdown-item" href="/fa/">فارسی (Persian)</a></li>
-    </ul>
-</div></li>
       </ul>
   </div>
   <div class="d-none d-lg-block">
@@ -94,15 +83,6 @@
     </button>
   </form>
   <nav class="td-sidebar-nav collapse" id="td-section-nav">
-    <div class="td-sidebar-nav__section nav-item dropdown d-block d-lg-none">
-      <div class="dropdown">
-  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="/no/">Norsk</a></li>
-    <li><a class="dropdown-item" href="/fa/">فارسی (Persian)</a></li>
-    </ul>
-</div>
-    </div>
     <ul class="td-sidebar-nav__section pe-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
   <a href="/docs/" title="Documentation" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Docs</span></a>
@@ -170,11 +150,8 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#ready-to-get-started">Ready to Get Started?</a></li>
-      </ul>
-    </li>
+    <li><a href="#prerequisite">Prerequisite</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
   </ul>
 </nav>
       </div>
@@ -189,8 +166,8 @@
         <li><a class="taxonomy-term" href="http://localhost:1313/tags/example/" data-taxonomy-term="example"><span class="taxonomy-label">Example</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="http://localhost:1313/tags/illustration/" data-taxonomy-term="illustration"><span class="taxonomy-label">Illustration</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="http://localhost:1313/tags/insight/" data-taxonomy-term="insight"><span class="taxonomy-label">Insight</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/install/" data-taxonomy-term="install"><span class="taxonomy-label">Install</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/krs/" data-taxonomy-term="krs"><span class="taxonomy-label">Krs</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/install/" data-taxonomy-term="install"><span class="taxonomy-label">Install</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/krs/" data-taxonomy-term="krs"><span class="taxonomy-label">Krs</span><span class="taxonomy-count">2</span></a></li>
         <li><a class="taxonomy-term" href="http://localhost:1313/tags/krs-cli/" data-taxonomy-term="krs-cli"><span class="taxonomy-label">KRS CLI</span><span class="taxonomy-count">1</span></a></li>
         </ul>
     </div>
@@ -198,11 +175,11 @@
       <h5 class="taxonomy-title">Categories</h5>
       <ul class="taxonomy-terms">
         <li><a class="taxonomy-term" href="http://localhost:1313/categories/cli-reference/" data-taxonomy-term="cli-reference"><span class="taxonomy-label">CLI-Reference</span><span class="taxonomy-count">2</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/categories/getting-started/" data-taxonomy-term="getting-started"><span class="taxonomy-label">Getting Started</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/categories/guide/" data-taxonomy-term="guide"><span class="taxonomy-label">Guide</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/categories/getting-started/" data-taxonomy-term="getting-started"><span class="taxonomy-label">Getting Started</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/categories/guide/" data-taxonomy-term="guide"><span class="taxonomy-label">Guide</span><span class="taxonomy-count">2</span></a></li>
         <li><a class="taxonomy-term" href="http://localhost:1313/categories/how-it-works/" data-taxonomy-term="how-it-works"><span class="taxonomy-label">How It Works</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/categories/intro/" data-taxonomy-term="intro"><span class="taxonomy-label">Intro</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/categories/setup/" data-taxonomy-term="setup"><span class="taxonomy-label">Setup</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/categories/intro/" data-taxonomy-term="intro"><span class="taxonomy-label">Intro</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/categories/setup/" data-taxonomy-term="setup"><span class="taxonomy-label">Setup</span><span class="taxonomy-count">2</span></a></li>
         </ul>
     </div>
   
@@ -225,13 +202,123 @@
             
 <div class="td-content">
 	<h1>Google&#39;s GKE</h1>
-	<div class="lead">A guide to setting up Krs for Google Kubernetes Engine</div>
+	<div class="lead">How to Install KRS on Google Kubernetes Engine</div>
 	<header class="article-meta">
 		
   </header>
 	<p>Effortlessly optimize your GKE cluster with KRS. This powerful tool, running locally on your machine, analyzes your GKE cluster for improvement. Leverage KRS to gain valuable insights and recommendations for a smoother Kubernetes experience.</p>
-<h3 id="ready-to-get-started">Ready to Get Started?<a class="td-heading-self-link" href="#ready-to-get-started" aria-label="Heading self-link"></a></h3>
-<p>Follow our step-by-step guide on <a href="https://github.com/kubetoolsca/krs/blob/main/gke.md">Setting up Krs for Google Kubernetes Engine</a></p>
+<h2 id="prerequisite">Prerequisite<a class="td-heading-self-link" href="#prerequisite" aria-label="Heading self-link"></a></h2>
+<ul>
+<li>A Google Cloud Account</li>
+<li>Installing Google Cloud SDK on your macOS</li>
+</ul>
+<h2 id="getting-started">Getting Started<a class="td-heading-self-link" href="#getting-started" aria-label="Heading self-link"></a></h2>
+<ol>
+<li>
+<p><strong>Execute the following command to install Google Cloud SDK in your system</strong></p>
+<pre tabindex="0"><code>tar xfz google-cloud-sdk-195.0.0-darwin-x86_64.tar.gz
+./google-cloud-sdk/install.sh
+</code></pre></li>
+<li>
+<p><strong>Enable Google Cloud Engine API</strong></p>
+<p><img alt="image" src="https://github.com/kubetoolsca/krs/assets/313480/6c441226-9e8e-4a91-ba8a-e0c595173faa"></p>
+</li>
+<li>
+<p><strong>Authenticate Your Google Cloud using gcloud auth</strong></p>
+<pre tabindex="0"><code>gcloud init
+</code></pre><p>In your browser, log in to your Google user account when prompted and click Allow to grant permission to access Google Cloud Platform resources.</p>
+</li>
+<li>
+<p><strong>Creating GKE Cluster</strong></p>
+<pre tabindex="0"><code>gcloud container clusters create k8s-lab1 --disk-size 10 --zone asia-east1-a --machine-type n1-standard-2 --num-nodes 3 --scopes compute-rw
+</code></pre></li>
+<li>
+<p><strong>Viewing it on Google Cloud Platform</strong></p>
+<p><img alt="image" src="https://github.com/kubetoolsca/krs/assets/313480/733cfe3a-c951-4ea0-b7f5-4a28f7393c8e"></p>
+</li>
+<li>
+<p><strong>Viewing the new context on Docker Desktop</strong></p>
+ <img width="738" alt="image" src="https://github.com/kubetoolsca/krs/assets/313480/8afc21c5-1961-4af8-b491-00c99cb350fa">
+</li>
+<li>
+<p><strong>Verifying the Google Kubernetes Cluster</strong></p>
+<pre tabindex="0"><code>kubectl get nodes
+NAME                                      STATUS   ROLES    AGE    VERSION
+gke-k8s-lab1-default-pool-5dfb7153-3fr7   Ready    &lt;none&gt;   3m1s   v1.29.4-gke.1043002
+gke-k8s-lab1-default-pool-5dfb7153-nl3v   Ready    &lt;none&gt;   3m1s   v1.29.4-gke.1043002
+gke-k8s-lab1-default-pool-5dfb7153-rkg8   Ready    &lt;none&gt;   3m2s   v1.29.4-gke.1043002
+</code></pre></li>
+<li>
+<p><strong>Initialize the KRS</strong></p>
+<pre tabindex="0"><code>krs init
+Services initialized and scanner loaded.
+</code></pre></li>
+<li>
+<p><strong>Running the scanner</strong></p>
+<pre tabindex="0"><code>krs scan
+
+Scanning your cluster...
+
+Cluster scanned successfully...
+
+Extracted tools used in cluster...
+
+
+The cluster is using the following tools:
+
++-------------+--------+-----------------------------+---------------+
+| Tool Name   |   Rank | Category                    | CNCF Status   |
++=============+========+=============================+===============+
+| autoscaler  |      5 | Cluster with Core CLI tools | unlisted      |
++-------------+--------+-----------------------------+---------------+
+| fluentbit   |      4 | Logging and Tracing         | unlisted      |
++-------------+--------+-----------------------------+---------------+
+</code></pre></li>
+<li>
+<p><strong>Checking the Krs Recommendation</strong></p>
+<pre tabindex="0"><code>krs recommend
+
+Our recommended tools for this deployment are:
+
++-----------------------------+------------------+-------------+---------------+
+| Category                    | Recommendation   | Tool Name   | CNCF Status   |
++=============================+==================+=============+===============+
+| Cluster with Core CLI tools | Recommended tool | k9s         | unlisted      |
++-----------------------------+------------------+-------------+---------------+
+| Logging and Tracing         | Recommended tool | elk         | unlisted      |
+</code></pre></li>
+<li>
+<p><strong>Installing Kubeview</strong></p>
+<pre tabindex="0"><code>git clone https://github.com/benc-uk/kubeview
+cd kubeview/charts/
+helm install kubeview kubeview
+</code></pre></li>
+<li>
+<p><strong>Running the scanner again</strong></p>
+<pre tabindex="0"><code>krs scan
+
+Scanning your cluster...
+
+Cluster scanned successfully...
+
+Extracted tools used in cluster...
+
+
+The cluster is using the following tools:
+
++-------------+--------+-----------------------------+---------------+
+| Tool Name   |   Rank | Category                    | CNCF Status   |
++=============+========+=============================+===============+
+| kubeview    |     30 | Cluster with Core CLI tools | unlisted      |
++-------------+--------+-----------------------------+---------------+
+|             |      3 | Cluster Management          | unlisted      |
++-------------+--------+-----------------------------+---------------+
+| autoscaler  |      5 | Cluster with Core CLI tools | unlisted      |
++-------------+--------+-----------------------------+---------------+
+| fluentbit   |      4 | Logging and Tracing         | unlisted      |
++-------------+--------+-----------------------------+---------------+
+</code></pre></li>
+</ol>
 
 	<style>
   .feedback--answer {

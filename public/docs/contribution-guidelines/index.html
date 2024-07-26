@@ -31,7 +31,7 @@
   <meta itemprop="name" content="Contribution Guidelines">
   <meta itemprop="description" content="How to contribute to the KRS project">
   <meta itemprop="dateModified" content="2024-07-19T16:16:16-06:00">
-  <meta itemprop="wordCount" content="438">
+  <meta itemprop="wordCount" content="510">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Contribution Guidelines">
   <meta name="twitter:description" content="How to contribute to the KRS project">
@@ -50,22 +50,11 @@
   <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="https://blog.kubetools.io/" target="_blank" rel="noopener"><span>Blog</span></a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link active" href="/docs/"><span>Docs</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/community/"><span>Community</span></a>
       </li>
-      <li class="nav-item dropdown d-none d-lg-block">
-        <div class="dropdown">
-  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="/no/">Norsk</a></li>
-    <li><a class="dropdown-item" href="/fa/">فارسی (Persian)</a></li>
-    </ul>
-</div></li>
       </ul>
   </div>
   <div class="d-none d-lg-block">
@@ -91,15 +80,6 @@
     </button>
   </form>
   <nav class="td-sidebar-nav collapse" id="td-section-nav">
-    <div class="td-sidebar-nav__section nav-item dropdown d-block d-lg-none">
-      <div class="dropdown">
-  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="/no/">Norsk</a></li>
-    <li><a class="dropdown-item" href="/fa/">فارسی (Persian)</a></li>
-    </ul>
-</div>
-    </div>
     <ul class="td-sidebar-nav__section pe-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
   <a href="/docs/" title="Documentation" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Docs</span></a>
@@ -167,13 +147,21 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#code-of-conduct"><strong>Code of Conduct</strong></a></li>
+    <li><a href="#release-management-and-pull-request-submission-guidelines"><strong>Release Management and Pull Request Submission Guidelines</strong></a>
       <ul>
-        <li><a href="#sharpen-your-skills">Sharpen Your Skills</a></li>
-        <li><a href="#contributing-to-krs">Contributing to KRS</a></li>
-        <li><a href="#additional-considerations-for-impactful-contributions">Additional Considerations for Impactful Contributions</a></li>
+        <li><a href="#repository-branch-structure"><strong>Repository Branch Structure</strong></a></li>
+        <li><a href="#contributing-to-the-project"><strong>Contributing to the Project</strong></a></li>
       </ul>
     </li>
+    <li><a href="#pull-request-pr-process"><strong>Pull Request (PR) Process</strong></a>
+      <ul>
+        <li></li>
+        <li><a href="#step-2-create-a-new-branch"><strong>Step 2: Create a New Branch</strong></a></li>
+        <li><a href="#notes-on-contribution"><strong>Notes on Contribution</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#additional-resources"><strong>Additional Resources</strong></a></li>
   </ul>
 </nav>
       </div>
@@ -188,8 +176,8 @@
         <li><a class="taxonomy-term" href="http://localhost:1313/tags/example/" data-taxonomy-term="example"><span class="taxonomy-label">Example</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="http://localhost:1313/tags/illustration/" data-taxonomy-term="illustration"><span class="taxonomy-label">Illustration</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="http://localhost:1313/tags/insight/" data-taxonomy-term="insight"><span class="taxonomy-label">Insight</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/install/" data-taxonomy-term="install"><span class="taxonomy-label">Install</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/krs/" data-taxonomy-term="krs"><span class="taxonomy-label">Krs</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/install/" data-taxonomy-term="install"><span class="taxonomy-label">Install</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/krs/" data-taxonomy-term="krs"><span class="taxonomy-label">Krs</span><span class="taxonomy-count">2</span></a></li>
         <li><a class="taxonomy-term" href="http://localhost:1313/tags/krs-cli/" data-taxonomy-term="krs-cli"><span class="taxonomy-label">KRS CLI</span><span class="taxonomy-count">1</span></a></li>
         </ul>
     </div>
@@ -197,11 +185,11 @@
       <h5 class="taxonomy-title">Categories</h5>
       <ul class="taxonomy-terms">
         <li><a class="taxonomy-term" href="http://localhost:1313/categories/cli-reference/" data-taxonomy-term="cli-reference"><span class="taxonomy-label">CLI-Reference</span><span class="taxonomy-count">2</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/categories/getting-started/" data-taxonomy-term="getting-started"><span class="taxonomy-label">Getting Started</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/categories/guide/" data-taxonomy-term="guide"><span class="taxonomy-label">Guide</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/categories/getting-started/" data-taxonomy-term="getting-started"><span class="taxonomy-label">Getting Started</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/categories/guide/" data-taxonomy-term="guide"><span class="taxonomy-label">Guide</span><span class="taxonomy-count">2</span></a></li>
         <li><a class="taxonomy-term" href="http://localhost:1313/categories/how-it-works/" data-taxonomy-term="how-it-works"><span class="taxonomy-label">How It Works</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/categories/intro/" data-taxonomy-term="intro"><span class="taxonomy-label">Intro</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/categories/setup/" data-taxonomy-term="setup"><span class="taxonomy-label">Setup</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/categories/intro/" data-taxonomy-term="intro"><span class="taxonomy-label">Intro</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/categories/setup/" data-taxonomy-term="setup"><span class="taxonomy-label">Setup</span><span class="taxonomy-count">2</span></a></li>
         </ul>
     </div>
   
@@ -226,50 +214,69 @@
 	<header class="article-meta">
 		
   </header>
-	<p>Welcome to the world of KRS contributors! We&rsquo;re excited to have you join our mission of empowering users with a seamless Kubernetes experience. This guide outlines how you can make valuable contributions to the KRS project.</p>
-<h3 id="sharpen-your-skills">Sharpen Your Skills<a class="td-heading-self-link" href="#sharpen-your-skills" aria-label="Heading self-link"></a></h3>
+	<p>Thank you for your interest in contributing to the Kubernetes Resource Scanner (KRS) tool! We welcome your contributions and are excited to help make this project better.</p>
+<h2 id="code-of-conduct"><strong>Code of Conduct</strong><a class="td-heading-self-link" href="#code-of-conduct" aria-label="Heading self-link"></a></h2>
+<p>Before contributing, please review and adhere to the <a href="CODE_OF_CONDUCT.md">Code of Conduct</a>. We expect all contributors to follow these guidelines to ensure a positive and inclusive environment.</p>
+<h2 id="release-management-and-pull-request-submission-guidelines"><strong>Release Management and Pull Request Submission Guidelines</strong><a class="td-heading-self-link" href="#release-management-and-pull-request-submission-guidelines" aria-label="Heading self-link"></a></h2>
+<h3 id="repository-branch-structure"><strong>Repository Branch Structure</strong><a class="td-heading-self-link" href="#repository-branch-structure" aria-label="Heading self-link"></a></h3>
+<p>Our project employs a three-branch workflow to manage the development and release of new features and fixes:</p>
 <ul>
-<li><strong>Kubernetes Expertise:</strong> Possessing a strong foundation in Kubernetes concepts allows you to understand user needs and tailor contributions accordingly.</li>
-<li><strong>KRS Functionality Deep Dive:</strong> Delving into KRS functionalities equips you to contribute to core functionalities, integrations, or even documentation improvements.</li>
+<li><strong>main</strong>: Stable release branch that contains production-ready code.</li>
+<li><strong>pre-release</strong>: Staging branch for final testing before merging into main.</li>
+<li><strong>release-v0.x.x</strong>: Active development branch where all new changes, bug fixes, and features are made and tested.</li>
 </ul>
-<h3 id="contributing-to-krs">Contributing to KRS<a class="td-heading-self-link" href="#contributing-to-krs" aria-label="Heading self-link"></a></h3>
-<ol>
-<li><strong>Fork the Repository:</strong> Head over to the <a href="https://github.com/kubetoolsca/krs">KRS project repository on GitHub</a> and &ldquo;Fork&rdquo; it to create your personal copy.</li>
-<li><strong>Local Clone for Collaboration:</strong> Use git clone to clone your forked repository to your development environment. This sets the stage for local development and collaboration.</li>
-<li><strong>Navigate the Issue Landscape:</strong> Explore open issues within the KRS project repository. Look for labels like &ldquo;help wanted&rdquo; or issues indicating specific functionalities requiring attention. These are prime areas where your expertise can shine!</li>
-<li><strong>Branch Out Strategically:</strong> Create a new branch in your local repository using a descriptive name that references the issue you&rsquo;re tackling (e.g., fix/issue-<issue-number> for bug fixes or feature/enhancement-<descriptive-name> for new features).</li>
-<li><strong>Code with Collaboration in Mind:</strong>
+<h3 id="contributing-to-the-project"><strong>Contributing to the Project</strong><a class="td-heading-self-link" href="#contributing-to-the-project" aria-label="Heading self-link"></a></h3>
+<p>To contribute to our project, follow these steps to ensure your changes are properly integrated:</p>
+<p><strong>Selecting the Correct Branch</strong></p>
 <ul>
-<li>Make your code contributions following the project&rsquo;s coding style and conventions.</li>
-<li>Write clear, well-documented code that adheres to best practices.</li>
-<li>Consider TDD development standards to ensure the integrity and reliability of your contribution.</li>
+<li>Always base your work on the latest <strong>release-vx.x.x</strong> branch. This branch will be named according to the version, for example, release-v0.1.0.</li>
+<li>Ensure you check the branch name in the repository for the most current version branch.</li>
 </ul>
-</li>
-<li><strong>Commit with Clarity:</strong>
+<p><strong>Working on Issues</strong></p>
 <ul>
-<li>Stage your changes using git add.</li>
-<li>Craft a meaningful commit message that summarizes your contribution and references the issue number.</li>
+<li>Before you start working on an issue, comment on that issue stating that you are taking it on. This helps prevent multiple contributors from working on the same issue simultaneously.</li>
+<li>Include the issue number in your branch name for traceability, e.g., 123-fix-login-bug.</li>
 </ul>
-</li>
-<li><strong>Push for Progress:</strong> Push your committed changes to your forked repository on GitHub.</li>
-<li><strong>Propose Your Innovation:</strong>
+<h2 id="pull-request-pr-process"><strong>Pull Request (PR) Process</strong><a class="td-heading-self-link" href="#pull-request-pr-process" aria-label="Heading self-link"></a></h2>
+<p>To maintain code quality and orderly management, all contributors must follow this PR process:</p>
+<h4 id="step-1-sync-your-fork"><strong>Step 1: Sync Your Fork</strong><a class="td-heading-self-link" href="#step-1-sync-your-fork" aria-label="Heading self-link"></a></h4>
+<p>Before starting your work, sync your fork with the upstream repository to ensure you have the latest changes from the release-v0.x.x branch:</p>
+<pre tabindex="0"><code>    git checkout release-vx.x.x
+    git pull origin release-vx.x.x
+</code></pre><h3 id="step-2-create-a-new-branch"><strong>Step 2: Create a New Branch</strong><a class="td-heading-self-link" href="#step-2-create-a-new-branch" aria-label="Heading self-link"></a></h3>
+<p>Create a new branch from the <strong>release-vx.x.x</strong> branch for your work:</p>
+<pre tabindex="0"><code>    git checkout -b your-branch-name
+</code></pre><h4 id="step-3-make-changes-and-commit"><strong>Step 3: Make Changes and Commit</strong><a class="td-heading-self-link" href="#step-3-make-changes-and-commit" aria-label="Heading self-link"></a></h4>
+<p>Make your changes locally and commit them with clear, concise commit messages. Your commits should reference the issue number:</p>
+<pre tabindex="0"><code>    git commit -m &#34;Fix issue #123: resolve login bug&#34;
+</code></pre><h4 id="step-4-push-changes"><strong>Step 4: Push Changes</strong><a class="td-heading-self-link" href="#step-4-push-changes" aria-label="Heading self-link"></a></h4>
+<p>Push your branch and changes to your fork:</p>
+<pre tabindex="0"><code>    git push -u origin your-branch-name
+</code></pre><h4 id="step-5-open-a-pull-request"><strong>Step 5: Open a Pull Request</strong><a class="td-heading-self-link" href="#step-5-open-a-pull-request" aria-label="Heading self-link"></a></h4>
 <ul>
-<li>Head over to your forked repository on GitHub and initiate a pull request.</li>
-<li>Provide a clear title and description for your pull request, mentioning the issue number and a brief explanation of your changes.</li>
+<li>Go to the original repository on GitHub and open a pull request from your branch to the <strong>release-vx.x.x</strong> branch.</li>
+<li>Clearly describe the changes you are proposing in the PR description. Link the PR to any relevant issues.</li>
 </ul>
-</li>
-</ol>
-<h3 id="additional-considerations-for-impactful-contributions">Additional Considerations for Impactful Contributions<a class="td-heading-self-link" href="#additional-considerations-for-impactful-contributions" aria-label="Heading self-link"></a></h3>
+<h4 id="step-6-pr-review"><strong>Step 6: PR Review</strong><a class="td-heading-self-link" href="#step-6-pr-review" aria-label="Heading self-link"></a></h4>
 <ul>
-<li><strong>Discussions Are Key:</strong> If your contribution involves a significant change, consider creating a separate issue to discuss the technical approach before diving in. This fosters collaboration and avoids potential roadblocks.</li>
-<li><strong>Testing is Essential:</strong> Whenever possible, write unit tests to accompany your code contributions. This strengthens the overall quality and maintainability of the KRS project.</li>
-<li><strong>Documentation Updates:</strong> If your contribution affects existing functionalities or introduces new features, ensure an accompanying documentation update follows your pull request. This ensures a smooth user experience.</li>
+<li>All pull requests must undergo review by at least two peers before merging.</li>
+<li>Address any feedback and make required updates to your PR; this may involve additional commits.</li>
 </ul>
-<h4 id="thank-you-for-being-a-krs-contributor">Thank you for being a KRS contributor!<a class="td-heading-self-link" href="#thank-you-for-being-a-krs-contributor" aria-label="Heading self-link"></a></h4>
-<p>Your contributions directly influence the future of KRS and empower users to manage their Kubernetes clusters with greater efficiency. Let&rsquo;s build a better KRS together!</p>
+<h4 id="step-7-final-merging"><strong>Step 7: Final Merging</strong><a class="td-heading-self-link" href="#step-7-final-merging" aria-label="Heading self-link"></a></h4>
 <ul>
-<li><a href="https://github.com/kubetoolsca/krs/tree/main">KRS Project Repository</a>: All about KRS, its features, use cases, and codebase.</li>
-<li><a href="https://github.com/kubetoolsca/krs-docs">KRS Documentation</a>: Comprehensive reference for KRS.</li>
+<li>Once your PR is approved by the reviewers, one of the maintainers will merge it into the release-v0.x.x branch.</li>
+<li>The changes will eventually be merged into pre-release and then main as part of our release process.</li>
+</ul>
+<h3 id="notes-on-contribution"><strong>Notes on Contribution</strong><a class="td-heading-self-link" href="#notes-on-contribution" aria-label="Heading self-link"></a></h3>
+<ul>
+<li>Please make sure all tests pass before submitting a PR.</li>
+<li>Adhere to the coding standards and guidelines provided in our repository to ensure consistency and quality.</li>
+</ul>
+<h2 id="additional-resources"><strong>Additional Resources</strong><a class="td-heading-self-link" href="#additional-resources" aria-label="Heading self-link"></a></h2>
+<ul>
+<li><a href="https://guides.github.com/activities/contributing-to-open-source/">GitHub Guides: Contributing to Open Source</a></li>
+<li><a href="https://opensource.guide/how-to-contribute/">How to Contribute to an Open Source Project</a></li>
+<li><a href="https://www.goodreads.com/book/show/86770.The_Art_of_Readable_Code">The Art of Readable Code</a></li>
 </ul>
 
 	<style>

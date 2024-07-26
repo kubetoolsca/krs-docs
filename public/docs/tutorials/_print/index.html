@@ -32,7 +32,7 @@
   <meta itemprop="description" content="How to interact with cloud-hosted Kubernetes clusters.">
   <meta itemprop="datePublished" content="2017-01-04T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-07-19T16:16:16-06:00">
-  <meta itemprop="wordCount" content="68">
+  <meta itemprop="wordCount" content="20">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Cloud Providers">
   <meta name="twitter:description" content="How to interact with cloud-hosted Kubernetes clusters.">
@@ -51,22 +51,11 @@
   <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="https://blog.kubetools.io/" target="_blank" rel="noopener"><span>Blog</span></a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link active" href="/docs/"><span>Docs</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/community/"><span>Community</span></a>
       </li>
-      <li class="nav-item dropdown d-none d-lg-block">
-        <div class="dropdown">
-  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="/no/">Norsk</a></li>
-    <li><a class="dropdown-item" href="/fa/">فارسی (Persian)</a></li>
-    </ul>
-</div></li>
       </ul>
   </div>
   <div class="d-none d-lg-block">
@@ -150,7 +139,7 @@ This is the multi-page printable view of this section.
 
 
 <div class="content">
-      <p>KRS operates seamlessly with various cloud providers, granting you the flexibility to deploy and manage your Kubernetes clusters on your preferred cloud infrastructure. Whether you choose Amazon Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), Google Kubernetes Engine (GKE), or another cloud provider with Kubernetes support, KRS integrates effortlessly. This empowers you to leverage your existing cloud investment and streamline your container orchestration workflow across different cloud environments.</p>
+      <p>KRS works seamlessly across cloud providers (AWS, Azure, GCP, etc.). Manage your Kubernetes clusters effortlessly, regardless of your cloud choice.</p>
 
 </div>
 </div>
@@ -170,13 +159,159 @@ This is the multi-page printable view of this section.
 	
     
 
-<div class="td-content" style="page-break-before: always">
+<div class="td-content" style="">
     
 	<h1 id="pg-c1181f96eb073f5d33a9ed5a37f5408a">1 - Azure EKS</h1>
-    <div class="lead">A guide to streamlining your AKS cluster management with KRS</div>
+    <div class="lead">How to Install KRS on AKS</div>
 	<p>Optimize your AKS cluster management with KRS. This powerful tool, installed locally on your machine, analyzes your AKS cluster to identify areas for improvement. KRS leverages AI to provide recommendations for enhancing your cluster&rsquo;s efficiency and functionality.</p>
-<h3 id="ready-to-get-started">Ready to Get Started?<a class="td-heading-self-link" href="#ready-to-get-started" aria-label="Heading self-link"></a></h3>
-<p>Our comprehensive tutorial on our GitHub repository will guide you through <a href="https://github.com/kubetoolsca/krs/blob/main/aks.md">Setting up Krs for an EKS cluster on Microsoft Azure</a></p>
+<h2 id="prerequisites">Prerequisites:<a class="td-heading-self-link" href="#prerequisites" aria-label="Heading self-link"></a></h2>
+<ul>
+<li>An Azure account</li>
+<li>Install Azure CLI on your laptop</li>
+</ul>
+<h2 id="installation">Installation<a class="td-heading-self-link" href="#installation" aria-label="Heading self-link"></a></h2>
+<ol>
+<li>
+<p><strong>Clone the repository using the command</strong></p>
+<pre tabindex="0"><code>git clone https://github.com/kubetoolsca/krs.git
+</code></pre></li>
+<li>
+<p><strong>Install the Krs Tool</strong></p>
+<p>Change directory to /krs and run the following command to install krs locally on your system:</p>
+<pre tabindex="0"><code>pip install .
+</code></pre></li>
+<li>
+<p><strong>Check if the tool has been successfully installed using</strong></p>
+<pre tabindex="0"><code>krs --help
+</code></pre><p>Once you get a list of commands you can move onto the next part.</p>
+</li>
+</ol>
+<h2 id="create-an-eks-cluster-on-your-azure-account">Create an EKS cluster on your Azure account<a class="td-heading-self-link" href="#create-an-eks-cluster-on-your-azure-account" aria-label="Heading self-link"></a></h2>
+<ol>
+<li>
+<p><strong>Create an EKS Cluster</strong></p>
+<p>To create an EKS account, you can log into your account and search for Azure Kubernetes Service.</p>
+ <img width="558" alt="Screenshot 2024-07-01 at 10 17 54 PM" src="https://github.com/kubetoolsca/krs/assets/90956242/10b571d3-4c22-449b-81a3-c742aa0e893f">
+<p>Once you click create, you can name your cluster, add a node pool (I used the default agent pool but you can create your own), and leave everything else to its default state. **This will help you create a cluster.</p>
+</li>
+<li>
+<p><strong>Install Azure CLI</strong></p>
+<pre tabindex="0"><code>brew update &amp;&amp; brew install azure-cli
+</code></pre></li>
+<li>
+<p><strong>Log into your Azure account</strong></p>
+<p>Once the CLI is installed, log into your Azure account using the command:</p>
+<pre tabindex="0"><code>az login
+</code></pre></li>
+<li>
+<p><strong>Connect to Your Cluster</strong></p>
+<p>Retrieve the connection command from your cluster details on the Azure portal and execute it to connect to your cluster.</p>
+ <img width="558" alt="Screenshot 2024-07-01 at 10 18 25 PM" src="https://github.com/kubetoolsca/krs/assets/90956242/652cc069-4bf8-4ba2-98b1-330ff7dd46fe">
+ <img width="557" alt="Screenshot 2024-07-01 at 10 18 51 PM" src="https://github.com/kubetoolsca/krs/assets/90956242/8738ca38-e4bf-40a7-b676-381886a44eca">
+</li>
+</ol>
+<h2 id="using-krs">Using Krs<a class="td-heading-self-link" href="#using-krs" aria-label="Heading self-link"></a></h2>
+<ol>
+<li>
+<p><strong>Initialise Krs</strong></p>
+<pre tabindex="0"><code>krs init
+</code></pre></li>
+<li>
+<p><strong>Scan the Clusters</strong></p>
+<pre tabindex="0"><code>    krs scan
+    Scanning your cluster...
+    Cluster scanned successfully...
+    Extracted tools used in cluster...
+    The cluster is using the following tools:
+    +-------------+--------+-----------------------------+---------------+
+    | Tool Name   | Rank   | Category                    | CNCF Status   |
+    +=============+========+=============================+===============+
+    | autoscaler  | 5      | Cluster with Core CLI tools | unlisted      |
+    +-------------+--------+-----------------------------+---------------+
+</code></pre></li>
+<li>
+<p><strong>Get Recommended Tools</strong></p>
+<pre tabindex="0"><code>    % krs recommend`
+    Our recommended tools for this deployment are:
+    +-----------------------------+------------------+-------------+---------------+
+    | Category                    | Recommendation   | Tool Name   | CNCF Status   |
+    +=============================+==================+=============+===============+
+    | Cluster with Core CLI tools | Recommended tool | k9s         | unlisted      |
+    +-----------------------------+------------------+-------------+---------------+
+</code></pre></li>
+<li>
+<p><strong>Installing a few tools</strong></p>
+<pre tabindex="0"><code>  brew install helm
+  helm install kubeview kubeview
+</code></pre><pre tabindex="0"><code>  helm install kubeview kubeview
+  NAME: kubeview
+  LAST DEPLOYED: Sat Jun 29 21:44:17 2024
+  NAMESPACE: default
+  STATUS: deployed
+  REVISION: 1
+  NOTES:
+  =====================================
+  ==== KubeView has been deployed! ====
+  =====================================
+  To get the external IP of your application, run the following:
+  export SERVICE_IP=$(kubectl get svc --namespace default kubeview -o jsonpath=&#39;{.status.loadBalancer.ingress[0].ip}&#39;)
+  echo http://$SERVICE_IP
+  NOTE: It may take a few minutes for the LoadBalancer IP to be available.
+  You can watch the status of by running &#39;kubectl get --namespace default svc -w kubeview&#39;
+</code></pre></li>
+<li>
+<p><strong>Exports pod info with logs and events</strong></p>
+<pre tabindex="0"><code>    krs export
+    Pod info with logs and events exported. **Json file saved to current directory!
+
+    ```
+    meetsimarkaur@meetsimars-MBP krs % ls
+    CODE_OF_CONDUCT.md   arch.png      gke.md         kubeview
+    CONTRIBUTIONS.md     bhive.png     krs            samples
+    LICENSE              build         krs.egg-info   setup.py
+    README.md            exported_pod_info.json   kubetail
+</code></pre></li>
+<li>
+<p><strong>Detecting and Fixing Issues with my cluster</strong></p>
+<pre tabindex="0"><code>    krs health`
+    Starting interactive terminal...
+    Choose the model provider for healthcheck:
+    [1] OpenAI
+    [2] Huggingface
+    &gt;&gt; 1
+    Installing necessary libraries.........
+    openai is already installed.
+    Enter your OpenAI API key: sk-proj-xxxxxxx
+    Enter the OpenAI model name: gpt-3.5-turbo
+    API key and model are valid.
+    Namespaces in the cluster:
+    1. **default
+    2. **kube-node-lease
+    3. **kube-public
+    4. **kube-system
+    Which namespace do you want to check the health for? Select a namespace by entering its number:
+    &gt;&gt; 1
+    Pods in the namespace default:
+    1. **kubeview-64fd5d8b8c-khv8v
+    Which pod from default do you want to check the health for? Select a pod by entering its number:
+    &gt;&gt; 1
+    Checking status of the pod...
+    Extracting logs and events from the pod...
+    Logs and events from the pod extracted successfully!
+    Interactive session started. **Type &#39;end chat&#39; to exit from the session!
+    &gt;&gt; Everything looks good!
+    Since the log entries provided are empty, there are no warnings or errors to analyze or address. **If there were actual log entries to review, common steps to resolve potential issues in a Kubernetes environment could include:
+    1. **Checking the configuration files for any errors or inconsistencies.
+    2. **Verifying that all necessary resources (e.g. **pods, services, deployments) are running as expected.
+    3. **Monitoring the cluster for any performance issues or resource constraints.
+    4. **Troubleshooting any networking problems that may be impacting connectivity.
+    5. **Updating Kubernetes components or applying patches as needed to ensure system stability and security.
+    6. **Checking logs of specific pods or services for more detailed error messages to pinpoint the root cause of any issues.
+    &gt;&gt; 2
+    &gt;&gt; Since the log entries are still empty, the response remains the same: Everything looks good! If you encounter any specific issues or errors in the future, feel free to provide the logs for further analysis and troubleshooting.
+</code></pre></li>
+</ol>
+<p>With KRS, you can effortlessly identify and optimize the tools within your Kubernetes clusters, whether on-premises or in the public cloud, simplifying your Kubernetes management journey.</p>
 
 </div>
 
@@ -193,10 +328,220 @@ This is the multi-page printable view of this section.
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-795b46faabebd9baa9b50d62c033b140">2 - DigitalOcean</h1>
-    <div class="lead">A guide to streamlining your DO cluster management with KRS</div>
-	<p>Gain valuable insights for your DigitalOcean Kubernetes cluster with KRS. This local tool analyzes your cluster and provides recommendations for smoother management.</p>
-<h3 id="ready-to-get-started">Ready to Get Started?<a class="td-heading-self-link" href="#ready-to-get-started" aria-label="Heading self-link"></a></h3>
-<p>Follow our guide on GitHub <a href="https://github.com/kubetoolsca/krs/blob/main/dokc.md">Installing and Configuring Krs with Digital Ocean Kubernetes Cluster</a></p>
+    <div class="lead">How to Install KRS on Digital Ocean Kubernetes Cluster</div>
+	<p>KRS is your Kubernetes sidekick, effortlessly optimizing your Digital Ocean cluster. Simply install, initialize, and scan to uncover hidden potential.</p>
+<h2 id="prerequisites">Prerequisites<a class="td-heading-self-link" href="#prerequisites" aria-label="Heading self-link"></a></h2>
+<ul>
+<li>Digital Ocean Account</li>
+<li>Homebrew(if you&rsquo;re on Mac)</li>
+</ul>
+<h2 id="getting-started">Getting Started<a class="td-heading-self-link" href="#getting-started" aria-label="Heading self-link"></a></h2>
+<ol>
+<li>
+<p><strong>Setup a Kubernetes Cluster on Digital Ocean</strong></p>
+<p><img alt="DGO_Kube_Cluster" src="https://github.com/kubetoolsca/krs/assets/171302280/6bd344c8-1a3f-4006-b187-49f01d0f5e56"></p>
+</li>
+<li>
+<p><strong>Install and Setup doctl on your Local Machine</strong></p>
+<p>If on Ubuntu use:</p>
+<pre tabindex="0"><code>sudo snap install doctl 
+sudo snap connect doctl:kube-config
+sudo snap connect doctl:ssh-keys :ssh-keys
+sudo snap connect doctl:dot-docker
+</code></pre><p>If on Mac, use:</p>
+<pre tabindex="0"><code>brew install doctl 
+</code></pre></li>
+<li>
+<p><strong>Authenticate your Digital Ocean Account</strong></p>
+<pre tabindex="0"><code>doctl auth init
+</code></pre></li>
+<li>
+<p><strong>Connect your Local Machine to your Digital Ocean Kubernetes Cluster</strong></p>
+<pre tabindex="0"><code>doctl kubernetes cluster kubeconfig save ea3a5a97-fdba-4455-bd81-46df80c68267
+</code></pre></li>
+<li>
+<p><strong>Setup KRS using these commands</strong></p>
+<pre tabindex="0"><code>git clone https://github.com/kubetoolsca/krs.git
+cd krs
+pip install .
+</code></pre></li>
+<li>
+<p><strong>Initialize KRS to permit it access to your cluster using the given command</strong></p>
+<pre tabindex="0"><code>krs init
+</code></pre></li>
+<li>
+<p><strong>Get a view of all possible actions with KRS, by running the given command</strong></p>
+<pre tabindex="0"><code>krs --help
+</code></pre><pre tabindex="0"><code>krs --help
+
+Usage: krs [OPTIONS] COMMAND [ARGS]... **                                        
+
+krs: A command line interface to scan your Kubernetes Cluster, detect errors,  
+provide resolutions using LLMs and recommend latest tools for your cluster     
+
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --install-completion          Install completion for the current shell. **     │
+│ --show-completion             Show completion for the current shell, to copy │
+│                               it or customize the installation. **             │
+│ --help                        Show this message and exit. **                   │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ───────────────────────────────────────────────────────────────────╮
+│ exit         Ends krs services safely and deletes all state files from       │
+│              system. **Removes all cached data. **                               │
+│ export       Exports pod info with logs and events. **                         │
+│ health       Starts an interactive terminal using an LLM of your choice to   │
+│              detect and fix issues with your cluster                         │
+│ init         Initializes the services and loads the scanner. **                │
+│ namespaces   Lists all the namespaces. **                                      │
+│ pods         Lists all the pods with namespaces, or lists pods under a       │
+│              specified namespace. **                                           │
+│ recommend    Generates a table of recommended tools from our ranking         │
+│              database and their CNCF project status. **                        │
+│ scan         Scans the cluster and extracts a list of tools that are         │
+│              currently used. **                                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+</code></pre></li>
+<li>
+<p><strong>Permit KRS to get information on the tools utilized in your cluster by running the given command</strong></p>
+<pre tabindex="0"><code>krs scan
+</code></pre><pre tabindex="0"><code>krs scan
+
+Scanning your cluster...
+
+Cluster scanned successfully...
+
+Extracted tools used in cluster...
+
+
+The cluster is using the following tools:
+
++-------------+--------+------------------+---------------+
+| Tool Name   |   Rank | Category         | CNCF Status   |
++=============+========+==================+===============+
+| cilium      |      1 | Network Policies | graduated     |
++-------------+--------+------------------+---------------+
+| hubble      |      7 | Security Tools   | listed        |
++-------------+--------+------------------+---------------+
+</code></pre></li>
+<li>
+<p><strong>Get recommendations on possible tools to use in your cluster by running the given command</strong></p>
+<pre tabindex="0"><code>krs recommend
+</code></pre><pre tabindex="0"><code>krs recommend
+
+Our recommended tools for this deployment are:
+
++------------------+------------------------+-------------+---------------+
+| Category         | Recommendation         | Tool Name   | CNCF Status   |
++==================+========================+=============+===============+
+| Network Policies | Already using the best | cilium      | graduated     |
++------------------+------------------------+-------------+---------------+
+| Security Tools   | Recommended tool       | trivy       | listed        |
++------------------+------------------------+-------------+---------------+
+</code></pre></li>
+<li>
+<p><strong>Check the pod and namespace status in your Kubernetes cluster, including errors.</strong></p>
+<pre tabindex="0"><code>krs health
+</code></pre><pre tabindex="0"><code>krs health
+
+Starting interactive terminal...
+
+
+Choose the model provider for healthcheck: 
+
+[1] OpenAI 
+[2] Huggingface
+
+&gt;&gt; 1
+
+Installing necessary libraries..........
+
+openai is already installed.
+
+Enter your OpenAI API key: sk-proj-qxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxP
+
+Enter the OpenAI model name: gpt-3.5-turbo
+API key and model are valid.
+
+Namespaces in the cluster:
+
+1. **default
+2. **kube-node-lease
+3. **kube-public
+4. **kube-system
+5. **portainer
+
+Which namespace do you want to check the health for? Select a namespace by entering its number: &gt;&gt; 4
+
+Pods in the namespace kube-system:
+
+1. **cilium-9lqbq
+2. **cilium-ffpct
+3. **cilium-pvknr
+4. **coredns-85f59d8784-nvr2n
+5. **coredns-85f59d8784-p9jcv
+6. **cpc-bridge-proxy-c6xzr
+7. **cpc-bridge-proxy-p7r4p
+8. **cpc-bridge-proxy-tkfrd
+9. **csi-do-node-hwxn7
+10. **csi-do-node-q27rc
+11. **csi-do-node-rn7dm
+12. **do-node-agent-6t5ms
+13. **do-node-agent-85r8b
+14. **do-node-agent-m7bvr
+15. **hubble-relay-74686df4df-856pj
+16. **hubble-ui-86cc69bddc-xc745
+17. **konnectivity-agent-9k8vk
+18. **konnectivity-agent-h5fm2
+19. **konnectivity-agent-kf4xh
+20. **kube-proxy-94945
+21. **kube-proxy-qgv4j
+22. **kube-proxy-vztzf
+
+Which pod from kube-system do you want to check the health for? Select a pod by entering its number: &gt;&gt; 1
+
+Checking status of the pod...
+
+Extracting logs and events from the pod...
+
+Logs and events from the pod extracted successfully!
+
+
+Interactive session started. **Type &#39;end chat&#39; to exit from the session!
+
+&gt;&gt;  The log entries provided are empty {}, so there is nothing to analyze. **Therefore, I can confirm that &#39;Everything looks good!&#39; in this case.
+
+If there were warnings or errors in the log entries, I would have analyzed them thoroughly to identify the root cause. **Depending on the specific warnings or errors, potential steps to resolve the issues could include:
+
+1. **Analyzing the specific error message to understand the problem
+2. **Checking Kubernetes resources (e.g., pods, deployments, configmaps) for any misconfigurations
+3. **Verifying connectivity to external resources or dependencies
+4. **Checking for resource limitations or constraints that could be causing issues
+5. **Reviewing recent changes in the Kubernetes environment that could have introduced problems
+6. **Using Kubernetes troubleshooting tools like kubectl logs, describe, or events to gather more information 
+
+By following these steps and addressing any identified issues, you can resolve warnings or errors in the Kubernetes environment.
+
+&gt;&gt; Wonderful, anything else to note?
+&gt;&gt;  In addition to resolving warnings or errors in Kubernetes logs, it&#39;s important to regularly monitor and maintain the Kubernetes environment to ensure smooth operation. **Some best practices for Kubernetes maintenance include:
+
+1. **Regularly updating Kubernetes components and cluster nodes to the latest stable versions to benefit from bug fixes and security patches.
+2. **Implementing automated backups of critical data and configurations to prevent data loss in case of failures.
+3. **Monitoring resource utilization and scaling components as needed to optimize performance and cost efficiency.
+4. **Implementing security best practices, such as network policies, RBAC, and pod security policies to protect the cluster from unauthorized access or malicious activities.
+5. **Conducting regular health checks and performance tuning to identify and address any bottlenecks or inefficiencies in the cluster.
+6. **Developing a disaster recovery plan and testing it periodically to ensure business continuity in case of unexpected events.
+
+By following these maintenance practices, you can ensure the stability, scalability, and security of your Kubernetes environment for optimal DevOps operations.
+
+&gt;&gt; Alright, so are we done?
+&gt;&gt;  Yes, we have covered the analysis of the Kubernetes log entries and discussed best practices for Kubernetes maintenance. **If you have any more questions or need further assistance, feel free to ask. **Otherwise, we can consider this conversation complete.
+
+&gt;&gt; Wonderful. **Thanks! end chat
+&gt;&gt;  You&#39;re welcome! If you have any more questions in the future, feel free to reach out. **Have a great day! Goodbye!
+
+&gt;&gt; end chat
+</code></pre></li>
+</ol>
 
 </div>
 
@@ -213,10 +558,170 @@ This is the multi-page printable view of this section.
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-a939572a24b9c322202e514f4c668cac">3 - AWS EKS</h1>
-    <div class="lead">A guide to streamlining your AWS cluster management with KRS</div>
-	<p>Effortlessly optimize your EKS cluster with KRS. This powerful tool, running locally on your machine, analyzes your EKS cluster for improvement. Leverage KRS to gain valuable insights and recommendations for a smoother Kubernetes experience.</p>
-<h3 id="ready-to-get-started">Ready to Get Started?<a class="td-heading-self-link" href="#ready-to-get-started" aria-label="Heading self-link"></a></h3>
-<p>Follow our step-by-step guide on <a href="https://github.com/kubetoolsca/krs/blob/main/eks.md">Installing and Configuring Krs with EKS (AWS)</a></p>
+    <div class="lead">How to Install KRS on AWS EKS</div>
+	<p>Optimize your EKS cluster with KRS. KRS running locally on your machine, analyzes your EKS cluster for improvement. Leverage KRS to gain valuable insights and recommendations for a smoother Kubernetes experience.</p>
+<h2 id="prerequisites">Prerequisites<a class="td-heading-self-link" href="#prerequisites" aria-label="Heading self-link"></a></h2>
+<ul>
+<li>AWS Account</li>
+<li>AWSCLI installed on your system</li>
+<li>Homebrew(if you&rsquo;re on Mac)</li>
+</ul>
+<h2 id="getting-started">Getting Started<a class="td-heading-self-link" href="#getting-started" aria-label="Heading self-link"></a></h2>
+<ol>
+<li>
+<p><strong>Setup Amazon EKS Cluster</strong></p>
+<pre tabindex="0"><code>eksctl create cluster --name &lt;cluster_name&gt; --version &lt;kubernetes_version&gt; --region &lt;aws_region_name e.g us-east-1&gt; --nodegroup-name &lt;linux_nodes&gt; --node-type &lt;node_type&gt;  --nodes &lt;number_of_nodes&gt; --zones=&lt;zone_names, e.g: us-east-1a,us-east-1b&gt;
+</code></pre><p><img alt="EKS_Clusters" src="https://github.com/kubetoolsca/krs/assets/171302280/edd250c6-12d6-4380-b430-302b06c98a73"></p>
+</li>
+<li>
+<p><strong>Authenticate your AWS account</strong></p>
+<pre tabindex="0"><code>aws configure 
+</code></pre></li>
+<li>
+<p><strong>Extract the list of running clusters on AWS using this command</strong></p>
+<pre tabindex="0"><code>aws eks list-clusters
+</code></pre></li>
+<li>
+<p><strong>Create a config file that permits KRS access to the EKS cluster using this command</strong></p>
+<pre tabindex="0"><code>aws eks update-kubeconfig --name &lt;cluster_name&gt; 
+</code></pre></li>
+<li>
+<p><strong>Setup KRS using these commands</strong></p>
+<pre tabindex="0"><code>$git clone https://github.com/kubetoolsca/krs.git
+$ cd krs
+$ pip install
+</code></pre></li>
+<li>
+<p><strong>Initialize KRS to permit it access to your cluster using the given command</strong></p>
+<pre tabindex="0"><code>krs init
+</code></pre></li>
+<li>
+<p><strong>Get a view of all possible actions with KRS, by running the given command</strong></p>
+<pre tabindex="0"><code>krs --help
+
+Usage: krs [OPTIONS] COMMAND [ARGS]... **                                        
+
+krs: A command line interface to scan your Kubernetes Cluster, detect errors,  
+provide resolutions using LLMs and recommend latest tools for your cluster     
+
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --install-completion          Install completion for the current shell. **     │
+│ --show-completion             Show completion for the current shell, to copy │
+│                               it or customize the installation. **             │
+│ --help                        Show this message and exit. **                   │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ───────────────────────────────────────────────────────────────────╮
+│ exit         Ends krs services safely and deletes all state files from       │
+│              system. **Removes all cached data. **                               │
+│ export       Exports pod info with logs and events. **                         │
+│ health       Starts an interactive terminal using an LLM of your choice to   │
+│              detect and fix issues with your cluster                         │
+│ init         Initializes the services and loads the scanner. **                │
+│ namespaces   Lists all the namespaces. **                                      │
+│ pods         Lists all the pods with namespaces, or lists pods under a       │
+│              specified namespace. **                                           │
+│ recommend    Generates a table of recommended tools from our ranking         │
+│              database and their CNCF project status. **                        │
+│ scan         Scans the cluster and extracts a list of tools that are         │
+│              currently used. **                                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+</code></pre></li>
+<li>
+<p><strong>Permit KRS to get information on the tools utilized in your cluster by running the given command</strong></p>
+<pre tabindex="0"><code>  krs scan
+
+  Scanning your cluster...
+
+  Cluster scanned successfully...
+
+  Extracted tools used in cluster...
+
+  The cluster is using the following tools:
+
+  +-------------+--------+-----------------------------+---------------+
+  | Tool Name   |   Rank | Category                    | CNCF Status   |
+  +=============+========+=============================+===============+
+  | autoscaler  |      5 | Cluster with Core CLI tools | unlisted      |
+  +-------------+--------+-----------------------------+---------------+
+  | istio       |      2 | Service Mesh                | graduated     |
+  +-------------+--------+-----------------------------+---------------+
+  | kserve      |      3 | Artificial Intelligence     | listed        |
+  +-------------+--------+-----------------------------+---------------+
+</code></pre></li>
+<li>
+<p><strong>Get recommendations on possible tools to use in your cluster by running the given command</strong></p>
+<pre tabindex="0"><code>  krs recommend
+</code></pre><pre tabindex="0"><code>    +-----------------------------+------------------+-------------+---------------+
+| Category                    | Recommendation   | Tool Name   | CNCF Status   |
++=============================+==================+=============+===============+
+| Cluster with Core CLI tools | Recommended tool | k9s         | unlisted      |
++-----------------------------+------------------+-------------+---------------+
+| Service Mesh                | Recommended tool | traefik     | listed        |
++-----------------------------+------------------+-------------+---------------+
+| Artificial Intelligence     | Recommended tool | k8sgpt      | sandbox       |
++-----------------------------+------------------+-------------+---------------+
+</code></pre></li>
+<li>
+<p><strong>Check the pod and namespace status in your Kubernetes cluster, including errors</strong></p>
+<pre tabindex="0"><code>  krs health
+</code></pre><pre tabindex="0"><code>Starting interactive terminal...
+
+Choose the model provider for healthcheck: 
+
+[1] OpenAI 
+[2] Huggingface
+
+&gt;&gt; 1
+
+Installing necessary libraries..........
+
+openai is already installed.
+
+Enter your OpenAI API key: sk-proj-xxxxxxxxxx
+
+Enter the OpenAI model name: gpt-3.5-turbo
+API key and model are valid.
+
+Namespaces in the cluster:
+
+1. **cert-manager
+2. **default
+3. **istio-system
+4. **knative-serving
+5. **kserve
+6. **kserve-test
+7. **kube-node-lease
+8. **kube-public
+9. **Kube-system
+
+Which namespace do you want to check the health for? Select a namespace by entering its number: &gt;&gt; 9
+
+Pods in the namespace kube-system:
+
+1. **aws-node-46hzm
+2. **aws-node-wdgnn
+3. **coredns-586b798467-54t6h
+4. **coredns-586b798467-jmlrp
+5. **kube-proxy-hfmjl
+6. **kube-proxy-n8lc6
+
+Which pod from kube-system do you want to check the health for? Select a pod by entering its number: &gt;&gt; 1
+
+Checking status of the pod...
+
+Extracting logs and events from the pod...
+
+Logs and events from the pod extracted successfully!
+
+
+Interactive session started. **Type &#39;end chat&#39; to exit from the session!
+
+&gt;&gt;  The provided log entries are empty, so there is nothing to analyze. **Everything looks good!
+
+&gt;&gt; Wonderful, so what next
+&gt;&gt;  If you have any specific questions or another set of log entries you would like me to analyze, feel free to provide them. **I&#39;m here to help with any DevOps or Kubernetes-related queries you may have. **Just let me know how I can assist you further!
+</code></pre></li>
+</ol>
 
 </div>
 
@@ -233,10 +738,120 @@ This is the multi-page printable view of this section.
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-69c92a422923c761c60c76bfde1e4032">4 - Google&#39;s GKE</h1>
-    <div class="lead">A guide to setting up Krs for Google Kubernetes Engine</div>
+    <div class="lead">How to Install KRS on Google Kubernetes Engine</div>
 	<p>Effortlessly optimize your GKE cluster with KRS. This powerful tool, running locally on your machine, analyzes your GKE cluster for improvement. Leverage KRS to gain valuable insights and recommendations for a smoother Kubernetes experience.</p>
-<h3 id="ready-to-get-started">Ready to Get Started?<a class="td-heading-self-link" href="#ready-to-get-started" aria-label="Heading self-link"></a></h3>
-<p>Follow our step-by-step guide on <a href="https://github.com/kubetoolsca/krs/blob/main/gke.md">Setting up Krs for Google Kubernetes Engine</a></p>
+<h2 id="prerequisite">Prerequisite<a class="td-heading-self-link" href="#prerequisite" aria-label="Heading self-link"></a></h2>
+<ul>
+<li>A Google Cloud Account</li>
+<li>Installing Google Cloud SDK on your macOS</li>
+</ul>
+<h2 id="getting-started">Getting Started<a class="td-heading-self-link" href="#getting-started" aria-label="Heading self-link"></a></h2>
+<ol>
+<li>
+<p><strong>Execute the following command to install Google Cloud SDK in your system</strong></p>
+<pre tabindex="0"><code>tar xfz google-cloud-sdk-195.0.0-darwin-x86_64.tar.gz
+./google-cloud-sdk/install.sh
+</code></pre></li>
+<li>
+<p><strong>Enable Google Cloud Engine API</strong></p>
+<p><img alt="image" src="https://github.com/kubetoolsca/krs/assets/313480/6c441226-9e8e-4a91-ba8a-e0c595173faa"></p>
+</li>
+<li>
+<p><strong>Authenticate Your Google Cloud using gcloud auth</strong></p>
+<pre tabindex="0"><code>gcloud init
+</code></pre><p>In your browser, log in to your Google user account when prompted and click Allow to grant permission to access Google Cloud Platform resources.</p>
+</li>
+<li>
+<p><strong>Creating GKE Cluster</strong></p>
+<pre tabindex="0"><code>gcloud container clusters create k8s-lab1 --disk-size 10 --zone asia-east1-a --machine-type n1-standard-2 --num-nodes 3 --scopes compute-rw
+</code></pre></li>
+<li>
+<p><strong>Viewing it on Google Cloud Platform</strong></p>
+<p><img alt="image" src="https://github.com/kubetoolsca/krs/assets/313480/733cfe3a-c951-4ea0-b7f5-4a28f7393c8e"></p>
+</li>
+<li>
+<p><strong>Viewing the new context on Docker Desktop</strong></p>
+ <img width="738" alt="image" src="https://github.com/kubetoolsca/krs/assets/313480/8afc21c5-1961-4af8-b491-00c99cb350fa">
+</li>
+<li>
+<p><strong>Verifying the Google Kubernetes Cluster</strong></p>
+<pre tabindex="0"><code>kubectl get nodes
+NAME                                      STATUS   ROLES    AGE    VERSION
+gke-k8s-lab1-default-pool-5dfb7153-3fr7   Ready    &lt;none&gt;   3m1s   v1.29.4-gke.1043002
+gke-k8s-lab1-default-pool-5dfb7153-nl3v   Ready    &lt;none&gt;   3m1s   v1.29.4-gke.1043002
+gke-k8s-lab1-default-pool-5dfb7153-rkg8   Ready    &lt;none&gt;   3m2s   v1.29.4-gke.1043002
+</code></pre></li>
+<li>
+<p><strong>Initialize the KRS</strong></p>
+<pre tabindex="0"><code>krs init
+Services initialized and scanner loaded.
+</code></pre></li>
+<li>
+<p><strong>Running the scanner</strong></p>
+<pre tabindex="0"><code>krs scan
+
+Scanning your cluster...
+
+Cluster scanned successfully...
+
+Extracted tools used in cluster...
+
+
+The cluster is using the following tools:
+
++-------------+--------+-----------------------------+---------------+
+| Tool Name   |   Rank | Category                    | CNCF Status   |
++=============+========+=============================+===============+
+| autoscaler  |      5 | Cluster with Core CLI tools | unlisted      |
++-------------+--------+-----------------------------+---------------+
+| fluentbit   |      4 | Logging and Tracing         | unlisted      |
++-------------+--------+-----------------------------+---------------+
+</code></pre></li>
+<li>
+<p><strong>Checking the Krs Recommendation</strong></p>
+<pre tabindex="0"><code>krs recommend
+
+Our recommended tools for this deployment are:
+
++-----------------------------+------------------+-------------+---------------+
+| Category                    | Recommendation   | Tool Name   | CNCF Status   |
++=============================+==================+=============+===============+
+| Cluster with Core CLI tools | Recommended tool | k9s         | unlisted      |
++-----------------------------+------------------+-------------+---------------+
+| Logging and Tracing         | Recommended tool | elk         | unlisted      |
+</code></pre></li>
+<li>
+<p><strong>Installing Kubeview</strong></p>
+<pre tabindex="0"><code>git clone https://github.com/benc-uk/kubeview
+cd kubeview/charts/
+helm install kubeview kubeview
+</code></pre></li>
+<li>
+<p><strong>Running the scanner again</strong></p>
+<pre tabindex="0"><code>krs scan
+
+Scanning your cluster...
+
+Cluster scanned successfully...
+
+Extracted tools used in cluster...
+
+
+The cluster is using the following tools:
+
++-------------+--------+-----------------------------+---------------+
+| Tool Name   |   Rank | Category                    | CNCF Status   |
++=============+========+=============================+===============+
+| kubeview    |     30 | Cluster with Core CLI tools | unlisted      |
++-------------+--------+-----------------------------+---------------+
+|             |      3 | Cluster Management          | unlisted      |
++-------------+--------+-----------------------------+---------------+
+| autoscaler  |      5 | Cluster with Core CLI tools | unlisted      |
++-------------+--------+-----------------------------+---------------+
+| fluentbit   |      4 | Logging and Tracing         | unlisted      |
++-------------+--------+-----------------------------+---------------+
+</code></pre></li>
+</ol>
 
 </div>
 

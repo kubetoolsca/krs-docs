@@ -22,7 +22,49 @@ KRS is a GenAI-powered Kubernetes Tools Recommender System. It scans your cluste
 {{% /blocks/lead %}}
 
 
-{{% blocks/section color="dark" type="col"%}}
+{{% blocks/section color="brown" type="col"%}}
+
+<h2 style="text-align: center;">Addressing Key Challenges in Kubernetes Management with KRS</h2><br>
+
+<div class="row">
+
+<div class="col-lg-4 mb-5 mb-lg-0 text-center">
+ <div class="mb-4 h1">
+    
+  </div>
+
+<h4 class="h3">Limited Tool Discovery!</h4>
+<div class="mb-0">
+<p>Finding the right tools for your specific Kubernetes needs can be challenging. Traditional management tools often lack comprehensive recommendations.</p>
+</div>
+</div>
+<div class="col-lg-4 mb-5 mb-lg-0 text-center">
+<div class="mb-4 h1">
+  <i></i>
+</div>
+<h4 class="h3">Information Overload</h4>
+<div class="mb-0">
+<p>There are many Kubernetes tools available, leading to decision fatigue and difficulty in choosing the best option.</p>
+</div>
+</div>
+<div class="col-lg-4 mb-5 mb-lg-0 text-center">
+<div class="mb-4 h1">
+  <i ></i>
+</div>
+<h4 class="h3">Incomplete Health Checks</h4>
+<div class="mb-0">
+<p>Basic cluster management tools might not provide in-depth health checks for individual pods or offer solutions based on AI analysis.</p>
+</div>
+
+</div>
+
+</div>
+
+{{% /blocks/section %}}
+
+ 
+
+{{% blocks/section type="col"%}}
 
 <h2 style="text-align: center;">Effective Solutions for Kubernetes Management with KRS</h2><br>
 
@@ -58,6 +100,7 @@ KRS is a GenAI-powered Kubernetes Tools Recommender System. It scans your cluste
   
   </div>
   </div>
+
 
 {{% /blocks/section %}}
 

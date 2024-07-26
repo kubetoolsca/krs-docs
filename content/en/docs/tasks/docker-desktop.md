@@ -1,7 +1,7 @@
 ---
 title: Docker Desktop
 description: >
-  How to setup Docker Desktop on your system
+  How to Setup Docker Desktop on Your system
 date: 2017-01-05
 weight: 4
 ---

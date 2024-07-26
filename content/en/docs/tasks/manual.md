@@ -1,237 +1,314 @@
 ---
 title: Manual
-description: >
-  A short lead description about this content page. It can be **bold** or _italic_ and can be split over multiple paragraphs.
-date: 2017-01-05
+description: How to Install and Use KRS on Your Cluster
+categories: [guide, setup, intro, getting started]
+tags: [krs, install]
 weight: 2
 ---
 
-{{% pageinfo %}}
-This is a placeholder page. Replace it with your own content.
-{{% /pageinfo %}}
+KRS empowers you to manage your Kubernetes clusters with the help of cutting-edge Artificial Intelligence. This guide equips you with everything you need to get started and unlock the potential of KRS's intelligent recommendations, proactive problem detection, and powerful health checks.
 
 
-Text can be **bold**, _italic_, or ~~strikethrough~~. [Links](https://gohugo.io) should be blue with no underlines (unless hovered over).
+## Prerequisites
 
-There should be whitespace between paragraphs. Vape migas chillwave sriracha poutine try-hard distillery. Tattooed shabby chic small batch, pabst art party heirloom letterpress air plant pop-up. Sustainable chia skateboard art party banjo cardigan normcore affogato vexillologist quinoa meggings man bun master cleanse shoreditch readymade. Yuccie prism four dollar toast tbh cardigan iPhone, tumblr listicle live-edge VHS. Pug lyft normcore hot chicken biodiesel, actually keffiyeh thundercats photo booth pour-over twee fam food truck microdosing banh mi. Vice activated charcoal raclette unicorn live-edge post-ironic. Heirloom vexillologist coloring book, beard deep v letterpress echo park humblebrag tilde.
+- **Up and Running Kubernetes Cluster:** Ensure you have a Kubernetes cluster running locally (e.g., Minikube, etc) or in the cloud (e.g., Amazon EKS, Google Kubernetes Engine, etc), if on the cloud, ensure that you've secured a config file, before using KRS.
 
-90's four loko seitan photo booth gochujang freegan tumeric listicle fam ugh humblebrag. Bespoke leggings gastropub, biodiesel brunch pug fashion axe meh swag art party neutra deep v chia. Enamel pin fanny pack knausgaard tofu, artisan cronut hammock meditation occupy master cleanse chartreuse lumbersexual. Kombucha kogi viral truffaut synth distillery single-origin coffee ugh slow-carb marfa selfies. Pitchfork schlitz semiotics fanny pack, ugh artisan vegan vaporware hexagon. Polaroid fixie post-ironic venmo wolf ramps **kale chips**.
+- **Python 3.6+:** KRS is a Python-based tool, so make sure you have Python 3.6 or a later version installed on your system. You can check your version by running python3 --version in your terminal. If you don't have Python installed, head over to https://www.python.org/downloads/ for installation instructions.
 
-> There should be no margin above this first sentence.
->
-> Blockquotes should be a lighter gray with a border along the left side in the secondary color.
->
-> There should be no margin below this final sentence.
+- **Basic understanding of Kubernetes concepts:** Having a foundational understanding of Kubernetes concepts like pods, namespaces, and deployments will help you get the most out of KRS's functionalities.
 
-## First Header 2
+## Installation
 
-This is a normal paragraph following a header. Knausgaard kale chips snackwave microdosing cronut copper mug swag synth bitters letterpress glossier **craft beer**. Mumblecore bushwick authentic gochujang vegan chambray meditation jean shorts irony. Viral farm-to-table kale chips, pork belly palo santo distillery activated charcoal aesthetic jianbing air plant woke lomo VHS organic. Tattooed locavore succulents heirloom, small batch sriracha echo park DIY af. Shaman you probably haven't heard of them copper mug, crucifix green juice vape *single-origin coffee* brunch actually. Mustache etsy vexillologist raclette authentic fam. Tousled beard humblebrag asymmetrical. I love turkey, I love my job, I love my friends, I love Chardonnay!
+1. **Clone the Repository** 
+    ```
+    git clone https://github.com/kubetoolsca/krs.git
+    ```
+2. **Change directory to the cloned repository** 
+     ```
+    cd krs
+    ```
+3. **Python Package Installation** 
+     ```
+    pip install krs
+    ```
 
-Deae legum paulatimque terra, non vos mutata tacet: dic. Vocant docuique me plumas fila quin afuerunt copia haec o neque.
+## Initial Setup
 
-On big screens, paragraphs and headings should not take up the full container width, but we want tables, code blocks and similar to take the full width.
+1. **Initialize KRS** 
+    This step initializes KRS's services and loads the scanner.
+    ```
+    krs init
+    ```
+2. **Explore KRS Commands (Optional)** 
+    ```
+    krs --help
+    ```
 
-Scenester tumeric pickled, authentic crucifix post-ironic fam freegan VHS pork belly 8-bit yuccie PBR&B. **I love this life we live in**.
+## Scan Your Cluster and Explore Recommendations
 
+This is where the real power of KRS comes in!
 
-## Second Header 2
+1. **Scan your cluster** 
+    Execute the following command to scan your cluster and identify the tools currently in use:
+    ```
+    krs scan
+    ```
+    You'll see the following results:
+    ```
+    Scanning your cluster...
 
-> This is a blockquote following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
+    Cluster scanned successfully...
 
-### Header 3
+    Extracted tools used in cluster...
 
-```
-This is a code block following a header.
-```
 
-Next level leggings before they sold out, PBR&B church-key shaman echo park. Kale chips occupy godard whatever pop-up freegan pork belly selfies. Gastropub Belinda subway tile woke post-ironic seitan. Shabby chic man bun semiotics vape, chia messenger bag plaid cardigan.
+    The cluster is using the following tools:
 
-#### Header 4
+    +-------------+--------+------------+---------------+
+    | Tool Name   | Rank   | Category   | CNCF Status   |
+    +=============+========+============+===============+
+    +-------------+--------+------------+---------------+
+    ```
 
-* This is an unordered list following a header.
-* This is an unordered list following a header.
-* This is an unordered list following a header.
+2. **View recommended tools** 
+    KRS analyzes your cluster and recommends tools based on best practices and its internal ranking database. Use the following command to explore these recommendations
+    ```
+    krs recommend
+    ```
 
-##### Header 5
+    You'll see similar results to this:
+    ```
 
-1. This is an ordered list following a header.
-2. This is an ordered list following a header.
-3. This is an ordered list following a header.
+    krs recommend
 
-###### Header 6
+    Our recommended tools for this deployment are:
 
-| What      | Follows         |
-|-----------|-----------------|
-| A table   | A header        |
-| A table   | A header        |
-| A table   | A header        |
+    +----------------------+------------------+-------------+---------------+
+    | Category             | Recommendation   | Tool Name   | CNCF Status   |
+    +======================+==================+=============+===============+
+    | Alert and Monitoring | Recommended tool | grafana     | listed        |
+    +----------------------+------------------+-------------+---------------+
+    | Cluster Management   | Recommended tool | rancher     | unlisted      |
+    +----------------------+------------------+-------------+---------------+
+    ```
 
-----------------
+## Interactive Health Check with AI
 
-There's a horizontal rule above and below this.
+KRS leverages Large Language Models (LLMs) like OpenAI or Hugging Face to provide in-depth health checks for your pods.
 
-----------------
+1. **Start the health check** 
+    Execute the following command to initiate an interactive terminal session:
+    ```
+    krs health
+    ```
+    You'll see the following results:
+    ```
+    krs health
 
-Here is an unordered list:
+    Starting interactive terminal...
 
-* Liverpool F.C.
-* Chelsea F.C.
-* Manchester United F.C.
 
-And an ordered list:
+    Choose the model provider for healthcheck:
 
-1. Michael Brecker
-2. Seamus Blake
-3. Branford Marsalis
+    [1] OpenAI
+    [2] Huggingface
 
-And an unordered task list:
+    >>
+    ```
 
-- [x] Create a Hugo theme
-- [x] Add task lists to it
-- [ ] Take a vacation
+2. **Choose your LLM provider** 
+    The user is prompted to choose a model provider for the health check. The options provided are "OpenAI" and "Huggingface". The selected option determines which LLM model will be used for the health check.
 
-And a "mixed" task list:
+    Let's say you choose the option "1", then it will install the necessary libraries.
 
-- [ ] Pack bags
-- ?
-- [ ] Travel!
+    ```
+    Enter your OpenAI API key: open_ai_api_key
 
-And a nested list:
+    Enter the OpenAI model name: gpt-3.5-turbo
+    API key and model are valid.
 
-* Jackson 5
-  * Michael
-  * Tito
-  * Jackie
-  * Marlon
-  * Jermaine
-* TMNT
-  * Leonardo
-  * Michelangelo
-  * Donatello
-  * Raphael
+    Namespaces in the cluster:
 
-Definition lists can be used with Markdown syntax. Definition headers are bold.
+    1. default
+    2. kube-node-lease
+    3. kube-public
+    4. kube-system
+    5. ns1
 
-Name
-: Godzilla
+    Which namespace do you want to check the health for? Select a namespace by entering 
+    its number: >> 4
 
-Born
-: 1952
 
-Birthplace
-: Japan
+    ```
+    
+3. **Specify the pod** 
+    Choose the pod you want to analyze from the listed options. KRS will then extract logs and events for the selected pod.
 
-Color
-: Green
+    ```
+    Which namespace do you want to check the health for? Select a namespace by entering 
+    its number: >> 4
 
+    Pods in the namespace kube-system:
 
-----------------
+    1. coredns-76f75df574-mdk6w
+    2. coredns-76f75df574-vg6z2
+    3. etcd-docker-desktop
+    4. kube-apiserver-docker-desktop
+    5. kube-controller-manager-docker-desktop
+    6. kube-proxy-p5hw4
+    7. kube-scheduler-docker-desktop
+    8. storage-provisioner
+    9. vpnkit-controller
 
-Tables should have bold headings and alternating shaded rows.
+    Which pod from kube-system do you want to check the health for? Select a pod by entering its 
+    number: >> 4
 
-| Artist            | Album           | Year |
-|-------------------|-----------------|------|
-| Michael Jackson   | Thriller        | 1982 |
-| Prince            | Purple Rain     | 1984 |
-| Beastie Boys      | License to Ill  | 1986 |
+    Checking status of the pod...
 
-If a table is too wide, it should scroll horizontally.
+    Extracting logs and events from the pod...
 
-| Artist            | Album           | Year | Label       | Awards   | Songs     |
-|-------------------|-----------------|------|-------------|----------|-----------|
-| Michael Jackson   | Thriller        | 1982 | Epic Records | Grammy Award for Album of the Year, American Music Award for Favorite Pop/Rock Album, American Music Award for Favorite Soul/R&B Album, Brit Award for Best Selling Album, Grammy Award for Best Engineered Album, Non-Classical | Wanna Be Startin' Somethin', Baby Be Mine, The Girl Is Mine, Thriller, Beat It, Billie Jean, Human Nature, P.Y.T. (Pretty Young Thing), The Lady in My Life |
-| Prince            | Purple Rain     | 1984 | Warner Brothers Records | Grammy Award for Best Score Soundtrack for Visual Media, American Music Award for Favorite Pop/Rock Album, American Music Award for Favorite Soul/R&B Album, Brit Award for Best Soundtrack/Cast Recording, Grammy Award for Best Rock Performance by a Duo or Group with Vocal | Let's Go Crazy, Take Me With U, The Beautiful Ones, Computer Blue, Darling Nikki, When Doves Cry, I Would Die 4 U, Baby I'm a Star, Purple Rain |
-| Beastie Boys      | License to Ill  | 1986 | Mercury Records | noawardsbutthistablecelliswide | Rhymin & Stealin, The New Style, She's Crafty, Posse in Effect, Slow Ride, Girls, (You Gotta) Fight for Your Right, No Sleep Till Brooklyn, Paul Revere, Hold It Now, Hit It, Brass Monkey, Slow and Low, Time to Get Ill |
+    Logs and events from the pod extracted successfully!
 
-----------------
+    >>
+    ```
 
-Code snippets like `var foo = "bar";` can be shown inline.
+4. **Interact with the LLM** 
+    The LLM will analyze the extracted information and provide insights into potential issues with your pod. 
+    You can ask clarifying questions or request further analysis within the interactive terminal.
 
-Also, `this should vertically align` ~~`with this`~~ ~~and this~~.
+    If your pod has no errors, your output would be :
 
-Code can also be shown in a block element.
+    ```
 
-```
-foo := "bar";
-bar := "foo";
-```
+    Interactive session started. Type 'end chat' to exit from the session!
 
-Code can also use syntax highlighting.
+    >>  The log entries provided are empty {}, so there is nothing to analyze. Therefore, 
+    I can confirm that 'Everything looks good!' in this case.
 
-```go
-func main() {
-  input := `var foo = "bar";`
+    If there were warnings or errors in the log entries, I would have analyzed them 
+    thoroughly to identify the root cause. Depending on the specific warnings or 
+    errors, potential steps to resolve the issues could include:
 
-  lexer := lexers.Get("javascript")
-  iterator, _ := lexer.Tokenise(nil, input)
-  style := styles.Get("github")
-  formatter := html.New(html.WithLineNumbers())
+    1. Analyzing the specific error message to understand the problem
+    2. Checking Kubernetes resources (e.g., pods, deployments, configmaps) 
+    for any misconfigurations
+    3. Verifying connectivity to external resources or dependencies
+    4. Checking for resource limitations or constraints that could be causing issues
+    5. Reviewing recent changes in the Kubernetes environment that could have introduced problems
+    6. Using Kubernetes troubleshooting tools like kubectl logs, describe, or events 
+    to gather more information 
 
-  var buff bytes.Buffer
-  formatter.Format(&buff, style, iterator)
+    By following these steps and addressing any identified issues, you can resolve 
+    warnings or errors in the Kubernetes environment.
 
-  fmt.Println(buff.String())
-}
-```
+    >> Wonderful, anything else to note?
+    >>  In addition to resolving warnings or errors in Kubernetes logs, it's important to regularly 
+    monitor and maintain the Kubernetes environment to ensure smooth operation. Some best 
+    practices for Kubernetes maintenance include:
 
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
+    1. Regularly updating Kubernetes components and cluster nodes to the latest stable versions 
+    to benefit from bug fixes and security patches.
+    2. Implementing automated backups of critical data and configurations to 
+    prevent data loss in case of failures.
+    3. Monitoring resource utilization and scaling components as needed to optimize 
+    performance and cost efficiency.
+    4. Implementing security best practices, such as network policies, RBAC, and 
+    pod security policies to protect 
+    the cluster from unauthorized access or malicious activities.
+    5. Conducting regular health checks and performance tuning to identify 
+    and address any bottlenecks or 
+    inefficiencies in the cluster.
+    6. Developing a disaster recovery plan and testing it periodically to 
+    ensure business continuity in case of unexpected events.
 
-Inline code inside table cells should still be distinguishable.
+    By following these maintenance practices, you can ensure the stability, scalability, and security 
+    of your Kubernetes environment for optimal DevOps operations.
 
-| Language    | Code               |
-|-------------|--------------------|
-| Javascript  | `var foo = "bar";` |
-| Ruby        | `foo = "bar"{`      |
+    >> Alright, so are we done?
+    >>  Yes, we have covered the analysis of the Kubernetes log entries and 
+    discussed best practices for Kubernetes maintenance. If you have any more 
+    questions or need further assistance, feel free to ask. Otherwise, 
+    we can consider this conversation complete.
 
-----------------
+    >> Wonderful. Thanks! end chat
+    >>  You're welcome! If you have any more questions in the future, 
+    feel free to reach out. Have a great day! Goodbye!
 
-Small images should be shown at their actual size.
+    >> end chat
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Picea_abies_shoot_with_buds%2C_Sogndal%2C_Norway.jpg/240px-Picea_abies_shoot_with_buds%2C_Sogndal%2C_Norway.jpg)
+    ```
 
-Large images should always scale down and fit in the content container.
+    Else, your output would be:
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Picea_abies_shoot_with_buds%2C_Sogndal%2C_Norway.jpg/1024px-Picea_abies_shoot_with_buds%2C_Sogndal%2C_Norway.jpg)
+    ```
+    Interactive session started. Type 'end chat' to exit from the session!
 
-_The photo above of the Spruce Picea abies shoot with foliage buds: Bjørn Erik Pedersen, CC-BY-SA._
+    >>  Warning/Error 1:
+    "Unable to authenticate the request" with err="[invalid bearer token, 
+    service account token has expired]"
+    This indicates that there was an issue with authenticating the request due to an invalid bearer token and 
+    an expired service account token. To resolve this issue, the bearer token needs to be updated or regenerated, 
+    and the service account token needs to be renewed.
 
+    Warning/Error 2:
+    "Failed to update lease" with err="StorageError: invalid object, Code: 4, Key: 
+    /registry/leases/kube-system/apiserver-457xdkumpkdqmkwikdt6khrbya"
+    This error indicates a storage error while trying to update a lease, possibly due to an invalid object 
+    or a conflict in UIDs. To resolve this issue, the lease object needs to be checked and possibly 
+    recreated with the correct UID.
 
-## Components
+    Warning/Error 3:
+    "Error removing old endpoints from kubernetes service: no API server IP addresses were listed in storage, 
+    refusing to erase all endpoints for the kubernetes Service"
+    This warning indicates that there were no API server IP addresses listed in storage, causing the removal 
+    of old endpoints from the Kubernetes service to fail. To resolve this issue, the API server IP addresses 
+    need to be correctly listed in storage.
 
-### Alerts
+    Warning/Error 4:
+    "Skipping API apps/v1beta1 because it has no resources."
+    This warning indicates that the API version 'apps/v1beta1' is being skipped because it has no 
+    associated resources. This might be an informational warning and may not necessarily require 
+    immediate action, depending on the use case.
 
-{{< alert >}}This is an alert.{{< /alert >}}
-{{< alert title="Note" >}}This is an alert with a title.{{< /alert >}}
-{{% alert title="Note" %}}This is an alert with a title and **Markdown**.{{% /alert %}}
-{{< alert color="success" >}}This is a successful alert.{{< /alert >}}
-{{< alert color="warning" >}}This is a warning.{{< /alert >}}
-{{< alert color="warning" title="Warning" >}}This is a warning with a title.{{< /alert >}}
+    Warning/Error 5:
+    "watch chan error: etcdserver: mvcc: required revision has been compacted"
+    This error indicates a watch channel error related to the revision being compacted in etcdserver. 
+    To resolve this issue, the etcd database revision or configuration may need to be checked and potentially adjusted.
 
+    Overall, it is important to investigate and address each warning and error to ensure the stability 
+    and reliability of the Kubernetes cluster. If there are no concerns in the log entries provided, 
+    the message 'Everything looks good!' can be returned.
 
-## Another Heading
+    >> can you help me in fixing this error message
+    >>  To help you fix the error messages mentioned in the log entries, here are some steps you can take:
 
-Add some sections here to see how the ToC looks like. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
+    1. For the "Unable to authenticate the request" error:
+    - Generate a new bearer token and update it in the relevant configuration files.
+    - Renew the service account token to prevent expiration issues.
 
-### This Document
+    2. For the "Failed to update lease" error:
+    - Investigate the storage error and check for any invalid objects.
+    - Recreate the lease object with the correct UID if needed.
 
-Inguina genus: Anaphen post: lingua violente voce suae meus aetate diversi. Orbis unam nec flammaeque status deam Silenum erat et a ferrea. Excitus rigidum ait: vestro et Herculis convicia: nitidae deseruit coniuge Proteaque adiciam *eripitur*? Sitim noceat signa *probat quidem*. Sua longis *fugatis* quidem genae.
+    3. For the "Error removing old endpoints from Kubernetes service" error:
+    - Ensure that the API server IP addresses are correctly listed in the storage.
+    - Verify the configuration of the Kubernetes service and update it if necessary.
 
+    4. For the "watch chan error: etcdserver: mvcc: required revision has been compacted" error:
+    - Check the etcd server configuration and ensure that the revision is maintained correctly.
+    - Monitor the etcd server for any potential issues causing revision compaction.
 
-### Pixel Count
+    After performing these steps, restart relevant services or components as needed to apply the changes. 
+    Monitor the Kubernetes cluster for any further errors and ensure that the issues have been resolved successfully.
 
-Tilde photo booth wayfarers cliche lomo intelligentsia man braid kombucha vaporware farm-to-table mixtape portland. PBR&B pickled cornhole ugh try-hard ethical subway tile. Fixie paleo intelligentsia pabst. Ennui waistcoat vinyl gochujang. Poutine salvia authentic affogato, chambray lumbersexual shabby chic.
+    Feel free to provide more specific details or additional logs if you need further assistance with resolving the error messages.
 
-### Contact Info
+    ```
 
-Plaid hell of cred microdosing, succulents tilde pour-over. Offal shabby chic 3 wolf moon blue bottle raw denim normcore poutine pork belly.
 
+5. **Exit the session** 
+    Type end chat to exit the interactive health check session.
 
-### External Links
+## Additional Resources!
 
-Stumptown PBR&B keytar plaid street art, forage XOXO pitchfork selvage affogato green juice listicle pickled everyday carry hashtag. Organic sustainable letterpress sartorial scenester intelligentsia swag bushwick. Put a bird on it stumptown neutra locavore. IPhone typewriter messenger bag narwhal. Ennui cold-pressed seitan flannel keytar, single-origin coffee adaptogen occupy yuccie williamsburg chillwave shoreditch forage waistcoat.
-
-```
-This is the final element on the page and there should be no margin below this.
-```
+KRS Project Repository: For those interested in contributing to the project or exploring the source code, visit the project repository. ([Github Repo](https://github.com/kubetoolsca/krs-docs))

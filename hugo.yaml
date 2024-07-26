@@ -50,30 +50,8 @@ languages:
     params:
       description: A Docsy example site
       custom_css: [css/custom.css]
-    menu:
-      main:
-      - identifier: "k_blog"
-        name: "Blog"
-        url: "https://blog.kubetools.io/"
-        weight: 10
-  # cSpell:disable
-  'no':
-    languageName: Norsk
-    contentDir: content/no
-    title: KRS Docs
-    params:
-      description: Docsy er operativsystem for skyen
-      time_format_default: 02.01.2006
-      time_format_blog: 02.01.2006
-  fa:
-    languageDirection: rtl
-    languageName: "فارسی (Persian)"
-    contentDir: content/fa
-    title: "KRS Docs"
-    params:
-      description: "یک نمونه برای پوسته داکسی"
-      time_format_default: 2006.01.02
-      time_format_blog: 2006.01.02
+    
+  
   # cSpell:enable
 
 markup:

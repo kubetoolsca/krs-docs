@@ -11,9 +11,9 @@
     <item>
       <title>Manual</title>
       <link>http://localhost:1313/docs/tasks/manual/</link>
-      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/tasks/manual/</guid>
-      <description>This is a placeholder page. Replace it with your own content.&#xA;Text can be bold, italic, or strikethrough. Links should be blue with no underlines (unless hovered over).&#xA;There should be whitespace between paragraphs. Vape migas chillwave sriracha poutine try-hard distillery. Tattooed shabby chic small batch, pabst art party heirloom letterpress air plant pop-up. Sustainable chia skateboard art party banjo cardigan normcore affogato vexillologist quinoa meggings man bun master cleanse shoreditch readymade.</description>
+      <description>KRS empowers you to manage your Kubernetes clusters with the help of cutting-edge Artificial Intelligence. This guide equips you with everything you need to get started and unlock the potential of KRS&amp;rsquo;s intelligent recommendations, proactive problem detection, and powerful health checks.&#xA;Prerequisites Up and Running Kubernetes Cluster: Ensure you have a Kubernetes cluster running locally (e.g., Minikube, etc) or in the cloud (e.g., Amazon EKS, Google Kubernetes Engine, etc), if on the cloud, ensure that you&amp;rsquo;ve secured a config file, before using KRS.</description>
     </item>
     <item>
       <title>Docker Desktop</title>
@@ -34,7 +34,7 @@
       <link>http://localhost:1313/docs/tasks/minikube/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/tasks/minikube/</guid>
-      <description>Minikube is your key to unlocking a powerful local Kubernetes environment. This lightweight tool lets you set up a single-node Kubernetes cluster on your machine in a flash. It&amp;rsquo;s perfect for:&#xA;Learning Kubernetes: Gain hands-on experience with core concepts in a controlled setting. Testing Applications: Deploy and test your containerized apps locally. Rapid Iteration: Experiment and refine your configurations without impacting production. Ready to dive in? Check out our comprehensive Minikube tutorial for a step-by-step guide: Install and Configure Krs with MiniKube</description>
+      <description>Minikube: Your local Kubernetes playground. Quickly spin up a single-node cluster and pair it with KRS for effortless cluster optimization.&#xA;Prerequisites Podman, Docker, or Virtual Box (container runtime) Kubectl Getting Started Setup a MiniKube Kubernetes Cluster on your Local Machine&#xA;curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 sudo install minikube-linux-amd64 /usr/local/bin/minikube &amp;amp;&amp;amp; rm minikube-linux-amd64 minikube start Setup KRS using these commands&#xA;git clone https://github.com/kubetoolsca/krs.git cd krs pip install . Initialize KRS to permit it access to your cluster using the given command</description>
     </item>
   </channel>
 </rss>

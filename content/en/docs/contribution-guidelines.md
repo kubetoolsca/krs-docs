@@ -4,44 +4,102 @@ description: How to contribute to the KRS project
 weight: 10
 ---
 
-Welcome to the world of KRS contributors! We're excited to have you join our mission of empowering users with a seamless Kubernetes experience. This guide outlines how you can make valuable contributions to the KRS project.
 
-### Sharpen Your Skills
+Thank you for your interest in contributing to the Kubernetes Resource Scanner (KRS) tool! We welcome your contributions and are excited to help make this project better.
 
-- **Kubernetes Expertise:** Possessing a strong foundation in Kubernetes concepts allows you to understand user needs and tailor contributions accordingly.
-- **KRS Functionality Deep Dive:** Delving into KRS functionalities equips you to contribute to core functionalities, integrations, or even documentation improvements.
-
-### Contributing to KRS
-
-1. **Fork the Repository:** Head over to the [KRS project repository on GitHub](https://github.com/kubetoolsca/krs) and "Fork" it to create your personal copy.
-2. **Local Clone for Collaboration:** Use git clone to clone your forked repository to your development environment. This sets the stage for local development and collaboration.
-3. **Navigate the Issue Landscape:** Explore open issues within the KRS project repository. Look for labels like "help wanted" or issues indicating specific functionalities requiring attention. These are prime areas where your expertise can shine!
-4. **Branch Out Strategically:** Create a new branch in your local repository using a descriptive name that references the issue you're tackling (e.g., fix/issue-<issue-number> for bug fixes or feature/enhancement-<descriptive-name> for new features).
-5. **Code with Collaboration in Mind:** 
-    - Make your code contributions following the project's coding style and conventions.
-    - Write clear, well-documented code that adheres to best practices.
-    - Consider TDD development standards to ensure the integrity and reliability of your contribution.
-6. **Commit with Clarity:** 
-    - Stage your changes using git add.
-    - Craft a meaningful commit message that summarizes your contribution and references the issue number.
-7. **Push for Progress:** Push your committed changes to your forked repository on GitHub.
-8. **Propose Your Innovation:** 
-    - Head over to your forked repository on GitHub and initiate a pull request.
-    - Provide a clear title and description for your pull request, mentioning the issue number and a brief explanation of your changes.
+## **Code of Conduct**
 
 
-### Additional Considerations for Impactful Contributions
+Before contributing, please review and adhere to the [Code of Conduct](CODE_OF_CONDUCT.md). We expect all contributors to follow these guidelines to ensure a positive and inclusive environment.
 
-- **Discussions Are Key:** If your contribution involves a significant change, consider creating a separate issue to discuss the technical approach before diving in. This fosters collaboration and avoids potential roadblocks.
-- **Testing is Essential:** Whenever possible, write unit tests to accompany your code contributions. This strengthens the overall quality and maintainability of the KRS project.
-- **Documentation Updates:** If your contribution affects existing functionalities or introduces new features, ensure an accompanying documentation update follows your pull request. This ensures a smooth user experience.
+## **Release Management and Pull Request Submission Guidelines**
+
+### **Repository Branch Structure**
+
+Our project employs a three-branch workflow to manage the development and release of new features and fixes:
+
+- **main**: Stable release branch that contains production-ready code.
+- **pre-release**: Staging branch for final testing before merging into main.
+- **release-v0.x.x**: Active development branch where all new changes, bug fixes, and features are made and tested.
+
+### **Contributing to the Project**
+
+To contribute to our project, follow these steps to ensure your changes are properly integrated:
+
+**Selecting the Correct Branch**
+
+- Always base your work on the latest **release-vx.x.x** branch. This branch will be named according to the version, for example, release-v0.1.0.
+- Ensure you check the branch name in the repository for the most current version branch.
+
+**Working on Issues**
+
+- Before you start working on an issue, comment on that issue stating that you are taking it on. This helps prevent multiple contributors from working on the same issue simultaneously.
+- Include the issue number in your branch name for traceability, e.g., 123-fix-login-bug.
+
+## **Pull Request (PR) Process**
+
+To maintain code quality and orderly management, all contributors must follow this PR process:
 
 
-#### Thank you for being a KRS contributor!
+#### **Step 1: Sync Your Fork**
 
-Your contributions directly influence the future of KRS and empower users to manage their Kubernetes clusters with greater efficiency. Let's build a better KRS together!
+Before starting your work, sync your fork with the upstream repository to ensure you have the latest changes from the release-v0.x.x branch:
+```
+    git checkout release-vx.x.x
+    git pull origin release-vx.x.x
+```
 
-* [KRS Project Repository](https://github.com/kubetoolsca/krs/tree/main): All about KRS, its features, use cases, and codebase.
-* [KRS Documentation](https://github.com/kubetoolsca/krs-docs): Comprehensive reference for KRS.
+
+### **Step 2: Create a New Branch**
+
+Create a new branch from the **release-vx.x.x** branch for your work:
+```
+    git checkout -b your-branch-name
+```
 
 
+#### **Step 3: Make Changes and Commit**
+
+Make your changes locally and commit them with clear, concise commit messages. Your commits should reference the issue number:
+```
+    git commit -m "Fix issue #123: resolve login bug"
+```
+
+
+#### **Step 4: Push Changes**
+
+Push your branch and changes to your fork:
+
+```
+    git push -u origin your-branch-name
+```
+
+
+#### **Step 5: Open a Pull Request**
+
+- Go to the original repository on GitHub and open a pull request from your branch to the **release-vx.x.x** branch.
+- Clearly describe the changes you are proposing in the PR description. Link the PR to any relevant issues.
+
+
+#### **Step 6: PR Review**
+
+- All pull requests must undergo review by at least two peers before merging.
+- Address any feedback and make required updates to your PR; this may involve additional commits.
+
+
+#### **Step 7: Final Merging**
+
+- Once your PR is approved by the reviewers, one of the maintainers will merge it into the release-v0.x.x branch.
+- The changes will eventually be merged into pre-release and then main as part of our release process.
+
+
+### **Notes on Contribution**
+
+- Please make sure all tests pass before submitting a PR.
+- Adhere to the coding standards and guidelines provided in our repository to ensure consistency and quality.
+
+## **Additional Resources**
+
+- [GitHub Guides: Contributing to Open Source](https://guides.github.com/activities/contributing-to-open-source/)
+- [How to Contribute to an Open Source Project](https://opensource.guide/how-to-contribute/)
+- [The Art of Readable Code](https://www.goodreads.com/book/show/86770.The_Art_of_Readable_Code)

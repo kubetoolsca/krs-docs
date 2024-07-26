@@ -12,7 +12,7 @@
       <link>http://localhost:1313/docs/contribution-guidelines/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/contribution-guidelines/</guid>
-      <description>Welcome to the world of KRS contributors! We&amp;rsquo;re excited to have you join our mission of empowering users with a seamless Kubernetes experience. This guide outlines how you can make valuable contributions to the KRS project.&#xA;Sharpen Your Skills Kubernetes Expertise: Possessing a strong foundation in Kubernetes concepts allows you to understand user needs and tailor contributions accordingly. KRS Functionality Deep Dive: Delving into KRS functionalities equips you to contribute to core functionalities, integrations, or even documentation improvements.</description>
+      <description>Thank you for your interest in contributing to the Kubernetes Resource Scanner (KRS) tool! We welcome your contributions and are excited to help make this project better.&#xA;Code of Conduct Before contributing, please review and adhere to the Code of Conduct. We expect all contributors to follow these guidelines to ensure a positive and inclusive environment.&#xA;Release Management and Pull Request Submission Guidelines Repository Branch Structure Our project employs a three-branch workflow to manage the development and release of new features and fixes:</description>
     </item>
     <item>
       <title>CLI Reference</title>
