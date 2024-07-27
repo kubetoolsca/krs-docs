@@ -1,5 +1,5 @@
 baseURL: https://example.docsy.dev
-title: Kube Docs
+title: KRS Docs
 
 # cSpell:ignore goldmark github hugo readingtime docsy subdir lastmod pygments linenos catmullrom norsk gu
 
@@ -46,33 +46,12 @@ imaging:
 languages:
   en:
     languageName: English
-    title: Kube Docs
+    title: KRS Docs
     params:
       description: A Docsy example site
-    menu:
-      main:
-      - identifier: "k_blog"
-        name: "Blog"
-        url: "https://blog.kubetools.io/"
-        weight: 10
-  # cSpell:disable
-  'no':
-    languageName: Norsk
-    contentDir: content/no
-    title: Kube Docs
-    params:
-      description: Docsy er operativsystem for skyen
-      time_format_default: 02.01.2006
-      time_format_blog: 02.01.2006
-  fa:
-    languageDirection: rtl
-    languageName: "فارسی (Persian)"
-    contentDir: content/fa
-    title: "Kube Docs"
-    params:
-      description: "یک نمونه برای پوسته داکسی"
-      time_format_default: 2006.01.02
-      time_format_blog: 2006.01.02
+      custom_css: [css/custom.css]
+    
+  
   # cSpell:enable
 
 markup:
@@ -151,8 +130,8 @@ params:
   prism_syntax_highlighting: false
 
   copyright:
-    authors: Docsy Authors | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) |
-    from_year: 2018
+    authors: Kubetools Technologies
+    from_year: 2024
 
   # User interface configuration
   ui:
@@ -196,11 +175,11 @@ params:
     # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
     developer:
       - name: GitHub
-        url: https://github.com/kubetoolsca
+        url: /docs/
         icon: fab fa-github
         desc: Development takes place here!
       - name: Slack
-        url: www.launchpass.com/kubetoolsio
+        url: https://www.launchpass.com/kubetoolsio
         icon: fab fa-slack
         desc: Chat with other project developers
   

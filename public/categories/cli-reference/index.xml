@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CLI-Reference on Kube Docs</title>
+    <title>CLI-Reference on KRS Docs</title>
     <link>http://localhost:1313/categories/cli-reference/</link>
-    <description>Recent content in CLI-Reference on Kube Docs</description>
+    <description>Recent content in CLI-Reference on KRS Docs</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Jul 2024 11:06:47 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jul 2024 13:41:18 -0600</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/cli-reference/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Architecture</title>
       <link>http://localhost:1313/docs/getting-started/architecture/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/getting-started/architecture/</guid>
-      <description>This is a placeholder page. Replace it with your own content.</description>
+      <description> </description>
     </item>
     <item>
       <title>CLI Reference</title>

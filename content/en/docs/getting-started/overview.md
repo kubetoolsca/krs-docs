@@ -1,6 +1,6 @@
 ---
 title: Overview
-description: Introduces KRS, your AI-powered co-pilot for managing Kubernetes clusters.
+description: An introduction to KRS
 weight: 1
 ---
 
@@ -30,7 +30,7 @@ KRS is ideal for anyone who manages Kubernetes clusters, regardless of experienc
 
 ## What's Next?
 
-- [Getting Started](/docs/getting-started/): Get started with KRS
-- [Examples](/docs/examples/): Check out some example code!
+- [Try KRS on Your Local Cluster](/docs/tasks/)
+- [Try KRS on Your Cloud](/docs/tutorials/)
 
 **Let KRS become your trusted companion for optimizing and managing your Kubernetes clusters effectively!**

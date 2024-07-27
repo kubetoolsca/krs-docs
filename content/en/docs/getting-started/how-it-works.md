@@ -2,7 +2,7 @@
 title: How It Works
 date: 2024-01-05
 description: >
-  A high-level overview of KRS's internal functionalities and the role of AI in its operations
+  How KRS works
 categories: [How It Works]
 tags: [insight]
 ---

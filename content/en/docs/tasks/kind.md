@@ -1,7 +1,7 @@
 ---
 title: Kind
 description: >
-  A short lead description about this content page. It can be **bold** or _italic_ and can be split over multiple paragraphs.
+  How to Use KRS on Kind
 date: 2017-01-05
 weight: 5
 ---

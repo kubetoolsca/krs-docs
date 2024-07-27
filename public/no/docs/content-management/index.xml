@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Håndtering av innhold on Kube Docs</title>
+    <title>Håndtering av innhold on KRS Docs</title>
     <link>http://localhost:1313/no/docs/content-management/</link>
-    <description>Recent content in Håndtering av innhold on Kube Docs</description>
+    <description>Recent content in Håndtering av innhold on KRS Docs</description>
     <generator>Hugo</generator>
     <language>no</language>
     <lastBuildDate>Wed, 03 Jul 2024 07:19:21 +0530</lastBuildDate>

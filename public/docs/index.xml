@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Documentation on Kube Docs</title>
+    <title>Documentation on KRS Docs</title>
     <link>http://localhost:1313/docs/</link>
-    <description>Recent content in Documentation on Kube Docs</description>
+    <description>Recent content in Documentation on KRS Docs</description>
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="http://localhost:1313/docs/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Examples</title>
-      <link>http://localhost:1313/docs/examples/</link>
-      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/examples/</guid>
-      <description>This is a placeholder page that shows you how to use this template site.&#xA;Do you have any example applications or code for your users in your repo or elsewhere? Link to your examples here.</description>
-    </item>
     <item>
       <title>Contribution Guidelines</title>
       <link>http://localhost:1313/docs/contribution-guidelines/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/contribution-guidelines/</guid>
-      <description>Welcome to the world of KRS contributors! We&amp;rsquo;re excited to have you join our mission of empowering users with a seamless Kubernetes experience. This guide outlines how you can make valuable contributions to the KRS project.&#xA;Sharpen Your Skills Kubernetes Expertise: Possessing a strong foundation in Kubernetes concepts allows you to understand user needs and tailor contributions accordingly. KRS Functionality Deep Dive: Delving into KRS functionalities equips you to contribute to core functionalities, integrations, or even documentation improvements.</description>
+      <description>Thank you for your interest in contributing to the Kubernetes Resource Scanner (KRS) tool! We welcome your contributions and are excited to help make this project better.&#xA;Code of Conduct Before contributing, please review and adhere to the Code of Conduct. We expect all contributors to follow these guidelines to ensure a positive and inclusive environment.&#xA;Release Management and Pull Request Submission Guidelines Repository Branch Structure Our project employs a three-branch workflow to manage the development and release of new features and fixes:</description>
     </item>
     <item>
       <title>CLI Reference</title>

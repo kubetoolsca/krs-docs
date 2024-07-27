@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kube Docs</title>
+    <title>KRS Docs</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on Kube Docs</description>
+    <description>Recent content on KRS Docs</description>
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
@@ -17,44 +17,44 @@
     <item>
       <title>Manual</title>
       <link>http://localhost:1313/docs/tasks/manual/</link>
-      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/tasks/manual/</guid>
-      <description>This is a placeholder page. Replace it with your own content.&#xA;Text can be bold, italic, or strikethrough. Links should be blue with no underlines (unless hovered over).&#xA;There should be whitespace between paragraphs. Vape migas chillwave sriracha poutine try-hard distillery. Tattooed shabby chic small batch, pabst art party heirloom letterpress air plant pop-up. Sustainable chia skateboard art party banjo cardigan normcore affogato vexillologist quinoa meggings man bun master cleanse shoreditch readymade.</description>
-    </item>
-    <item>
-      <title>Examples</title>
-      <link>http://localhost:1313/docs/examples/</link>
-      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/examples/</guid>
-      <description>This is a placeholder page that shows you how to use this template site.&#xA;Do you have any example applications or code for your users in your repo or elsewhere? Link to your examples here.</description>
+      <description>KRS empowers you to manage your Kubernetes clusters with the help of cutting-edge Artificial Intelligence. This guide equips you with everything you need to get started and unlock the potential of KRS&amp;rsquo;s intelligent recommendations, proactive problem detection, and powerful health checks.&#xA;Prerequisites Up and Running Kubernetes Cluster: Ensure you have a Kubernetes cluster running locally (e.g., Minikube, etc) or in the cloud (e.g., Amazon EKS, Google Kubernetes Engine, etc), if on the cloud, ensure that you&amp;rsquo;ve secured a config file, before using KRS.</description>
     </item>
     <item>
       <title>Azure EKS</title>
       <link>http://localhost:1313/docs/tutorials/aks/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/tutorials/aks/</guid>
-      <description>Optimize your AKS cluster management with KRS. This powerful tool, installed locally on your machine, analyzes your AKS cluster to identify areas for improvement. KRS leverages AI to provide recommendations for enhancing your cluster&amp;rsquo;s efficiency and functionality.&#xA;Ready to Get Started? Our comprehensive tutorial on our GitHub repository will guide you through Setting up Krs for an EKS cluster on Microsoft Azure</description>
+      <description>Optimize your AKS cluster management with KRS. This powerful tool, installed locally on your machine, analyzes your AKS cluster to identify areas for improvement. KRS leverages AI to provide recommendations for enhancing your cluster&amp;rsquo;s efficiency and functionality.&#xA;Prerequisites: An Azure account Install Azure CLI on your laptop Installation Clone the repository using the command&#xA;git clone https://github.com/kubetoolsca/krs.git Install the Krs Tool&#xA;Change directory to /krs and run the following command to install krs locally on your system:</description>
     </item>
     <item>
       <title>DigitalOcean</title>
       <link>http://localhost:1313/docs/tutorials/aws/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/tutorials/aws/</guid>
-      <description>Gain valuable insights for your DigitalOcean Kubernetes cluster with KRS. This local tool analyzes your cluster and provides recommendations for smoother management.&#xA;Ready to Get Started? Follow our guide on GitHub Installing and Configuring Krs with Digital Ocean Kubernetes Cluster</description>
+      <description>KRS is your Kubernetes sidekick, effortlessly optimizing your Digital Ocean cluster. Simply install, initialize, and scan to uncover hidden potential.&#xA;Prerequisites Digital Ocean Account Homebrew(if you&amp;rsquo;re on Mac) Getting Started Setup a Kubernetes Cluster on Digital Ocean&#xA;Install and Setup doctl on your Local Machine&#xA;If on Ubuntu use:&#xA;sudo snap install doctl sudo snap connect doctl:kube-config sudo snap connect doctl:ssh-keys :ssh-keys sudo snap connect doctl:dot-docker If on Mac, use:</description>
     </item>
     <item>
       <title>Docker Desktop</title>
       <link>http://localhost:1313/docs/tasks/docker-desktop/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/tasks/docker-desktop/</guid>
-      <description>This is a placeholder page. Replace it with your own content.&#xA;Text can be bold, italic, or strikethrough. Links should be blue with no underlines (unless hovered over).&#xA;There should be whitespace between paragraphs. Vape migas chillwave sriracha poutine try-hard distillery. Tattooed shabby chic small batch, pabst art party heirloom letterpress air plant pop-up. Sustainable chia skateboard art party banjo cardigan normcore affogato vexillologist quinoa meggings man bun master cleanse shoreditch readymade.</description>
+      <description>Get started with Docker Desktop to build and run containerized applications.&#xA;To install and get started with Docker Desktop, follow these steps:&#xA;Download the installer: Visit the official Docker website to download the appropriate installer for your operating system (Windows, macOS, or Linux).&#xA;Run the installer: Execute the downloaded installer and follow the on-screen instructions to complete the installation process.&#xA;For detailed instructions and troubleshooting, refer to the official Docker documentation: Instructions on Getting Started</description>
     </item>
     <item>
       <title>AWS EKS</title>
       <link>http://localhost:1313/docs/tutorials/eks/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/tutorials/eks/</guid>
-      <description>Effortlessly optimize your EKS cluster with KRS. This powerful tool, running locally on your machine, analyzes your EKS cluster for improvement. Leverage KRS to gain valuable insights and recommendations for a smoother Kubernetes experience.&#xA;Ready to Get Started? Follow our step-by-step guide on Installing and Configuring Krs with EKS (AWS)</description>
+      <description>Optimize your EKS cluster with KRS. KRS running locally on your machine, analyzes your EKS cluster for improvement. Leverage KRS to gain valuable insights and recommendations for a smoother Kubernetes experience.&#xA;Prerequisites AWS Account AWSCLI installed on your system Homebrew(if you&amp;rsquo;re on Mac) Getting Started Setup Amazon EKS Cluster&#xA;eksctl create cluster --name &amp;lt;cluster_name&amp;gt; --version &amp;lt;kubernetes_version&amp;gt; --region &amp;lt;aws_region_name e.g us-east-1&amp;gt; --nodegroup-name &amp;lt;linux_nodes&amp;gt; --node-type &amp;lt;node_type&amp;gt; --nodes &amp;lt;number_of_nodes&amp;gt; --zones=&amp;lt;zone_names, e.g: us-east-1a,us-east-1b&amp;gt; Authenticate your AWS account</description>
+    </item>
+    <item>
+      <title>Google&#39;s GKE</title>
+      <link>http://localhost:1313/docs/tutorials/gke/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tutorials/gke/</guid>
+      <description>Effortlessly optimize your GKE cluster with KRS. This powerful tool, running locally on your machine, analyzes your GKE cluster for improvement. Leverage KRS to gain valuable insights and recommendations for a smoother Kubernetes experience.&#xA;Prerequisite A Google Cloud Account Installing Google Cloud SDK on your macOS Getting Started Execute the following command to install Google Cloud SDK in your system&#xA;tar xfz google-cloud-sdk-195.0.0-darwin-x86_64.tar.gz ./google-cloud-sdk/install.sh Enable Google Cloud Engine API&#xA;Authenticate Your Google Cloud using gcloud auth</description>
     </item>
     <item>
       <title>Kind</title>
@@ -68,14 +68,14 @@
       <link>http://localhost:1313/docs/tasks/minikube/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/tasks/minikube/</guid>
-      <description>Minikube is your key to unlocking a powerful local Kubernetes environment. This lightweight tool lets you set up a single-node Kubernetes cluster on your machine in a flash. It&amp;rsquo;s perfect for:&#xA;Learning Kubernetes: Gain hands-on experience with core concepts in a controlled setting. Testing Applications: Deploy and test your containerized apps locally. Rapid Iteration: Experiment and refine your configurations without impacting production. Ready to dive in? Check out our comprehensive Minikube tutorial for a step-by-step guide: Install and Configure Krs with MiniKube</description>
+      <description>Minikube: Your local Kubernetes playground. Quickly spin up a single-node cluster and pair it with KRS for effortless cluster optimization.&#xA;Prerequisites Podman, Docker, or Virtual Box (container runtime) Kubectl Getting Started Setup a MiniKube Kubernetes Cluster on your Local Machine&#xA;curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 sudo install minikube-linux-amd64 /usr/local/bin/minikube &amp;amp;&amp;amp; rm minikube-linux-amd64 minikube start Setup KRS using these commands&#xA;git clone https://github.com/kubetoolsca/krs.git cd krs pip install . Initialize KRS to permit it access to your cluster using the given command</description>
     </item>
     <item>
       <title>Contribution Guidelines</title>
       <link>http://localhost:1313/docs/contribution-guidelines/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/contribution-guidelines/</guid>
-      <description>Welcome to the world of KRS contributors! We&amp;rsquo;re excited to have you join our mission of empowering users with a seamless Kubernetes experience. This guide outlines how you can make valuable contributions to the KRS project.&#xA;Sharpen Your Skills Kubernetes Expertise: Possessing a strong foundation in Kubernetes concepts allows you to understand user needs and tailor contributions accordingly. KRS Functionality Deep Dive: Delving into KRS functionalities equips you to contribute to core functionalities, integrations, or even documentation improvements.</description>
+      <description>Thank you for your interest in contributing to the Kubernetes Resource Scanner (KRS) tool! We welcome your contributions and are excited to help make this project better.&#xA;Code of Conduct Before contributing, please review and adhere to the Code of Conduct. We expect all contributors to follow these guidelines to ensure a positive and inclusive environment.&#xA;Release Management and Pull Request Submission Guidelines Repository Branch Structure Our project employs a three-branch workflow to manage the development and release of new features and fixes:</description>
     </item>
     <item>
       <title>How It Works</title>
@@ -89,7 +89,7 @@
       <link>http://localhost:1313/docs/getting-started/architecture/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/getting-started/architecture/</guid>
-      <description>This is a placeholder page. Replace it with your own content.</description>
+      <description> </description>
     </item>
     <item>
       <title>CLI Reference</title>
@@ -97,13 +97,6 @@
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/cli-reference/</guid>
       <description>The KRS CLI provides a powerful set of commands for interacting with your Kubernetes clusters and leveraging KRS&amp;rsquo;s intelligent features. This section serves as a comprehensive reference guide for all available commands and their functionalities.&#xA;krs --help Usage: krs [OPTIONS] COMMAND [ARGS]... krs: A command line interface to scan your Kubernetes Cluster, detect errors, provide resolutions using LLMs and recommend latest tools for your cluster ╭─ Options ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮ │ --install-completion Install completion for the current shell.</description>
-    </item>
-    <item>
-      <title>Example Page</title>
-      <link>http://localhost:1313/docs/getting-started/example-page/</link>
-      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/getting-started/example-page/</guid>
-      <description>This is a placeholder page. Replace it with your own content.&#xA;Text can be bold, italic, or strikethrough. Links should be blue with no underlines (unless hovered over).&#xA;There should be whitespace between paragraphs. Vape migas chillwave sriracha poutine try-hard distillery. Tattooed shabby chic small batch, pabst art party heirloom letterpress air plant pop-up. Sustainable chia skateboard art party banjo cardigan normcore affogato vexillologist quinoa meggings man bun master cleanse shoreditch readymade.</description>
     </item>
     <item>
       <title>Search Results</title>

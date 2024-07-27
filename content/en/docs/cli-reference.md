@@ -9,7 +9,7 @@ tags: [CLI, KRS CLI, example, commands]
 
 The KRS CLI provides a powerful set of commands for interacting with your Kubernetes clusters and leveraging KRS's intelligent features. This section serves as a comprehensive reference guide for all available commands and their functionalities.
 
-{{% pageinfo %}}
+```
 
     krs --help
 
@@ -32,7 +32,7 @@ The KRS CLI provides a powerful set of commands for interacting with your Kubern
     │ recommend    Generates a table of recommended tools from our ranking database and their CNCF project status.                                                  │
     │ scan         Scans the cluster and extracts a list of tools that are currently used.                                                                          │
     ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
-{{% /pageinfo %}}
+```
 
 ### Understanding the Output
 
@@ -64,13 +64,13 @@ This section dives deeper into each KRS command, providing a comprehensive expla
   - **```krs init```**
 - **Options:** None
 - **Example:**
-  {{% pageinfo %}}
+  ```
     krs init
-  {{% /pageinfo %}}
+  ```
 **Output**
-  {{% pageinfo %}}
+  ```
     Services initialized and scanner loaded.
-  {{% /pageinfo %}}
+  ```
 
 ##### 2. **krs scan:**
 - **Purpose:** 
@@ -79,15 +79,15 @@ This section dives deeper into each KRS command, providing a comprehensive expla
   - **```krs scan```**
 - **Options:** None
 - **Example:**
-  {{% pageinfo %}}
+  ```
     krs scan
-  {{% /pageinfo %}}
+  ```
 
 - **Output:**
 
   The krs scan command provides a list of tools detected within your Kubernetes cluster. This list may include tools for monitoring, logging, security, networking, and more.
 
-  {{% pageinfo %}}
+  ```
     Scanning your cluster...
 
     Cluster scanned successfully...
@@ -104,7 +104,7 @@ This section dives deeper into each KRS command, providing a comprehensive expla
     +-------------+--------+------------------+---------------+
     | hubble      |      7 | Security Tools   | listed        |
     +-------------+--------+------------------+---------------+
-  {{% /pageinfo %}}
+  ```
 
 ##### 3. **krs namespaces:**
 - **Purpose:**  
@@ -113,22 +113,22 @@ This section dives deeper into each KRS command, providing a comprehensive expla
   - **```krs namespaces```**
 - **Options:** None
 - **Example:** 
-  {{% pageinfo %}}
+  ```
     krs namespaces
-  {{% /pageinfo %}}
+  ```
 
 - **Output:**
 
   The krs namespaces command displays a list of all namespace names within your Kubernetes cluster.
 
-  {{% pageinfo %}}
+  ```
     Namespaces in your cluster are: 
 
     1. default
     2. kube-node-lease
     3. kube-public
     4. kube-system
-  {{% /pageinfo %}}
+  ```
 
 ##### 4. **krs pods [--namespace <namespace_name>]:**
 - **Purpose:**
@@ -139,19 +139,19 @@ This section dives deeper into each KRS command, providing a comprehensive expla
 - **Options:**
   - **```--namespace <namespace_name>```**: Filters the list of pods to include only those within the specified namespace.
 - **Example:**
-  {{% pageinfo %}}
+  ```
     krs pods
-  {{% /pageinfo %}}
+  ```
 
-  {{% pageinfo %}}
+  ```
     krs pods --namespace kube-system 
-  {{% /pageinfo %}}
+  ```
   
 - **Output:**
 
   The krs namespaces command displays a list of all namespace names within your Kubernetes cluster.
 
-  {{% pageinfo %}}
+  ```
     Pods in namespace 'kube-system': 
 
     1. cilium-9lqbq
@@ -177,7 +177,7 @@ This section dives deeper into each KRS command, providing a comprehensive expla
     21. kube-proxy-qgv4j
     22. kube-proxy-vztzf
 
-  {{% /pageinfo %}}
+  ```
 
 ##### 5. **krs recommend:**
 - **Purpose:**
@@ -186,15 +186,15 @@ This section dives deeper into each KRS command, providing a comprehensive expla
   - **```krs recommend```**
 - **Options:** None
 - **Example:**
-  {{% pageinfo %}}
+  ```
     krs recommend
-  {{% /pageinfo %}}
+  ```
 
 - **Output:**
 
   The krs recommend command displays a table with recommended tools. The table typically includes information like the tool name, a brief description, and its CNCF project status (e.g., graduated, listed).
 
-  {{% pageinfo %}}
+  ```
     Our recommended tools for this deployment are:
 
     +------------------+------------------------+-------------+---------------+
@@ -205,7 +205,7 @@ This section dives deeper into each KRS command, providing a comprehensive expla
     | Security Tools   | Recommended tool       | trivy       | listed        |
     +------------------+------------------------+-------------+---------------+
 
-  {{% /pageinfo %}}
+  ```
 
 ##### 6. **krs health:**
 - **Purpose:**
@@ -214,9 +214,9 @@ This section dives deeper into each KRS command, providing a comprehensive expla
   - **```krs health```**
 - **Options:** None
 - **Example:**
-  {{% pageinfo %}}
+  ```
     krs health
-  {{% /pageinfo %}}
+  ```
 
 - **Output:**
 
@@ -226,7 +226,7 @@ This section dives deeper into each KRS command, providing a comprehensive expla
   - **Network Health Analysis:** KRS can assess the health of your cluster's network fabric. This might involve examining pod-to-pod communication latency, identifying potential bottlenecks, and verifying network configuration for optimal performance.
   - **Security Posture Evaluation:** KRS can scan your cluster for security vulnerabilities. This may involve analyzing deployments for outdated container images, checking security context constraints (SCCs), and searching for suspicious activities within the cluster.
 
-  {{% pageinfo %}}
+  ```
 
     Starting interactive terminal...
 
@@ -327,4 +327,4 @@ This section dives deeper into each KRS command, providing a comprehensive expla
     >> end chat
 
 
-  {{% /pageinfo %}}
+  ```

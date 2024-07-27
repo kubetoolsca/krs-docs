@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Guide on Kube Docs</title>
+    <title>Guide on KRS Docs</title>
     <link>http://localhost:1313/categories/guide/</link>
-    <description>Recent content in Guide on Kube Docs</description>
+    <description>Recent content in Guide on KRS Docs</description>
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="http://localhost:1313/categories/guide/index.xml" rel="self" type="application/rss+xml" />
@@ -12,6 +12,13 @@
       <link>http://localhost:1313/docs/getting-started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/getting-started/</guid>
+      <description>This AI-powered tool empowers you to manage your Kubernetes clusters with ease. Dive into the guide to unlock KRS&amp;rsquo;s functionalities:&#xA;Intelligent recommendations Proactive problem detection Powerful health checks Ready to streamline your Kubernetes experience? Let&amp;rsquo;s get going! </description>
+    </item>
+    <item>
+      <title>Manual</title>
+      <link>http://localhost:1313/docs/tasks/manual/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tasks/manual/</guid>
       <description>KRS empowers you to manage your Kubernetes clusters with the help of cutting-edge Artificial Intelligence. This guide equips you with everything you need to get started and unlock the potential of KRS&amp;rsquo;s intelligent recommendations, proactive problem detection, and powerful health checks.&#xA;Prerequisites Up and Running Kubernetes Cluster: Ensure you have a Kubernetes cluster running locally (e.g., Minikube, etc) or in the cloud (e.g., Amazon EKS, Google Kubernetes Engine, etc), if on the cloud, ensure that you&amp;rsquo;ve secured a config file, before using KRS.</description>
     </item>
   </channel>

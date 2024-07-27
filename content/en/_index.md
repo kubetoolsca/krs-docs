@@ -1,13 +1,15 @@
 ---
-title: Kube Docs
+title: 
 ---
 
 {{< blocks/cover title="Kubetools Recommender System" image_anchor="top" height="full" >}}
 
+
+
 <a class="btn btn-lg btn-primary me-3 mb-4" href="/docs/" style="background-color: white; color: #020202;">
   Getting Started <i class="fas fa-arrow-alt-circle-right ms-2"></i>
 </a>
-<a class="btn btn-lg btn-primary me-3 mb-4" href="www.launchpass.com/kubetoolsio" style="background-color: #2faf79; border-color: #ecb22e;">
+<a class="btn btn-lg btn-primary me-3 mb-4" target = "_blank" href="https://www.launchpass.com/kubetoolsio" style="background-color: #2faf79; border-color: #ecb22e;">
   Join Slack <i class="fab fa-slack ms-2 "></i>
 </a>
 <p class="lead mt-5"></p>
@@ -20,7 +22,7 @@ KRS is a GenAI-powered Kubernetes Tools Recommender System. It scans your cluste
 {{% /blocks/lead %}}
 
 
-{{% blocks/section color="dark" type="col"%}}
+{{% blocks/section color="brown" type="col"%}}
 
 <h2 style="text-align: center;">Addressing Key Challenges in Kubernetes Management with KRS</h2><br>
 
@@ -103,6 +105,7 @@ KRS is a GenAI-powered Kubernetes Tools Recommender System. It scans your cluste
 {{% /blocks/section %}}
 
 
+
 {{% blocks/section type="col" %}}
 
 <div class="row">
@@ -110,7 +113,7 @@ KRS is a GenAI-powered Kubernetes Tools Recommender System. It scans your cluste
 <div class="mb-4 h1">
   <i class="fab fa-github"></i>
 </div>
-<h4 class="h3">Install KRS off Github</h4>
+<h4 class="h3">Get Started with KRS</h4>
 <div class="mb-0">
 <p><a href="https://github.com/kubetoolsca/krs">Get the KRS tool!</a></p>
 </div>
