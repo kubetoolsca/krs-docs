@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Docs on KRS Docs</title>
+    <title>Docs on KRS</title>
     <link>http://localhost:1313/tags/docs/</link>
-    <description>Recent content in Docs on KRS Docs</description>
+    <description>Recent content in Docs on KRS</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 24 Jul 2024 13:41:18 -0600</lastBuildDate>

@@ -1,5 +1,5 @@
 ---
-title: KRS Docs
+title: KRS
 ---
 
 {{< blocks/cover title="Kubetools Recommender System" image_anchor="top" height="full" >}}

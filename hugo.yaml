@@ -1,5 +1,5 @@
 baseURL: https://example.docsy.dev
-title: KRS Docs
+title: KRS
 
 # cSpell:ignore goldmark github hugo readingtime docsy subdir lastmod pygments linenos catmullrom norsk gu
 
@@ -46,9 +46,9 @@ imaging:
 languages:
   en:
     languageName: English
-    title: KRS Docs
+    title: KRS
     params:
-      description: A Docsy example site
+      description: A KRS Docs site
       custom_css: [css/custom.css]
     
   
