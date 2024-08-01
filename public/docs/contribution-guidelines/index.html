@@ -58,10 +58,7 @@
       </ul>
   </div>
   <div class="d-none d-lg-block">
-    <div class="td-search">
-  <div class="td-search__icon"></div>
-  <input type="search" class="td-search__input form-control td-search-input" placeholder="Search this site…" aria-label="Search this site…" autocomplete="off">
-</div>
+    
   </div>
 </div>
 </nav>
@@ -72,10 +69,7 @@
           <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
             <div id="td-sidebar-menu" class="td-sidebar__inner">
   <form class="td-sidebar__search d-flex align-items-center">
-    <div class="td-search">
-  <div class="td-search__icon"></div>
-  <input type="search" class="td-search__input form-control td-search-input" placeholder="Search this site…" aria-label="Search this site…" autocomplete="off">
-</div>
+    
     <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
     </button>
   </form>
@@ -147,21 +141,16 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#code-of-conduct"><strong>Code of Conduct</strong></a></li>
-    <li><a href="#release-management-and-pull-request-submission-guidelines"><strong>Release Management and Pull Request Submission Guidelines</strong></a>
+    <li>
       <ul>
-        <li><a href="#repository-branch-structure"><strong>Repository Branch Structure</strong></a></li>
-        <li><a href="#contributing-to-the-project"><strong>Contributing to the Project</strong></a></li>
-      </ul>
-    </li>
-    <li><a href="#pull-request-pr-process"><strong>Pull Request (PR) Process</strong></a>
-      <ul>
-        <li></li>
+        <li><a href="#code-of-conduct"><strong>Code of Conduct</strong></a></li>
+        <li><a href="#release-management-and-pull-request-submission-guidelines"><strong>Release Management and Pull Request Submission Guidelines</strong></a></li>
+        <li><a href="#pull-request-pr-process"><strong>Pull Request (PR) Process</strong></a></li>
         <li><a href="#step-2-create-a-new-branch"><strong>Step 2: Create a New Branch</strong></a></li>
         <li><a href="#notes-on-contribution"><strong>Notes on Contribution</strong></a></li>
+        <li><a href="#additional-resources"><strong>Additional Resources</strong></a></li>
       </ul>
     </li>
-    <li><a href="#additional-resources"><strong>Additional Resources</strong></a></li>
   </ul>
 </nav>
       </div>
@@ -215,17 +204,17 @@
 		
   </header>
 	<p>Thank you for your interest in contributing to the Kubernetes Resource Scanner (KRS) tool! We welcome your contributions and are excited to help make this project better.</p>
-<h2 id="code-of-conduct"><strong>Code of Conduct</strong><a class="td-heading-self-link" href="#code-of-conduct" aria-label="Heading self-link"></a></h2>
+<h3 id="code-of-conduct"><strong>Code of Conduct</strong><a class="td-heading-self-link" href="#code-of-conduct" aria-label="Heading self-link"></a></h3>
 <p>Before contributing, please review and adhere to the <a href="CODE_OF_CONDUCT.md">Code of Conduct</a>. We expect all contributors to follow these guidelines to ensure a positive and inclusive environment.</p>
-<h2 id="release-management-and-pull-request-submission-guidelines"><strong>Release Management and Pull Request Submission Guidelines</strong><a class="td-heading-self-link" href="#release-management-and-pull-request-submission-guidelines" aria-label="Heading self-link"></a></h2>
-<h3 id="repository-branch-structure"><strong>Repository Branch Structure</strong><a class="td-heading-self-link" href="#repository-branch-structure" aria-label="Heading self-link"></a></h3>
+<h3 id="release-management-and-pull-request-submission-guidelines"><strong>Release Management and Pull Request Submission Guidelines</strong><a class="td-heading-self-link" href="#release-management-and-pull-request-submission-guidelines" aria-label="Heading self-link"></a></h3>
+<h4 id="repository-branch-structure"><strong>Repository Branch Structure</strong><a class="td-heading-self-link" href="#repository-branch-structure" aria-label="Heading self-link"></a></h4>
 <p>Our project employs a three-branch workflow to manage the development and release of new features and fixes:</p>
 <ul>
 <li><strong>main</strong>: Stable release branch that contains production-ready code.</li>
 <li><strong>pre-release</strong>: Staging branch for final testing before merging into main.</li>
 <li><strong>release-v0.x.x</strong>: Active development branch where all new changes, bug fixes, and features are made and tested.</li>
 </ul>
-<h3 id="contributing-to-the-project"><strong>Contributing to the Project</strong><a class="td-heading-self-link" href="#contributing-to-the-project" aria-label="Heading self-link"></a></h3>
+<h4 id="contributing-to-the-project"><strong>Contributing to the Project</strong><a class="td-heading-self-link" href="#contributing-to-the-project" aria-label="Heading self-link"></a></h4>
 <p>To contribute to our project, follow these steps to ensure your changes are properly integrated:</p>
 <p><strong>Selecting the Correct Branch</strong></p>
 <ul>
@@ -237,7 +226,7 @@
 <li>Before you start working on an issue, comment on that issue stating that you are taking it on. This helps prevent multiple contributors from working on the same issue simultaneously.</li>
 <li>Include the issue number in your branch name for traceability, e.g., 123-fix-login-bug.</li>
 </ul>
-<h2 id="pull-request-pr-process"><strong>Pull Request (PR) Process</strong><a class="td-heading-self-link" href="#pull-request-pr-process" aria-label="Heading self-link"></a></h2>
+<h3 id="pull-request-pr-process"><strong>Pull Request (PR) Process</strong><a class="td-heading-self-link" href="#pull-request-pr-process" aria-label="Heading self-link"></a></h3>
 <p>To maintain code quality and orderly management, all contributors must follow this PR process:</p>
 <h4 id="step-1-sync-your-fork"><strong>Step 1: Sync Your Fork</strong><a class="td-heading-self-link" href="#step-1-sync-your-fork" aria-label="Heading self-link"></a></h4>
 <p>Before starting your work, sync your fork with the upstream repository to ensure you have the latest changes from the release-v0.x.x branch:</p>
@@ -272,7 +261,7 @@
 <li>Please make sure all tests pass before submitting a PR.</li>
 <li>Adhere to the coding standards and guidelines provided in our repository to ensure consistency and quality.</li>
 </ul>
-<h2 id="additional-resources"><strong>Additional Resources</strong><a class="td-heading-self-link" href="#additional-resources" aria-label="Heading self-link"></a></h2>
+<h3 id="additional-resources"><strong>Additional Resources</strong><a class="td-heading-self-link" href="#additional-resources" aria-label="Heading self-link"></a></h3>
 <ul>
 <li><a href="https://guides.github.com/activities/contributing-to-open-source/">GitHub Guides: Contributing to Open Source</a></li>
 <li><a href="https://opensource.guide/how-to-contribute/">How to Contribute to an Open Source Project</a></li>

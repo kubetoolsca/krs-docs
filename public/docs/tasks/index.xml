@@ -27,7 +27,7 @@
       <link>http://localhost:1313/docs/tasks/kind/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/tasks/kind/</guid>
-      <description>This is a placeholder page. Replace it with your own content.</description>
+      <description>Prerequisites Podman, Docker, or Virtual Box (container runtime) Kubectl go (version 1.16+) Getting Started Setup a Kind Kubernetes Cluster on your Local Machine&#xA;go install sigs.k8s.io/kind@v0.23.0 &amp;amp;&amp;amp; kind create cluster Setup KRS using these commands&#xA;git clone https://github.com/kubetoolsca/krs.git cd krs pip install . Initialize KRS to permit it access to your cluster using the given command&#xA;krs init Get a view of all possible actions with KRS, by running the given command</description>
     </item>
     <item>
       <title>Minikube</title>

@@ -59,10 +59,7 @@
       </ul>
   </div>
   <div class="d-none d-lg-block">
-    <div class="td-search">
-  <div class="td-search__icon"></div>
-  <input type="search" class="td-search__input form-control td-search-input" placeholder="Search this site…" aria-label="Search this site…" autocomplete="off">
-</div>
+    
   </div>
 </div>
 </nav>
@@ -271,8 +268,61 @@ The chosen LLM meticulously analyzes the pod&rsquo;s health data, pinpointing po
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-ffc590ea6468143712feda0ba56c1372">3 - Architecture</h1>
-    <div class="lead">An illustration of KRS&rsquo;s architecture</div>
-	<img src="https://raw.githubusercontent.com/kubetoolsca/krs/main/arch.png" alt="Architecture Illustration">
+    <div class="lead">KRS Architecture Overview</div>
+	<h2 id="introduction">Introduction<a class="td-heading-self-link" href="#introduction" aria-label="Heading self-link"></a></h2>
+<p>The Kubetools Recommender System (KRS) is a tool designed to assist Kubernetes administrators in optimizing their cluster configurations by recommending suitable tools based on the existing setup. This document outlines the core components of KRS and their interactions.</p>
+<h2 id="system-architecture">System Architecture<a class="td-heading-self-link" href="#system-architecture" aria-label="Heading self-link"></a></h2>
+<h3 id="overview">Overview<a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"></a></h3>
+<h5 id="cli-command-line-interface"><strong>CLI (Command-Line Interface)</strong><a class="td-heading-self-link" href="#cli-command-line-interface" aria-label="Heading self-link"></a></h5>
+<ul>
+<li>The user&rsquo;s primary interaction point with the system</li>
+<li>Provides commands for scanning, recommending tools, performing health checks, and managing system state</li>
+<li>Orchestrates interactions with other components</li>
+</ul>
+<h5 id="scanner"><strong>Scanner</strong><a class="td-heading-self-link" href="#scanner" aria-label="Heading self-link"></a></h5>
+<ul>
+<li>Responsible for interacting with the Kubernetes API to gather information about the cluster&rsquo;s resources (pods, services, deployments, etc.)</li>
+<li>Extracts data on deployed tools and their configurations</li>
+<li>Stores collected data in a structured format for subsequent processing</li>
+</ul>
+<h5 id="tool-database"><strong>Tool Database</strong><a class="td-heading-self-link" href="#tool-database" aria-label="Heading self-link"></a></h5>
+<ul>
+<li>Maintains a curated database of Kubernetes tools, categorized and ranked based on various criteria (e.g., functionality, popularity, maturity)</li>
+<li>Serves as a knowledge base for the recommender component</li>
+</ul>
+<h5 id="recommender"><strong>Recommender</strong><a class="td-heading-self-link" href="#recommender" aria-label="Heading self-link"></a></h5>
+<ul>
+<li>Analyzes the scanned cluster data to identify potential tool gaps</li>
+<li>Leverages the tool database to suggest suitable tools based on the identified gaps and ranking criteria</li>
+<li>Generates recommendations in a user-friendly format</li>
+</ul>
+<h5 id="health-checker"><strong>Health Checker</strong><a class="td-heading-self-link" href="#health-checker" aria-label="Heading self-link"></a></h5>
+<ul>
+<li>Provides in-depth health checks for selected pods</li>
+<li>Extracts pod logs and events for analysis</li>
+<li>Utilizes a Language Model (LLM) to process the data and identify potential issues</li>
+<li>Offers recommendations for resolving identified problems</li>
+</ul>
+<h5 id="data-storage"><strong>Data Storage</strong><a class="td-heading-self-link" href="#data-storage" aria-label="Heading self-link"></a></h5>
+<ul>
+<li>Manages persistent storage of tool rankings, cluster information, and other relevant data</li>
+<li>Employs JSON and pickle formats for efficient data handling</li>
+</ul>
+<h3 id="data-flow">Data Flow<a class="td-heading-self-link" href="#data-flow" aria-label="Heading self-link"></a></h3>
+<img src="https://raw.githubusercontent.com/kubetoolsca/krs/main/arch.png" alt="Architecture Illustration">
+<ol>
+<li>The user initiates a scan using the CLI.</li>
+<li>The scanner interacts with the Kubernetes API to collect cluster data</li>
+<li>Collected data is stored in the data storage component</li>
+<li>The recommender analyzes the stored data and generates tool recommendations</li>
+<li>The CLI presents the recommendations to the user</li>
+<li>If a health check is requested, the CLI interacts with the health checker</li>
+<li>The health checker collects pod information, processes it using the LLM, and presents findings to the user</li>
+</ol>
+<h3 id="deployment-architecture">Deployment Architecture<a class="td-heading-self-link" href="#deployment-architecture" aria-label="Heading self-link"></a></h3>
+<p>KRS is designed to run as a standalone application on a machine with access to a Kubernetes cluster. It can be deployed as a containerized application or as a traditional executable.</p>
+<h2 id="conclusion">Conclusion<a class="td-heading-self-link" href="#conclusion" aria-label="Heading self-link"></a></h2>
+<p>KRS is a tool designed to optimize Kubernetes cluster management. It leverages a modular architecture comprising a CLI, scanner, recommender, health checker, and data storage components. By analyzing cluster data and utilizing LLM technology, KRS provides actionable insights and recommendations for tool selection and cluster health.</p>
 
 </div>
 

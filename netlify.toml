@@ -2,7 +2,8 @@
 # (https://gohugo.io/hosting-and-deployment/hosting-on-netlify/#configure-hugo-version-in-netlify)
 
 [build]
-command = "npm run build:preview"
+# Combined command for Hugo and Pagefind, along with the npm preview build
+command = "npm run build:preview && hugo --gc --minify -b $URL && npx pagefind --source 'public'"
 publish = "public"
 
 [build.environment]

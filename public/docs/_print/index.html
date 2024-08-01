@@ -61,10 +61,7 @@ We understand that documentation needs vary depending on project size and comple
       </ul>
   </div>
   <div class="d-none d-lg-block">
-    <div class="td-search">
-  <div class="td-search__icon"></div>
-  <input type="search" class="td-search__input form-control td-search-input" placeholder="Search this site…" aria-label="Search this site…" autocomplete="off">
-</div>
+    
   </div>
 </div>
 </nav>
@@ -437,8 +434,61 @@ The chosen LLM meticulously analyzes the pod&rsquo;s health data, pinpointing po
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-ffc590ea6468143712feda0ba56c1372">1.3 - Architecture</h1>
-    <div class="lead">An illustration of KRS&rsquo;s architecture</div>
-	<img src="https://raw.githubusercontent.com/kubetoolsca/krs/main/arch.png" alt="Architecture Illustration">
+    <div class="lead">KRS Architecture Overview</div>
+	<h2 id="introduction">Introduction<a class="td-heading-self-link" href="#introduction" aria-label="Heading self-link"></a></h2>
+<p>The Kubetools Recommender System (KRS) is a tool designed to assist Kubernetes administrators in optimizing their cluster configurations by recommending suitable tools based on the existing setup. This document outlines the core components of KRS and their interactions.</p>
+<h2 id="system-architecture">System Architecture<a class="td-heading-self-link" href="#system-architecture" aria-label="Heading self-link"></a></h2>
+<h3 id="overview">Overview<a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"></a></h3>
+<h5 id="cli-command-line-interface"><strong>CLI (Command-Line Interface)</strong><a class="td-heading-self-link" href="#cli-command-line-interface" aria-label="Heading self-link"></a></h5>
+<ul>
+<li>The user&rsquo;s primary interaction point with the system</li>
+<li>Provides commands for scanning, recommending tools, performing health checks, and managing system state</li>
+<li>Orchestrates interactions with other components</li>
+</ul>
+<h5 id="scanner"><strong>Scanner</strong><a class="td-heading-self-link" href="#scanner" aria-label="Heading self-link"></a></h5>
+<ul>
+<li>Responsible for interacting with the Kubernetes API to gather information about the cluster&rsquo;s resources (pods, services, deployments, etc.)</li>
+<li>Extracts data on deployed tools and their configurations</li>
+<li>Stores collected data in a structured format for subsequent processing</li>
+</ul>
+<h5 id="tool-database"><strong>Tool Database</strong><a class="td-heading-self-link" href="#tool-database" aria-label="Heading self-link"></a></h5>
+<ul>
+<li>Maintains a curated database of Kubernetes tools, categorized and ranked based on various criteria (e.g., functionality, popularity, maturity)</li>
+<li>Serves as a knowledge base for the recommender component</li>
+</ul>
+<h5 id="recommender"><strong>Recommender</strong><a class="td-heading-self-link" href="#recommender" aria-label="Heading self-link"></a></h5>
+<ul>
+<li>Analyzes the scanned cluster data to identify potential tool gaps</li>
+<li>Leverages the tool database to suggest suitable tools based on the identified gaps and ranking criteria</li>
+<li>Generates recommendations in a user-friendly format</li>
+</ul>
+<h5 id="health-checker"><strong>Health Checker</strong><a class="td-heading-self-link" href="#health-checker" aria-label="Heading self-link"></a></h5>
+<ul>
+<li>Provides in-depth health checks for selected pods</li>
+<li>Extracts pod logs and events for analysis</li>
+<li>Utilizes a Language Model (LLM) to process the data and identify potential issues</li>
+<li>Offers recommendations for resolving identified problems</li>
+</ul>
+<h5 id="data-storage"><strong>Data Storage</strong><a class="td-heading-self-link" href="#data-storage" aria-label="Heading self-link"></a></h5>
+<ul>
+<li>Manages persistent storage of tool rankings, cluster information, and other relevant data</li>
+<li>Employs JSON and pickle formats for efficient data handling</li>
+</ul>
+<h3 id="data-flow">Data Flow<a class="td-heading-self-link" href="#data-flow" aria-label="Heading self-link"></a></h3>
+<img src="https://raw.githubusercontent.com/kubetoolsca/krs/main/arch.png" alt="Architecture Illustration">
+<ol>
+<li>The user initiates a scan using the CLI.</li>
+<li>The scanner interacts with the Kubernetes API to collect cluster data</li>
+<li>Collected data is stored in the data storage component</li>
+<li>The recommender analyzes the stored data and generates tool recommendations</li>
+<li>The CLI presents the recommendations to the user</li>
+<li>If a health check is requested, the CLI interacts with the health checker</li>
+<li>The health checker collects pod information, processes it using the LLM, and presents findings to the user</li>
+</ol>
+<h3 id="deployment-architecture">Deployment Architecture<a class="td-heading-self-link" href="#deployment-architecture" aria-label="Heading self-link"></a></h3>
+<p>KRS is designed to run as a standalone application on a machine with access to a Kubernetes cluster. It can be deployed as a containerized application or as a traditional executable.</p>
+<h2 id="conclusion">Conclusion<a class="td-heading-self-link" href="#conclusion" aria-label="Heading self-link"></a></h2>
+<p>KRS is a tool designed to optimize Kubernetes cluster management. It leverages a modular architecture comprising a CLI, scanner, recommender, health checker, and data storage components. By analyzing cluster data and utilizing LLM technology, KRS provides actionable insights and recommendations for tool selection and cluster health.</p>
 
 </div>
 
@@ -521,12 +571,42 @@ installation and configuration process for each tool, and equally interacting wi
 </ol>
 <h2 id="initial-setup">Initial Setup<a class="td-heading-self-link" href="#initial-setup" aria-label="Heading self-link"></a></h2>
 <ol>
-<li><strong>Initialize KRS</strong>
-This step initializes KRS&rsquo;s services and loads the scanner.
+<li>
+<p><strong>Initialize KRS</strong>
+This step initializes KRS&rsquo;s services and loads the scanner.</p>
 <pre tabindex="0"><code>krs init
 </code></pre></li>
-<li><strong>Explore KRS Commands (Optional)</strong>
+<li>
+<p><strong>Explore KRS Commands</strong></p>
 <pre tabindex="0"><code>krs --help
+</code></pre><pre tabindex="0"><code>krs --help
+
+Usage: krs [OPTIONS] COMMAND [ARGS]... **                                        
+
+krs: A command line interface to scan your Kubernetes Cluster, detect errors,  
+provide resolutions using LLMs and recommend latest tools for your cluster     
+
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --install-completion          Install completion for the current shell. **     │
+│ --show-completion             Show completion for the current shell, to copy │
+│                               it or customize the installation. **             │
+│ --help                        Show this message and exit. **                   │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ───────────────────────────────────────────────────────────────────╮
+│ exit         Ends krs services safely and deletes all state files from       │
+│              system. **Removes all cached data. **                               │
+│ export       Exports pod info with logs and events. **                         │
+│ health       Starts an interactive terminal using an LLM of your choice to   │
+│              detect and fix issues with your cluster                         │
+│ init         Initializes the services and loads the scanner. **                │
+│ namespaces   Lists all the namespaces. **                                      │
+│ pods         Lists all the pods with namespaces, or lists pods under a       │
+│              specified namespace. **                                           │
+│ recommend    Generates a table of recommended tools from our ranking         │
+│              database and their CNCF project status. **                        │
+│ scan         Scans the cluster and extracts a list of tools that are         │
+│              currently used. **                                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
 </code></pre></li>
 </ol>
 <h2 id="scan-your-cluster-and-explore-recommendations">Scan Your Cluster and Explore Recommendations<a class="td-heading-self-link" href="#scan-your-cluster-and-explore-recommendations" aria-label="Heading self-link"></a></h2>
@@ -816,13 +896,202 @@ Type end chat to exit the interactive health check session.</p>
     
 	<h1 id="pg-f8328c79993d5eb712df1197fe8a9445">2.3 - Kind</h1>
     <div class="lead">How to Use KRS on Kind</div>
-	
+	<h2 id="prerequisites">Prerequisites<a class="td-heading-self-link" href="#prerequisites" aria-label="Heading self-link"></a></h2>
+<ul>
+<li>Podman, Docker, or Virtual Box (container runtime)</li>
+<li>Kubectl</li>
+<li>go (version 1.16+)</li>
+</ul>
+<h2 id="getting-started">Getting Started<a class="td-heading-self-link" href="#getting-started" aria-label="Heading self-link"></a></h2>
+<ol>
+<li>
+<p><strong>Setup a Kind Kubernetes Cluster on your Local Machine</strong></p>
+<pre tabindex="0"><code>go install sigs.k8s.io/kind@v0.23.0 &amp;&amp; kind create cluster
+</code></pre><p><img alt="Kind_Cluster" src="https://github.com/user-attachments/assets/f8eeace2-86ef-45f7-bbed-657b4f7cffa0"></p>
+</li>
+<li>
+<p><strong>Setup KRS using these commands</strong></p>
+<pre tabindex="0"><code>git clone https://github.com/kubetoolsca/krs.git
+cd krs
+pip install .
+</code></pre></li>
+<li>
+<p><strong>Initialize KRS to permit it access to your cluster using the given command</strong></p>
+<pre tabindex="0"><code>krs init
+</code></pre></li>
+<li>
+<p><strong>Get a view of all possible actions with KRS, by running the given command</strong></p>
+<pre tabindex="0"><code>krs --help
+</code></pre><pre tabindex="0"><code>krs --help
 
-<div class="pageinfo pageinfo-primary">
-<p>This is a placeholder page. Replace it with your own content.</p>
+Usage: krs [OPTIONS] COMMAND [ARGS]... **                                        
 
-</div>
+krs: A command line interface to scan your Kubernetes Cluster, detect errors,  
+provide resolutions using LLMs and recommend latest tools for your cluster     
 
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --install-completion          Install completion for the current shell. **     │
+│ --show-completion             Show completion for the current shell, to copy │
+│                               it or customize the installation. **             │
+│ --help                        Show this message and exit. **                   │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ───────────────────────────────────────────────────────────────────╮
+│ exit         Ends krs services safely and deletes all state files from       │
+│              system. **Removes all cached data. **                               │
+│ export       Exports pod info with logs and events. **                         │
+│ health       Starts an interactive terminal using an LLM of your choice to   │
+│              detect and fix issues with your cluster                         │
+│ init         Initializes the services and loads the scanner. **                │
+│ namespaces   Lists all the namespaces. **                                      │
+│ pods         Lists all the pods with namespaces, or lists pods under a       │
+│              specified namespace. **                                           │
+│ recommend    Generates a table of recommended tools from our ranking         │
+│              database and their CNCF project status. **                        │
+│ scan         Scans the cluster and extracts a list of tools that are         │
+│              currently used. **                                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+</code></pre></li>
+<li>
+<p><strong>Permit KRS to get information on the tools utilized in your cluster by running the given command</strong></p>
+<pre tabindex="0"><code>krs scan
+</code></pre><pre tabindex="0"><code>krs scan
+
+Scanning your cluster...
+
+Cluster scanned successfully...
+
+Extracted tools used in cluster...
+
+
+The cluster is using the following tools:
+
++-------------+--------+-----------------------------------+---------------+
+| Tool Name   |   Rank | Category                          | CNCF Status   |
++=============+========+===================================+===============+
+| kind        |      3 | Alternative Tools for Development | listed        |
++-------------+--------+-----------------------------------+---------------+
+|             |      4 | Cluster Management                | listed        |
++-------------+--------+-----------------------------------+---------------+
+</code></pre></li>
+<li>
+<p><strong>Get recommendations on possible tools to use in your cluster by running the given command</strong></p>
+<pre tabindex="0"><code>krs recommend
+</code></pre><pre tabindex="0"><code>krs recommend
+
+Our recommended tools for this deployment are:
+
++-----------------------------------+------------------+-------------+---------------+
+| Category                          | Recommendation   | Tool Name   | CNCF Status   |
++===================================+==================+=============+===============+
+| Alternative Tools for Development | Recommended tool | minikube    | listed        |
++-----------------------------------+------------------+-------------+---------------+
+| Cluster Management                | Recommended tool | rancher     | unlisted      |
++-----------------------------------+------------------+-------------+---------------+
+</code></pre></li>
+<li>
+<p><strong>Check the pod and namespace status in your Kubernetes cluster, including errors</strong></p>
+<pre tabindex="0"><code>krs health
+</code></pre><pre tabindex="0"><code>krs health
+
+Starting interactive terminal...
+
+
+Choose the model provider for healthcheck: 
+
+[1] OpenAI 
+[2] Huggingface
+
+&gt;&gt; 1
+
+Installing necessary libraries..........
+
+openai is already installed.
+
+Enter your OpenAI API key: sk-proj-qxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxP
+
+Enter the OpenAI model name: gpt-3.5-turbo
+API key and model are valid.
+
+Namespaces in the cluster:
+
+1. **default
+2. **kube-node-lease
+3. **kube-public
+4. **kube-system
+5. **local-path-storage
+
+Which namespace do you want to check the health for? Select a namespace by entering its number: &gt;&gt; 4
+
+Pods in the namespace kube-system:
+
+1. **cilium-9lqbq
+2. **cilium-ffpct
+3. **cilium-pvknr
+4. **coredns-85f59d8784-nvr2n
+5. **coredns-85f59d8784-p9jcv
+6. **cpc-bridge-proxy-c6xzr
+7. **cpc-bridge-proxy-p7r4p
+8. **cpc-bridge-proxy-tkfrd
+9. **csi-do-node-hwxn7
+10. **csi-do-node-q27rc
+11. **csi-do-node-rn7dm
+12. **do-node-agent-6t5ms
+13. **do-node-agent-85r8b
+14. **do-node-agent-m7bvr
+15. **hubble-relay-74686df4df-856pj
+16. **hubble-ui-86cc69bddc-xc745
+17. **konnectivity-agent-9k8vk
+18. **konnectivity-agent-h5fm2
+19. **konnectivity-agent-kf4xh
+20. **kube-proxy-94945
+21. **kube-proxy-qgv4j
+22. **kube-proxy-vztzf
+
+Which pod from kube-system do you want to check the health for? Select a pod by entering its number: &gt;&gt; 1
+
+Checking status of the pod...
+
+Extracting logs and events from the pod...
+
+Logs and events from the pod extracted successfully!
+
+
+Interactive session started. **Type &#39;end chat&#39; to exit from the session!
+
+&gt;&gt;  The log entries provided are empty {}, so there is nothing to analyze. **Therefore, I can confirm that &#39;Everything looks good!&#39; in this case.
+
+If there were warnings or errors in the log entries, I would have analyzed them thoroughly to identify the root cause. **Depending on the specific warnings or errors, potential steps to resolve the issues could include:
+
+1. **Analyzing the specific error message to understand the problem
+2. **Checking Kubernetes resources (e.g., pods, deployments, configmaps) for any misconfigurations
+3. **Verifying connectivity to external resources or dependencies
+4. **Checking for resource limitations or constraints that could be causing issues
+5. **Reviewing recent changes in the Kubernetes environment that could have introduced problems
+6. **Using Kubernetes troubleshooting tools like kubectl logs, describe, or events to gather more information 
+
+By following these steps and addressing any identified issues, you can resolve warnings or errors in the Kubernetes environment.
+
+&gt;&gt; Wonderful, anything else to note?
+&gt;&gt;  In addition to resolving warnings or errors in Kubernetes logs, it&#39;s important to regularly monitor and maintain the Kubernetes environment to ensure smooth operation. **Some best practices for Kubernetes maintenance include:
+
+1. **Regularly updating Kubernetes components and cluster nodes to the latest stable versions to benefit from bug fixes and security patches.
+2. **Implementing automated backups of critical data and configurations to prevent data loss in case of failures.
+3. **Monitoring resource utilization and scaling components as needed to optimize performance and cost efficiency.
+4. **Implementing security best practices, such as network policies, RBAC, and pod security policies to protect the cluster from unauthorized access or malicious activities.
+5. **Conducting regular health checks and performance tuning to identify and address any bottlenecks or inefficiencies in the cluster.
+6. **Developing a disaster recovery plan and testing it periodically to ensure business continuity in case of unexpected events.
+
+By following these maintenance practices, you can ensure the stability, scalability, and security of your Kubernetes environment for optimal DevOps operations.
+
+&gt;&gt; Alright, so are we done?
+&gt;&gt;  Yes, we have covered the analysis of the Kubernetes log entries and discussed best practices for Kubernetes maintenance. **If you have any more questions or need further assistance, feel free to ask. **Otherwise, we can consider this conversation complete.
+
+&gt;&gt; Wonderful. **Thanks! end chat
+&gt;&gt;  You&#39;re welcome! If you have any more questions in the future, feel free to reach out. **Have a great day! Goodbye!
+
+&gt;&gt; end chat
+</code></pre></li>
+</ol>
 
 </div>
 
@@ -1105,6 +1374,34 @@ By following these maintenance practices, you can ensure the stability, scalabil
 <li>
 <p><strong>Check if the tool has been successfully installed using</strong></p>
 <pre tabindex="0"><code>krs --help
+</code></pre><pre tabindex="0"><code>krs --help
+
+Usage: krs [OPTIONS] COMMAND [ARGS]... **                                        
+
+krs: A command line interface to scan your Kubernetes Cluster, detect errors,  
+provide resolutions using LLMs and recommend latest tools for your cluster     
+
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --install-completion          Install completion for the current shell. **     │
+│ --show-completion             Show completion for the current shell, to copy │
+│                               it or customize the installation. **             │
+│ --help                        Show this message and exit. **                   │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ───────────────────────────────────────────────────────────────────╮
+│ exit         Ends krs services safely and deletes all state files from       │
+│              system. **Removes all cached data. **                               │
+│ export       Exports pod info with logs and events. **                         │
+│ health       Starts an interactive terminal using an LLM of your choice to   │
+│              detect and fix issues with your cluster                         │
+│ init         Initializes the services and loads the scanner. **                │
+│ namespaces   Lists all the namespaces. **                                      │
+│ pods         Lists all the pods with namespaces, or lists pods under a       │
+│              specified namespace. **                                           │
+│ recommend    Generates a table of recommended tools from our ranking         │
+│              database and their CNCF project status. **                        │
+│ scan         Scans the cluster and extracts a list of tools that are         │
+│              currently used. **                                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
 </code></pre><p>Once you get a list of commands you can move onto the next part.</p>
 </li>
 </ol>
@@ -1773,6 +2070,38 @@ The cluster is using the following tools:
 | fluentbit   |      4 | Logging and Tracing         | unlisted      |
 +-------------+--------+-----------------------------+---------------+
 </code></pre></li>
+<li>
+<p><strong>Discover other KRS commands</strong></p>
+<pre tabindex="0"><code>krs --help
+</code></pre><pre tabindex="0"><code>krs --help
+
+Usage: krs [OPTIONS] COMMAND [ARGS]... **                                        
+
+krs: A command line interface to scan your Kubernetes Cluster, detect errors,  
+provide resolutions using LLMs and recommend latest tools for your cluster     
+
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --install-completion          Install completion for the current shell. **     │
+│ --show-completion             Show completion for the current shell, to copy │
+│                               it or customize the installation. **             │
+│ --help                        Show this message and exit. **                   │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ───────────────────────────────────────────────────────────────────╮
+│ exit         Ends krs services safely and deletes all state files from       │
+│              system. **Removes all cached data. **                               │
+│ export       Exports pod info with logs and events. **                         │
+│ health       Starts an interactive terminal using an LLM of your choice to   │
+│              detect and fix issues with your cluster                         │
+│ init         Initializes the services and loads the scanner. **                │
+│ namespaces   Lists all the namespaces. **                                      │
+│ pods         Lists all the pods with namespaces, or lists pods under a       │
+│              specified namespace. **                                           │
+│ recommend    Generates a table of recommended tools from our ranking         │
+│              database and their CNCF project status. **                        │
+│ scan         Scans the cluster and extracts a list of tools that are         │
+│              currently used. **                                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+</code></pre></li>
 </ol>
 
 </div>
@@ -1796,17 +2125,17 @@ The cluster is using the following tools:
 	<h1 id="pg-54889070d33ff8ba421707b96841ef23">4 - Contribution Guidelines</h1>
     <div class="lead">How to contribute to the KRS project</div>
 	<p>Thank you for your interest in contributing to the Kubernetes Resource Scanner (KRS) tool! We welcome your contributions and are excited to help make this project better.</p>
-<h2 id="code-of-conduct"><strong>Code of Conduct</strong><a class="td-heading-self-link" href="#code-of-conduct" aria-label="Heading self-link"></a></h2>
+<h3 id="code-of-conduct"><strong>Code of Conduct</strong><a class="td-heading-self-link" href="#code-of-conduct" aria-label="Heading self-link"></a></h3>
 <p>Before contributing, please review and adhere to the <a href="CODE_OF_CONDUCT.md">Code of Conduct</a>. We expect all contributors to follow these guidelines to ensure a positive and inclusive environment.</p>
-<h2 id="release-management-and-pull-request-submission-guidelines"><strong>Release Management and Pull Request Submission Guidelines</strong><a class="td-heading-self-link" href="#release-management-and-pull-request-submission-guidelines" aria-label="Heading self-link"></a></h2>
-<h3 id="repository-branch-structure"><strong>Repository Branch Structure</strong><a class="td-heading-self-link" href="#repository-branch-structure" aria-label="Heading self-link"></a></h3>
+<h3 id="release-management-and-pull-request-submission-guidelines"><strong>Release Management and Pull Request Submission Guidelines</strong><a class="td-heading-self-link" href="#release-management-and-pull-request-submission-guidelines" aria-label="Heading self-link"></a></h3>
+<h4 id="repository-branch-structure"><strong>Repository Branch Structure</strong><a class="td-heading-self-link" href="#repository-branch-structure" aria-label="Heading self-link"></a></h4>
 <p>Our project employs a three-branch workflow to manage the development and release of new features and fixes:</p>
 <ul>
 <li><strong>main</strong>: Stable release branch that contains production-ready code.</li>
 <li><strong>pre-release</strong>: Staging branch for final testing before merging into main.</li>
 <li><strong>release-v0.x.x</strong>: Active development branch where all new changes, bug fixes, and features are made and tested.</li>
 </ul>
-<h3 id="contributing-to-the-project"><strong>Contributing to the Project</strong><a class="td-heading-self-link" href="#contributing-to-the-project" aria-label="Heading self-link"></a></h3>
+<h4 id="contributing-to-the-project"><strong>Contributing to the Project</strong><a class="td-heading-self-link" href="#contributing-to-the-project" aria-label="Heading self-link"></a></h4>
 <p>To contribute to our project, follow these steps to ensure your changes are properly integrated:</p>
 <p><strong>Selecting the Correct Branch</strong></p>
 <ul>
@@ -1818,7 +2147,7 @@ The cluster is using the following tools:
 <li>Before you start working on an issue, comment on that issue stating that you are taking it on. This helps prevent multiple contributors from working on the same issue simultaneously.</li>
 <li>Include the issue number in your branch name for traceability, e.g., 123-fix-login-bug.</li>
 </ul>
-<h2 id="pull-request-pr-process"><strong>Pull Request (PR) Process</strong><a class="td-heading-self-link" href="#pull-request-pr-process" aria-label="Heading self-link"></a></h2>
+<h3 id="pull-request-pr-process"><strong>Pull Request (PR) Process</strong><a class="td-heading-self-link" href="#pull-request-pr-process" aria-label="Heading self-link"></a></h3>
 <p>To maintain code quality and orderly management, all contributors must follow this PR process:</p>
 <h4 id="step-1-sync-your-fork"><strong>Step 1: Sync Your Fork</strong><a class="td-heading-self-link" href="#step-1-sync-your-fork" aria-label="Heading self-link"></a></h4>
 <p>Before starting your work, sync your fork with the upstream repository to ensure you have the latest changes from the release-v0.x.x branch:</p>
@@ -1853,7 +2182,7 @@ The cluster is using the following tools:
 <li>Please make sure all tests pass before submitting a PR.</li>
 <li>Adhere to the coding standards and guidelines provided in our repository to ensure consistency and quality.</li>
 </ul>
-<h2 id="additional-resources"><strong>Additional Resources</strong><a class="td-heading-self-link" href="#additional-resources" aria-label="Heading self-link"></a></h2>
+<h3 id="additional-resources"><strong>Additional Resources</strong><a class="td-heading-self-link" href="#additional-resources" aria-label="Heading self-link"></a></h3>
 <ul>
 <li><a href="https://guides.github.com/activities/contributing-to-open-source/">GitHub Guides: Contributing to Open Source</a></li>
 <li><a href="https://opensource.guide/how-to-contribute/">How to Contribute to an Open Source Project</a></li>

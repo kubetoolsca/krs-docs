@@ -59,10 +59,7 @@
       </ul>
   </div>
   <div class="d-none d-lg-block">
-    <div class="td-search">
-  <div class="td-search__icon"></div>
-  <input type="search" class="td-search__input form-control td-search-input" placeholder="Search this site…" aria-label="Search this site…" autocomplete="off">
-</div>
+    
   </div>
 </div>
 </nav>
@@ -183,6 +180,34 @@ This is the multi-page printable view of this section.
 <li>
 <p><strong>Check if the tool has been successfully installed using</strong></p>
 <pre tabindex="0"><code>krs --help
+</code></pre><pre tabindex="0"><code>krs --help
+
+Usage: krs [OPTIONS] COMMAND [ARGS]... **                                        
+
+krs: A command line interface to scan your Kubernetes Cluster, detect errors,  
+provide resolutions using LLMs and recommend latest tools for your cluster     
+
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --install-completion          Install completion for the current shell. **     │
+│ --show-completion             Show completion for the current shell, to copy │
+│                               it or customize the installation. **             │
+│ --help                        Show this message and exit. **                   │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ───────────────────────────────────────────────────────────────────╮
+│ exit         Ends krs services safely and deletes all state files from       │
+│              system. **Removes all cached data. **                               │
+│ export       Exports pod info with logs and events. **                         │
+│ health       Starts an interactive terminal using an LLM of your choice to   │
+│              detect and fix issues with your cluster                         │
+│ init         Initializes the services and loads the scanner. **                │
+│ namespaces   Lists all the namespaces. **                                      │
+│ pods         Lists all the pods with namespaces, or lists pods under a       │
+│              specified namespace. **                                           │
+│ recommend    Generates a table of recommended tools from our ranking         │
+│              database and their CNCF project status. **                        │
+│ scan         Scans the cluster and extracts a list of tools that are         │
+│              currently used. **                                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
 </code></pre><p>Once you get a list of commands you can move onto the next part.</p>
 </li>
 </ol>
@@ -850,6 +875,38 @@ The cluster is using the following tools:
 +-------------+--------+-----------------------------+---------------+
 | fluentbit   |      4 | Logging and Tracing         | unlisted      |
 +-------------+--------+-----------------------------+---------------+
+</code></pre></li>
+<li>
+<p><strong>Discover other KRS commands</strong></p>
+<pre tabindex="0"><code>krs --help
+</code></pre><pre tabindex="0"><code>krs --help
+
+Usage: krs [OPTIONS] COMMAND [ARGS]... **                                        
+
+krs: A command line interface to scan your Kubernetes Cluster, detect errors,  
+provide resolutions using LLMs and recommend latest tools for your cluster     
+
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --install-completion          Install completion for the current shell. **     │
+│ --show-completion             Show completion for the current shell, to copy │
+│                               it or customize the installation. **             │
+│ --help                        Show this message and exit. **                   │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ───────────────────────────────────────────────────────────────────╮
+│ exit         Ends krs services safely and deletes all state files from       │
+│              system. **Removes all cached data. **                               │
+│ export       Exports pod info with logs and events. **                         │
+│ health       Starts an interactive terminal using an LLM of your choice to   │
+│              detect and fix issues with your cluster                         │
+│ init         Initializes the services and loads the scanner. **                │
+│ namespaces   Lists all the namespaces. **                                      │
+│ pods         Lists all the pods with namespaces, or lists pods under a       │
+│              specified namespace. **                                           │
+│ recommend    Generates a table of recommended tools from our ranking         │
+│              database and their CNCF project status. **                        │
+│ scan         Scans the cluster and extracts a list of tools that are         │
+│              currently used. **                                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
 </code></pre></li>
 </ol>
 
