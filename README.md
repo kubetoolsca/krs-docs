@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9c34129f-79e6-49d9-898a-331d9696c459/deploy-status)](https://app.netlify.com/sites/krsdocs/deploys)
+
 # Krs Official Documentation
 
 This is an official website for Krs
