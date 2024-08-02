@@ -11,7 +11,7 @@ Leverage OpenAI's powerful language models to enhance Krs' problem-solving and r
 
 ## Prerequisites
 
-- **Up and Running Kubernetes Cluster:** Ensure you have a Kubernetes cluster running locally (e.g., Minikube, etc) or in the cloud (e.g., Amazon EKS, Google Kubernetes Engine, etc), if on the cloud, ensure that you've secured a config file, before using KRS.
+- **Existing Kubernetes cluster:** Ensure you have a Kubernetes cluster running locally (e.g., Minikube, etc) or in the cloud (e.g., Amazon EKS, Google Kubernetes Engine, etc), if on the cloud, ensure that you've secured a config file, before using KRS.
 
 - **Python 3.6+:** KRS is a Python-based tool, so make sure you have Python 3.6 or a later version installed on your system. You can check your version by running python3 --version in your terminal. If you don't have Python installed, head over to https://www.python.org/downloads/ for installation instructions.
 

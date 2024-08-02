@@ -40,7 +40,14 @@
       <link>http://localhost:1313/docs/tasks/docker-desktop/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/tasks/docker-desktop/</guid>
-      <description>Get started with Docker Desktop to build and run containerized applications.&#xA;To install and get started with Docker Desktop, follow these steps:&#xA;Download the installer: Visit the official Docker website to download the appropriate installer for your operating system (Windows, macOS, or Linux).&#xA;Run the installer: Execute the downloaded installer and follow the on-screen instructions to complete the installation process.&#xA;For detailed instructions and troubleshooting, refer to the official Docker documentation: Instructions on Getting Started</description>
+      <description>Discover how to easily install and configure Krs using Docker Desktop. This guide will walk you through the steps to get your Kubernetes cluster up and running efficiently.&#xA;Prerequisites Kubectl Getting Started Setup Docker and Kubernetes Install Docker Desktop&#xA;Enable Kubernetes under Docker Desktop&#xA;Enabling Kubernetes in Docker Desktop is straightforward. Check the &amp;ldquo;Enable Kubernetes&amp;rdquo; box in Docker Desktop settings. Once the download and setup process completes, you&amp;rsquo;ll see indicators confirming that both Docker and Kubernetes are running.</description>
+    </item>
+    <item>
+      <title>OpenAI</title>
+      <link>http://localhost:1313/docs/v_ai/aks/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/v_ai/aks/</guid>
+      <description>Leverage OpenAI&amp;rsquo;s powerful language models to enhance Krs&amp;rsquo; problem-solving and recommendation capabilities.&#xA;Prerequisites Existing Kubernetes cluster: Ensure you have a Kubernetes cluster running locally (e.g., Minikube, etc) or in the cloud (e.g., Amazon EKS, Google Kubernetes Engine, etc), if on the cloud, ensure that you&amp;rsquo;ve secured a config file, before using KRS.&#xA;Python 3.6+: KRS is a Python-based tool, so make sure you have Python 3.6 or a later version installed on your system.</description>
     </item>
     <item>
       <title>AWS EKS</title>
@@ -69,6 +76,20 @@
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/tasks/minikube/</guid>
       <description>Minikube: Your local Kubernetes playground. Quickly spin up a single-node cluster and pair it with KRS for effortless cluster optimization.&#xA;Prerequisites Podman, Docker, or Virtual Box (container runtime) Kubectl Getting Started Setup a MiniKube Kubernetes Cluster on your Local Machine&#xA;curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 sudo install minikube-linux-amd64 /usr/local/bin/minikube &amp;amp;&amp;amp; rm minikube-linux-amd64 minikube start Setup KRS using these commands&#xA;git clone https://github.com/kubetoolsca/krs.git cd krs pip install . Initialize KRS to permit it access to your cluster using the given command</description>
+    </item>
+    <item>
+      <title>LocalAI</title>
+      <link>http://localhost:1313/docs/v_ai/aws/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/v_ai/aws/</guid>
+      <description>LocalAI coming soon</description>
+    </item>
+    <item>
+      <title>HuggingFace</title>
+      <link>http://localhost:1313/docs/v_ai/eks/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/v_ai/eks/</guid>
+      <description>Leverage HuggingFace&amp;rsquo;s powerful language models to enhance Krs&amp;rsquo; problem-solving and recommendation capabilities.&#xA;Prerequisites Existing Kubernetes cluster Ensure you have a Kubernetes cluster running locally (e.g., Minikube, etc) or in the cloud (e.g., Amazon EKS, Google Kubernetes Engine, etc), if on the cloud, ensure that you&amp;rsquo;ve secured a config file, before using KRS.&#xA;Python 3.6+: KRS is a Python-based tool, so make sure you have Python 3.6 or a later version installed on your system.</description>
     </item>
     <item>
       <title>Contribution Guidelines</title>
