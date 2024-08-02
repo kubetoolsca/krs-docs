@@ -1,6 +1,6 @@
 # Krs Official Documentation
 
-This is an official website for Krs docs
+This is an official website for Krs
 
 ## Prerequisite
 

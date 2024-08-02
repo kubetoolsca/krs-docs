@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Getting Started on KRS Docs</title>
+    <title>Getting Started on KRS</title>
     <link>http://localhost:1313/docs/getting-started/</link>
-    <description>Recent content in Getting Started on KRS Docs</description>
+    <description>Recent content in Getting Started on KRS</description>
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="http://localhost:1313/docs/getting-started/index.xml" rel="self" type="application/rss+xml" />
@@ -26,7 +26,7 @@
       <link>http://localhost:1313/docs/getting-started/architecture/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/getting-started/architecture/</guid>
-      <description> </description>
+      <description>Introduction The Kubetools Recommender System (KRS) is a tool designed to assist Kubernetes administrators in optimizing their cluster configurations by recommending suitable tools based on the existing setup. This document outlines the core components of KRS and their interactions.&#xA;System Architecture Overview CLI (Command-Line Interface) The user&amp;rsquo;s primary interaction point with the system Provides commands for scanning, recommending tools, performing health checks, and managing system state Orchestrates interactions with other components Scanner Responsible for interacting with the Kubernetes API to gather information about the cluster&amp;rsquo;s resources (pods, services, deployments, etc.</description>
     </item>
   </channel>
 </rss>

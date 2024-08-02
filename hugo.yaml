@@ -1,5 +1,5 @@
 baseURL: https://example.docsy.dev
-title: KRS Docs
+title: KRS
 
 # cSpell:ignore goldmark github hugo readingtime docsy subdir lastmod pygments linenos catmullrom norsk gu
 
@@ -46,9 +46,9 @@ imaging:
 languages:
   en:
     languageName: English
-    title: KRS Docs
+    title: KRS
     params:
-      description: A Docsy example site
+      description: A KRS Docs site
       custom_css: [css/custom.css]
     
   
@@ -121,7 +121,7 @@ params:
   github_branch: main
 
   # Google Custom Search Engine ID. Remove or comment out to disable search.
-  gcs_engine_id: d72aa9b2712488cc3
+  # gcs_engine_id: d72aa9b2712488cc3
 
   # Enable Lunr.js offline search
   offlineSearch: false
@@ -175,7 +175,7 @@ params:
     # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
     developer:
       - name: GitHub
-        url: /docs/
+        url: https://github.com/kubetoolsca/krs
         icon: fab fa-github
         desc: Development takes place here!
       - name: Slack

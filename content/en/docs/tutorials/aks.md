@@ -35,6 +35,39 @@ Optimize your AKS cluster management with KRS. This powerful tool, installed loc
     krs --help
     ```
 
+    ```
+    krs --help
+                                                                                    
+    Usage: krs [OPTIONS] COMMAND [ARGS]... **                                        
+                                                                                    
+    krs: A command line interface to scan your Kubernetes Cluster, detect errors,  
+    provide resolutions using LLMs and recommend latest tools for your cluster     
+                                                                                    
+    ╭─ Options ────────────────────────────────────────────────────────────────────╮
+    │ --install-completion          Install completion for the current shell. **     │
+    │ --show-completion             Show completion for the current shell, to copy │
+    │                               it or customize the installation. **             │
+    │ --help                        Show this message and exit. **                   │
+    ╰──────────────────────────────────────────────────────────────────────────────╯
+    ╭─ Commands ───────────────────────────────────────────────────────────────────╮
+    │ exit         Ends krs services safely and deletes all state files from       │
+    │              system. **Removes all cached data. **                               │
+    │ export       Exports pod info with logs and events. **                         │
+    │ health       Starts an interactive terminal using an LLM of your choice to   │
+    │              detect and fix issues with your cluster                         │
+    │ init         Initializes the services and loads the scanner. **                │
+    │ namespaces   Lists all the namespaces. **                                      │
+    │ pods         Lists all the pods with namespaces, or lists pods under a       │
+    │              specified namespace. **                                           │
+    │ recommend    Generates a table of recommended tools from our ranking         │
+    │              database and their CNCF project status. **                        │
+    │ scan         Scans the cluster and extracts a list of tools that are         │
+    │              currently used. **                                                │
+    ╰──────────────────────────────────────────────────────────────────────────────╯
+    ```
+
+
+
     Once you get a list of commands you can move onto the next part.
 
 ## Create an EKS cluster on your Azure account

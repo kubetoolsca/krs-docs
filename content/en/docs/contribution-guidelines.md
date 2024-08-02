@@ -7,14 +7,14 @@ weight: 10
 
 Thank you for your interest in contributing to the Kubernetes Resource Scanner (KRS) tool! We welcome your contributions and are excited to help make this project better.
 
-## **Code of Conduct**
+### **Code of Conduct**
 
 
 Before contributing, please review and adhere to the [Code of Conduct](CODE_OF_CONDUCT.md). We expect all contributors to follow these guidelines to ensure a positive and inclusive environment.
 
-## **Release Management and Pull Request Submission Guidelines**
+### **Release Management and Pull Request Submission Guidelines**
 
-### **Repository Branch Structure**
+#### **Repository Branch Structure**
 
 Our project employs a three-branch workflow to manage the development and release of new features and fixes:
 
@@ -22,7 +22,7 @@ Our project employs a three-branch workflow to manage the development and releas
 - **pre-release**: Staging branch for final testing before merging into main.
 - **release-v0.x.x**: Active development branch where all new changes, bug fixes, and features are made and tested.
 
-### **Contributing to the Project**
+#### **Contributing to the Project**
 
 To contribute to our project, follow these steps to ensure your changes are properly integrated:
 
@@ -36,7 +36,7 @@ To contribute to our project, follow these steps to ensure your changes are prop
 - Before you start working on an issue, comment on that issue stating that you are taking it on. This helps prevent multiple contributors from working on the same issue simultaneously.
 - Include the issue number in your branch name for traceability, e.g., 123-fix-login-bug.
 
-## **Pull Request (PR) Process**
+### **Pull Request (PR) Process**
 
 To maintain code quality and orderly management, all contributors must follow this PR process:
 
@@ -98,7 +98,7 @@ Push your branch and changes to your fork:
 - Please make sure all tests pass before submitting a PR.
 - Adhere to the coding standards and guidelines provided in our repository to ensure consistency and quality.
 
-## **Additional Resources**
+### **Additional Resources**
 
 - [GitHub Guides: Contributing to Open Source](https://guides.github.com/activities/contributing-to-open-source/)
 - [How to Contribute to an Open Source Project](https://opensource.guide/how-to-contribute/)

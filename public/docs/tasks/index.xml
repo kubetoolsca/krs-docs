@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Local Installation on KRS Docs</title>
+    <title>Local Installation on KRS</title>
     <link>http://localhost:1313/docs/tasks/</link>
-    <description>Recent content in Local Installation on KRS Docs</description>
+    <description>Recent content in Local Installation on KRS</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 24 Jul 2024 13:41:18 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 31 Jul 2024 19:50:18 -0600</lastBuildDate>
     <atom:link href="http://localhost:1313/docs/tasks/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Manual</title>
@@ -27,7 +27,7 @@
       <link>http://localhost:1313/docs/tasks/kind/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/tasks/kind/</guid>
-      <description>This is a placeholder page. Replace it with your own content.</description>
+      <description>Prerequisites Podman, Docker, or Virtual Box (container runtime) Kubectl go (version 1.16+) Getting Started Setup a Kind Kubernetes Cluster on your Local Machine&#xA;go install sigs.k8s.io/kind@v0.23.0 &amp;amp;&amp;amp; kind create cluster Setup KRS using these commands&#xA;git clone https://github.com/kubetoolsca/krs.git cd krs pip install . Initialize KRS to permit it access to your cluster using the given command&#xA;krs init Get a view of all possible actions with KRS, by running the given command</description>
     </item>
     <item>
       <title>Minikube</title>
