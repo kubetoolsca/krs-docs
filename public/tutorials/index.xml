@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloud Providers on KRS</title>
+    <link>http://localhost:1313/tutorials/</link>
+    <description>Recent content in Cloud Providers on KRS</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 05 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure EKS</title>
+      <link>http://localhost:1313/tutorials/aks/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tutorials/aks/</guid>
+      <description>Optimize your AKS cluster management with KRS. This powerful tool, installed locally on your machine, analyzes your AKS cluster to identify areas for improvement. KRS leverages AI to provide recommendations for enhancing your cluster&amp;rsquo;s efficiency and functionality.&#xA;Prerequisites: An Azure account Install Azure CLI on your laptop Installation Clone the repository using the command&#xA;git clone https://github.com/kubetoolsca/krs.git Install the Krs Tool&#xA;Change directory to /krs and run the following command to install krs locally on your system:</description>
+    </item>
+    <item>
+      <title>DigitalOcean</title>
+      <link>http://localhost:1313/tutorials/aws/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tutorials/aws/</guid>
+      <description>KRS is your Kubernetes sidekick, effortlessly optimizing your Digital Ocean cluster. Simply install, initialize, and scan to uncover hidden potential.&#xA;Prerequisites Digital Ocean Account Homebrew(if you&amp;rsquo;re on Mac) Getting Started Setup a Kubernetes Cluster on Digital Ocean&#xA;Install and Setup doctl on your Local Machine&#xA;If on Ubuntu use:&#xA;sudo snap install doctl sudo snap connect doctl:kube-config sudo snap connect doctl:ssh-keys :ssh-keys sudo snap connect doctl:dot-docker If on Mac, use:</description>
+    </item>
+    <item>
+      <title>AWS EKS</title>
+      <link>http://localhost:1313/tutorials/eks/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tutorials/eks/</guid>
+      <description>Optimize your EKS cluster with KRS. KRS running locally on your machine, analyzes your EKS cluster for improvement. Leverage KRS to gain valuable insights and recommendations for a smoother Kubernetes experience.&#xA;Prerequisites AWS Account AWSCLI installed on your system Homebrew(if you&amp;rsquo;re on Mac) Getting Started Setup Amazon EKS Cluster&#xA;eksctl create cluster --name &amp;lt;cluster_name&amp;gt; --version &amp;lt;kubernetes_version&amp;gt; --region &amp;lt;aws_region_name e.g us-east-1&amp;gt; --nodegroup-name &amp;lt;linux_nodes&amp;gt; --node-type &amp;lt;node_type&amp;gt; --nodes &amp;lt;number_of_nodes&amp;gt; --zones=&amp;lt;zone_names, e.g: us-east-1a,us-east-1b&amp;gt; Authenticate your AWS account</description>
+    </item>
+    <item>
+      <title>Google&#39;s GKE</title>
+      <link>http://localhost:1313/tutorials/gke/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tutorials/gke/</guid>
+      <description>Effortlessly optimize your GKE cluster with KRS. This powerful tool, running locally on your machine, analyzes your GKE cluster for improvement. Leverage KRS to gain valuable insights and recommendations for a smoother Kubernetes experience.&#xA;Prerequisite A Google Cloud Account Installing Google Cloud SDK on your macOS Getting Started Execute the following command to install Google Cloud SDK in your system&#xA;tar xfz google-cloud-sdk-195.0.0-darwin-x86_64.tar.gz ./google-cloud-sdk/install.sh Enable Google Cloud Engine API&#xA;Authenticate Your Google Cloud using gcloud auth</description>
+    </item>
+  </channel>
+</rss>

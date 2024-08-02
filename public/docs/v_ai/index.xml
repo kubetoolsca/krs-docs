@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI Model on KRS</title>
+    <link>http://localhost:1313/docs/v_ai/</link>
+    <description>Recent content in AI Model on KRS</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 05 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/v_ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI</title>
+      <link>http://localhost:1313/docs/v_ai/aks/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/v_ai/aks/</guid>
+      <description>Leverage OpenAI&amp;rsquo;s powerful language models to enhance Krs&amp;rsquo; problem-solving and recommendation capabilities.&#xA;Prerequisites Up and Running Kubernetes Cluster: Ensure you have a Kubernetes cluster running locally (e.g., Minikube, etc) or in the cloud (e.g., Amazon EKS, Google Kubernetes Engine, etc), if on the cloud, ensure that you&amp;rsquo;ve secured a config file, before using KRS.&#xA;Python 3.6+: KRS is a Python-based tool, so make sure you have Python 3.6 or a later version installed on your system.</description>
+    </item>
+    <item>
+      <title>HuggingFace</title>
+      <link>http://localhost:1313/docs/v_ai/eks/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/v_ai/eks/</guid>
+      <description>Optimize your EKS cluster with KRS. KRS running locally on your machine, analyzes your EKS cluster for improvement. Leverage KRS to gain valuable insights and recommendations for a smoother Kubernetes experience.&#xA;Prerequisites AWS Account AWSCLI installed on your system Homebrew(if you&amp;rsquo;re on Mac) Getting Started Setup Amazon EKS Cluster&#xA;eksctl create cluster --name &amp;lt;cluster_name&amp;gt; --version &amp;lt;kubernetes_version&amp;gt; --region &amp;lt;aws_region_name e.g us-east-1&amp;gt; --nodegroup-name &amp;lt;linux_nodes&amp;gt; --node-type &amp;lt;node_type&amp;gt; --nodes &amp;lt;number_of_nodes&amp;gt; --zones=&amp;lt;zone_names, e.g: us-east-1a,us-east-1b&amp;gt; Authenticate your AWS account</description>
+    </item>
+    <item>
+      <title>LocalAI</title>
+      <link>http://localhost:1313/docs/v_ai/aws/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/v_ai/aws/</guid>
+      <description>LocalAI coming soon</description>
+    </item>
+  </channel>
+</rss>
