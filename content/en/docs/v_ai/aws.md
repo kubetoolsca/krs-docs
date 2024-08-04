@@ -2,7 +2,7 @@
 title: LocalAI
 description: >
   How to Use KRS with LocalAI
-weight: 6
+weight: 5
 ---
 
 {{% pageinfo %}}
