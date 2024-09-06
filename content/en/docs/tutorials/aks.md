@@ -1,5 +1,5 @@
 ---
-title: Azure EKS
+title: Azure AKS
 description: >
   How to Install KRS on AKS
 date: 2017-01-05
@@ -70,11 +70,11 @@ Optimize your AKS cluster management with KRS. This powerful tool, installed loc
 
     Once you get a list of commands you can move onto the next part.
 
-## Create an EKS cluster on your Azure account
+## Create an AKS cluster on your Azure account
 
-1. **Create an EKS Cluster**
+1. **Create an AKS Cluster**
 
-    To create an EKS account, you can log into your account and search for Azure Kubernetes Service.
+    To create an AKS account, you can log into your account and search for Azure Kubernetes Service.
 
     <img width="558" alt="Screenshot 2024-07-01 at 10 17 54 PM" src="https://github.com/kubetoolsca/krs/assets/90956242/10b571d3-4c22-449b-81a3-c742aa0e893f">
 
